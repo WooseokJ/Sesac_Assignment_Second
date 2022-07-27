@@ -25,9 +25,9 @@ extension UIViewController{
 }
 
 class SearchViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource {
-    
-    @IBOutlet weak var third: UITableView!
-    @IBOutlet weak var second: UITableView!
+//
+//    @IBOutlet weak var third: UITableView!
+//    @IBOutlet weak var second: UITableView!
     @IBOutlet weak var searchtableView: UITableView!
     
     override func viewDidLoad() {
@@ -46,15 +46,10 @@ class SearchViewController: UIViewController ,UITableViewDelegate, UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier, for: indexPath) as? ListTableViewCell else{return UITableViewCell()}
         cell.backgroundColor = .clear
         cell.titleLabel.font = .boldSystemFont(ofSize: 22)
         cell.titleLabel.text = "hello"
-        
-        
         return cell
                 
     }
