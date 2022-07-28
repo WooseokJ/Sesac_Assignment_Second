@@ -38,6 +38,7 @@
 		E1485D2D2890E1F400BE8A71 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E1485D392890EA6600BE8A71 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		E1485D3A2890EA6600BE8A71 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		E17E1C1C2892B9E00093690A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				E1485D272890DD7C00BE8A71 /* Info.plist */,
+				E17E1C1C2892B9E00093690A /* README.md */,
 				E13B9ABE28920CAB00D6001A /* protocol */,
 				E1485D312890E49C00BE8A71 /* Search */,
 				E1485D322890E4A700BE8A71 /* basic */,
