@@ -44,7 +44,6 @@ class WebViewController: UIViewController {
         }
         let request = URLRequest(url:url) //url통해 요청할게
         webView.load(request)
-        
     }
 }
 
