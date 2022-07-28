@@ -24,7 +24,8 @@ extension UIViewController{
     }
 }
 
-class SearchViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource {
+class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    
 //
 //    @IBOutlet weak var third: UITableView!
 //    @IBOutlet weak var second: UITableView!
@@ -53,7 +54,6 @@ class SearchViewController: UIViewController ,UITableViewDelegate, UITableViewDa
         return cell
                 
     }
-    
     
 
 
