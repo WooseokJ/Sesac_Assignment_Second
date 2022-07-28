@@ -261,24 +261,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="a6q-UY-tXb">
-                                <rect key="frame" x="0.0" y="74" width="414" height="51"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="qM2-Hr-nW9"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5A-JK-PDt">
-                                <rect key="frame" x="0.0" y="812" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="817" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Item" id="f9A-nf-X5H"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YOo-ee-ZNF"/>
-                                    <barButtonItem title="Item" id="CcV-Hq-Ncs"/>
-                                    <barButtonItem title="Item" id="UUl-PC-fKS"/>
+                                    <barButtonItem title="Item" image="xmark" catalog="system" id="3PK-d4-dyR"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="DDo-HD-Ac9"/>
+                                    <barButtonItem title="Item" image="arrow.backward" catalog="system" id="f9A-nf-X5H">
+                                        <connections>
+                                            <action selector="goBackButtonClicked:" destination="Trn-3I-Vh3" id="nlO-NM-wQg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1Ng-Ld-uX7"/>
+                                    <barButtonItem title="Item" image="arrow.counterclockwise" catalog="system" id="CcV-Hq-Ncs">
+                                        <connections>
+                                            <action selector="reloadButtonClicked:" destination="Trn-3I-Vh3" id="JPB-q9-EMy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Aqa-Kc-kUX"/>
+                                    <barButtonItem title="Item" image="arrow.forward" catalog="system" id="UUl-PC-fKS">
+                                        <connections>
+                                            <action selector="goForwardButtonClicked:" destination="Trn-3I-Vh3" id="X7V-hu-fEr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xEN-fX-uOx"/>
                                 </items>
                             </toolbar>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lNV-LA-Udt">
-                                <rect key="frame" x="0.0" y="125" width="414" height="687"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNV-LA-Udt">
+                                <rect key="frame" x="0.0" y="95" width="414" height="722"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -287,16 +302,21 @@
                             </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zjs-LE-ca5"/>
-                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="V5A-JK-PDt" firstAttribute="leading" secondItem="zjs-LE-ca5" secondAttribute="leading" id="08U-l6-chg"/>
+                            <constraint firstItem="lNV-LA-Udt" firstAttribute="top" secondItem="a6q-UY-tXb" secondAttribute="bottom" id="52X-lD-rnS"/>
                             <constraint firstItem="V5A-JK-PDt" firstAttribute="trailing" secondItem="zjs-LE-ca5" secondAttribute="trailing" id="9Dc-RE-i6z"/>
-                            <constraint firstAttribute="bottom" secondItem="V5A-JK-PDt" secondAttribute="bottom" constant="40" id="bfN-2t-sXE"/>
+                            <constraint firstItem="lNV-LA-Udt" firstAttribute="trailing" secondItem="zjs-LE-ca5" secondAttribute="trailing" id="COy-OU-hlV"/>
+                            <constraint firstItem="V5A-JK-PDt" firstAttribute="top" secondItem="lNV-LA-Udt" secondAttribute="bottom" id="Qzs-kw-zb4"/>
+                            <constraint firstAttribute="bottom" secondItem="V5A-JK-PDt" secondAttribute="bottom" constant="30" id="bfN-2t-sXE"/>
                             <constraint firstItem="a6q-UY-tXb" firstAttribute="leading" secondItem="zjs-LE-ca5" secondAttribute="leading" id="eKL-Fu-T5v"/>
-                            <constraint firstItem="a6q-UY-tXb" firstAttribute="top" secondItem="zjs-LE-ca5" secondAttribute="top" constant="30" id="oA9-2u-B4M"/>
+                            <constraint firstItem="a6q-UY-tXb" firstAttribute="top" secondItem="zjs-LE-ca5" secondAttribute="top" id="oA9-2u-B4M"/>
+                            <constraint firstItem="lNV-LA-Udt" firstAttribute="leading" secondItem="zjs-LE-ca5" secondAttribute="leading" id="okX-Q9-NuM"/>
                             <constraint firstItem="a6q-UY-tXb" firstAttribute="trailing" secondItem="zjs-LE-ca5" secondAttribute="trailing" id="pOx-8d-KH5"/>
                         </constraints>
                     </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="a6q-UY-tXb" id="OkA-VG-YRn"/>
                         <outlet property="webView" destination="lNV-LA-Udt" id="7wa-Df-2yW"/>
@@ -308,6 +328,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <image name="arrow.counterclockwise" catalog="system" width="115" height="128"/>
+        <image name="arrow.forward" catalog="system" width="128" height="98"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -316,9 +340,6 @@
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
