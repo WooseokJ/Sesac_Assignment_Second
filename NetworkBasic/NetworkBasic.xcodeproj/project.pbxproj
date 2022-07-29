@@ -20,6 +20,7 @@
 		E1485D2E2890E1F400BE8A71 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1485D2D2890E1F400BE8A71 /* SearchViewController.swift */; };
 		E1485D3B2890EA6600BE8A71 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1485D392890EA6600BE8A71 /* ListTableViewCell.swift */; };
 		E1485D3C2890EA6600BE8A71 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1485D3A2890EA6600BE8A71 /* ListTableViewCell.xib */; };
+		E199C6D028935D4800A4B91E /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E199C6CF28935D4800A4B91E /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		E1485D392890EA6600BE8A71 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		E1485D3A2890EA6600BE8A71 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		E17E1C1C2892B9E00093690A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E199C6CF28935D4800A4B91E /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		E199C6D5289388D700A4B91E /* BinggraeSamanco-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeSamanco-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 			children = (
 				E1485D272890DD7C00BE8A71 /* Info.plist */,
 				E17E1C1C2892B9E00093690A /* README.md */,
+				E199C6D42893879B00A4B91E /* Resource */,
 				E13B9ABE28920CAB00D6001A /* protocol */,
 				E1485D312890E49C00BE8A71 /* Search */,
 				E1485D322890E4A700BE8A71 /* basic */,
@@ -129,6 +133,7 @@
 				E1485D192890DD7900BE8A71 /* AppDelegate.swift */,
 				E1485D1D2890DD7900BE8A71 /* ViewController.swift */,
 				E1485D1F2890DD7900BE8A71 /* Main.storyboard */,
+				E199C6D128935D5200A4B91E /* Location */,
 				E13B9ACB28923E1000D6001A /* translate */,
 				E13B9ACA28923E0000D6001A /* lotto */,
 				E13B9AC928923DE600D6001A /* web */,
@@ -136,6 +141,22 @@
 				E1485D242890DD7C00BE8A71 /* LaunchScreen.storyboard */,
 			);
 			path = basic;
+			sourceTree = "<group>";
+		};
+		E199C6D128935D5200A4B91E /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				E199C6CF28935D4800A4B91E /* LocationViewController.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		E199C6D42893879B00A4B91E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E199C6D5289388D700A4B91E /* BinggraeSamanco-Bold.otf */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +236,7 @@
 				E1485D1A2890DD7900BE8A71 /* AppDelegate.swift in Sources */,
 				E1485D2E2890E1F400BE8A71 /* SearchViewController.swift in Sources */,
 				E13B9AC22892238300D6001A /* LottoViewController.swift in Sources */,
+				E199C6D028935D4800A4B91E /* LocationViewController.swift in Sources */,
 				E1485D1C2890DD7900BE8A71 /* SceneDelegate.swift in Sources */,
 				E13B9AC42892306400D6001A /* TranslateViewController.swift in Sources */,
 				E13B9AC028920CCF00D6001A /* ViewPresentableProtocol.swift in Sources */,

@@ -14,31 +14,38 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-       
+       // 2. 노티제거
+        // 알람앱,미리알림,스케줄,할일목록 -> 하루전 알림 30분전알림.
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        
+
+        
         guard let _ = (scene as? UIWindowScene) else { return }
     }
-
+    
     func sceneDidDisconnect(_ scene: UIScene) {
      
     }
 
-    func sceneDidBecomeActive(_ scene: UIScene) {
+    func sceneDidBecomeActive(_ scene: UIScene) { //
+        
+        // Badge 제거
+        UIApplication.shared.applicationIconBadgeNumber = 0 
+        
+        
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
+
     }
 
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
+    func sceneWillEnterForeground(_ scene: UIScene) { //포그라운드
+        
+        
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
+
     }
 
 

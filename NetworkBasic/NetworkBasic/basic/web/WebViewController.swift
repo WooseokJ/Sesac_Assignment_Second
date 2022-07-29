@@ -21,22 +21,24 @@ class WebViewController: UIViewController {
         searchBar.delegate = self
 
     }
-    
+    //MARK: 뒤로가기
     @IBAction func goBackButtonClicked(_ sender: UIBarButtonItem) {
         if webView.canGoBack{
             webView.goBack()
         }
     }
+    //MARK: 새로고침
     @IBAction func reloadButtonClicked(_ sender: UIBarButtonItem) {
         webView.reload()
     }
+    //MARK: 앞으로가기
     @IBAction func goForwardButtonClicked(_ sender: UIBarButtonItem) {
         if webView.canGoForward{
             webView.goForward()
         }
     }
     
-    
+    //MARK: 웹사이트열기
     func openWebPage(url:String){
         guard let url = URL(string: url) else{ //우선 유효한 URL인지 확인
             print("Invalid URL") //유효하지않은 URL
@@ -46,7 +48,7 @@ class WebViewController: UIViewController {
         webView.load(request)
     }
 }
-
+//MARK: 서치바 관련 이벤크
 extension WebViewController : UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         openWebPage(url: searchBar.text!)

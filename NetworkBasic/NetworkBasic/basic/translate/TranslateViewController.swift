@@ -15,7 +15,7 @@ class TranslateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //플레이스홀더만들기
+        //MARK: 플레이스홀더만들기
         userTextview.delegate = self //일을맡김
         
         // responder chain 은 특정 뷰객체를 선택하게해줌
@@ -26,6 +26,8 @@ class TranslateViewController: UIViewController {
         userTextview.text = textViewPlaceholderText
         userTextview.textColor = .lightGray
         
+        userTextview.font = UIFont(name: "Zapfino", size: 22)
+        
         
     }
     
@@ -34,13 +36,13 @@ class TranslateViewController: UIViewController {
 
 extension TranslateViewController : UITextViewDelegate{
     
-    //한글자마다 실행되는데 한글자씩 변경될떄 마다 실행
+    //MARK: 한글자마다 실행되는데 한글자씩 변경될떄 마다 실행
     func textViewDidChange(_ textView: UITextView) {
         print(textView.text.count)
     }
     
     // 편집시작할떄(커서가 깜빡이기 시작될떄)
-    // 텍스트뷰글자: 플레이스 홀더랑 글자가 같으면 claer,color도 바꿔주기
+    //MARK: 텍스트뷰글자: 플레이스 홀더랑 글자가 같으면 claer,color도 바꿔주기
     func textViewDidBeginEditing(_ textView: UITextView) {
         print("start")
         if textView.textColor == .lightGray{ //  lightGray이므로 아무것도입력안될떄를 나타냄
@@ -50,7 +52,7 @@ extension TranslateViewController : UITextViewDelegate{
         
     }
     // 편집이 끝났을떄 (커서가 없어지는 순간)
-    //텍스트뷰글자: 사용자가 아무글자안쓰면 플레이스홀더글자보이게!
+    //MARK: 텍스트뷰글자: 사용자가 아무글자안쓰면 플레이스홀더글자보이게!
     func textViewDidEndEditing(_ textView: UITextView) {
         print("end")
         if textView.text.isEmpty{
