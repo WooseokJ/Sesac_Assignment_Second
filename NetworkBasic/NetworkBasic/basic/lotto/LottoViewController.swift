@@ -47,15 +47,16 @@ class LottoViewController: UIViewController {
         
         // AF: 200~299 를 성공(status code 가 success)
         let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
+        
         AF.request(url, method: .get).validate(statusCode: 200..<300).responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
 //                let bonuse = json["bnusNo"].intValue //int 와 intValue는 옵셔널차이
-
+                
                 let drwNo = json["drwNo"].stringValue
-
+                
                 
                 self.numberTextField.text = drwNo+"회" //날짜를 텍스트필드에 보여줄게
                 
