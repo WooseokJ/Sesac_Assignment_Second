@@ -9,12 +9,12 @@ import UIKit
 
 
 @objc protocol ViewPresentableProtocol{ // 여기에도 @objc 붙여야함
-    
+    //프로퍼티
     var navigationTitleString:String {get set}
     var backgroundColor : UIColor {get} // 변수에값넣으면 set처럼 사용가능한이유: 만약 get만 명시햇다면 get기능만 최소한 구현되있으면된다. (그래서 필요하면 set도 구현가능(사용가능))   대신 구현하는 클래스,구조체,열거형,익스텐션은 var를못쓰고 leta만사용가능(static도 동일)
-    
     static var identifier : String {get}
     
+    //메소드
     func configureView()
     @objc optional func configureLabel() // void 생략
     @objc optional func configureTextField()

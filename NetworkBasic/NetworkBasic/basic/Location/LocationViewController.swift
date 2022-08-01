@@ -2,6 +2,8 @@
 import UIKit
 
 class LocationViewController: UIViewController {
+//    static var reuseIdentifier: String = String(describing: LocationViewController.self) //LocationViewController.self(메타타입) => "LocationViewController"
+
 
 
     //MARK: notification 1.

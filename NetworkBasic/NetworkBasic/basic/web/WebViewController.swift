@@ -8,6 +8,8 @@
 import UIKit
 import WebKit // webview가 uikit에없어서
 class WebViewController: UIViewController {
+//    static var reuseIdentifier: String = "WebViewController"
+    
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var webView: WKWebView!

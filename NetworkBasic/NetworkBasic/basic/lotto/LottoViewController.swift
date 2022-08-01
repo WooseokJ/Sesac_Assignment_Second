@@ -5,9 +5,13 @@
 //  Created by useok on 2022/07/28.
 //
 
-import UIKit
+import UIKit // 내부 애플라이브러리
 
-class LottoViewController: UIViewController{
+import Alamofire // 알파벳순으로 외부라이브러리
+import SwiftyJSON
+
+
+class LottoViewController: UIViewController {
     
     //viewcontroller에서도 UIpickerview를 불러와서 쓸수있음.
 //    @IBOutlet weak var lottoPickerView: UIPickerView!
@@ -16,9 +20,11 @@ class LottoViewController: UIViewController{
     
     @IBOutlet weak var numberTextField: UITextField!
     
-
-    
     let numberList : [Int] = Array(1...1025).reversed() // 역순정렬
+   
+    
+    @IBOutlet var lottoNoLabel: [UILabel]!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +37,47 @@ class LottoViewController: UIViewController{
         
         lottoPickerView.delegate = self
         lottoPickerView.dataSource = self
-        
+        requestLotto(number: 1025)
       
     }
-}
+    
+  
+    
+    func requestLotto(number: Int) {
+        
+        // AF: 200~299 를 성공(status code 가 success)
+        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
+        AF.request(url, method: .get).validate(statusCode: 200..<300).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+//                let bonuse = json["bnusNo"].intValue //int 와 intValue는 옵셔널차이
 
+                let drwNo = json["drwNo"].stringValue
+
+                
+                self.numberTextField.text = drwNo+"회" //날짜를 텍스트필드에 보여줄게
+                
+                var cnt = 1
+                for num in self.lottoNoLabel{
+                    num.textAlignment = .center
+                    self.colorBackGround(target: num)
+                    guard num != self.lottoNoLabel[self.lottoNoLabel.count-1] else {
+                        num.text = json["bnusNo"].stringValue
+                        return
+                    }
+                    num.text = json["drwtNo\(cnt)"].stringValue
+                    cnt+=1
+                }
+   
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+    }
+}
 extension LottoViewController : UIPickerViewDelegate,UIPickerViewDataSource{
     
     //MARK: 피커 세로 선택 개수
@@ -59,7 +101,8 @@ extension LottoViewController : UIPickerViewDelegate,UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 //        print("componet:",component,"row",row)
 //        numberTextField.text = "\(row+1)회차"
-        numberTextField.text = "\(numberList[row])회차"
+        requestLotto(number: numberList[row])
+//        numberTextField.text = "\(numberList[row])회차"
     }
 
     //MARK: 피커안의내용(제목)
@@ -67,4 +110,11 @@ extension LottoViewController : UIPickerViewDelegate,UIPickerViewDataSource{
 //        return "\(row+1)번쨰 임" // 피커에 보이는 글자
         return "\(numberList[row])회차 임"
     }
+    func colorBackGround(target: UILabel){
+        let r : CGFloat = CGFloat.random(in: 0...1)
+        let g : CGFloat = CGFloat.random(in: 0...1)
+        let b : CGFloat = CGFloat.random(in: 0...1)
+        target.backgroundColor = UIColor(red : r,green: g,blue: b,alpha: 1)
+    }
+   
 }

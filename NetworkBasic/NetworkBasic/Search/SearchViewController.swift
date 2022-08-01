@@ -38,7 +38,7 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
         searchtableView.dataSource = self
         // 테이블뷰 사용할 테이블뷰 셀(XIB)등록
         //xib: xml interface builder (예전엔 NIB이라불림)
-        searchtableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
+        searchtableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
 
     }
     // UIviewController에 있는게 아니잖아 그래서 override하면 오류남
@@ -47,7 +47,7 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier, for: indexPath) as? ListTableViewCell else{return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell else{return UITableViewCell()}
         cell.backgroundColor = .clear
         cell.titleLabel.font = .boldSystemFont(ofSize: 22)
         cell.titleLabel.text = "hello"

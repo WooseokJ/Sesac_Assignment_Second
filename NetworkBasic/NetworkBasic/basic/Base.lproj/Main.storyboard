@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Blw-vx-64J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KuW-B5-guQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -202,6 +202,13 @@
                     </view>
                     <connections>
                         <outlet property="numberTextField" destination="8UQ-b2-3V1" id="zs5-OM-QaL"/>
+                        <outletCollection property="lottoNoLabel" destination="lpJ-LU-bTV" collectionClass="NSMutableArray" id="RDz-xW-6By"/>
+                        <outletCollection property="lottoNoLabel" destination="oo7-nn-kGz" collectionClass="NSMutableArray" id="fQP-qN-8Zo"/>
+                        <outletCollection property="lottoNoLabel" destination="gR6-et-xz0" collectionClass="NSMutableArray" id="nyn-0w-pAx"/>
+                        <outletCollection property="lottoNoLabel" destination="6r5-ER-dus" collectionClass="NSMutableArray" id="6pg-SW-LoR"/>
+                        <outletCollection property="lottoNoLabel" destination="oyr-4H-ViB" collectionClass="NSMutableArray" id="Nt7-OC-MYb"/>
+                        <outletCollection property="lottoNoLabel" destination="Fu7-Ca-3qp" collectionClass="NSMutableArray" id="oio-kT-sk9"/>
+                        <outletCollection property="lottoNoLabel" destination="CN2-vl-SSh" collectionClass="NSMutableArray" id="7ry-ET-gmU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5j-IB-AT0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
