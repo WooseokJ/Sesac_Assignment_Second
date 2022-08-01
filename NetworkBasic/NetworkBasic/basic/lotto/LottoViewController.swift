@@ -111,9 +111,9 @@ extension LottoViewController : UIPickerViewDelegate,UIPickerViewDataSource{
         return "\(numberList[row])회차 임"
     }
     func colorBackGround(target: UILabel){
-        let r : CGFloat = CGFloat.random(in: 0...1)
-        let g : CGFloat = CGFloat.random(in: 0...1)
-        let b : CGFloat = CGFloat.random(in: 0...1)
+        let r : CGFloat = CGFloat.random(in: 0.5...1)
+        let g : CGFloat = CGFloat.random(in: 0.5...1)
+        let b : CGFloat = CGFloat.random(in: 0.5...1)
         target.backgroundColor = UIColor(red : r,green: g,blue: b,alpha: 1)
     }
    
