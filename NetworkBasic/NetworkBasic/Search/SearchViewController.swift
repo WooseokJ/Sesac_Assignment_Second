@@ -32,6 +32,18 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
     
     //boxoffice 담을 배열
     var list: [BoxOfficeModel] = []
+    var inputDate : String {
+        get{
+            let date = Date(timeInterval: -(60*24*60), since: Date())
+            print(date)
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyyMMdd"
+            let yesterday = formatter.string(from: date)
+            return yesterday
+                    
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //연결고리 작업 : 테이블뷰가 해야할 역할 > 뷰컨트롤러에게 요청
@@ -40,8 +52,10 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
         // 테이블뷰 사용할 테이블뷰 셀(XIB)등록
         //xib: xml interface builder (예전엔 NIB이라불림)
         searchtableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
-        requestBoxOffice(text: "20220801")
+        
+        requestBoxOffice(text: inputDate)
         searchBar.delegate = self
+        
     }
     
     func configureView() {

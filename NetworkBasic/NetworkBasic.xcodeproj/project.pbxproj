@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E124190828990A4E00FEED65 /* BeerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E124190728990A4E00FEED65 /* BeerTableViewController.swift */; };
+		E124190A28990DCC00FEED65 /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E124190928990DCC00FEED65 /* BeerTableViewCell.swift */; };
 		E13979AD2898BD340036CD72 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13979AC2898BD340036CD72 /* BoxOfficeModel.swift */; };
 		E13B9AC028920CCF00D6001A /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13B9ABF28920CCF00D6001A /* ViewPresentableProtocol.swift */; };
 		E13B9AC22892238300D6001A /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13B9AC12892238300D6001A /* LottoViewController.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E124190728990A4E00FEED65 /* BeerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewController.swift; sourceTree = "<group>"; };
+		E124190928990DCC00FEED65 /* BeerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
 		E13979AC2898BD340036CD72 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		E13B9ABF28920CCF00D6001A /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
 		E13B9AC12892238300D6001A /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 		E165962428979D3700418C6D /* Beer */ = {
 			isa = PBXGroup;
 			children = (
+				E124190728990A4E00FEED65 /* BeerTableViewController.swift */,
+				E124190928990DCC00FEED65 /* BeerTableViewCell.swift */,
 				E16596252897A95400418C6D /* BeerViewController.swift */,
 			);
 			path = Beer;
@@ -291,6 +297,8 @@
 				E1C0C8C2289757C400873CDE /* Cosntant.swift in Sources */,
 				E13B9AC42892306400D6001A /* TranslateViewController.swift in Sources */,
 				E1C0C8C02897528300873CDE /* ReusebleViewProtocol.swift in Sources */,
+				E124190828990A4E00FEED65 /* BeerTableViewController.swift in Sources */,
+				E124190A28990DCC00FEED65 /* BeerTableViewCell.swift in Sources */,
 				E13B9AC028920CCF00D6001A /* ViewPresentableProtocol.swift in Sources */,
 				E1485D3B2890EA6600BE8A71 /* ListTableViewCell.swift in Sources */,
 			);

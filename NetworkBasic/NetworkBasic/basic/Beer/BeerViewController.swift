@@ -12,19 +12,29 @@ import SwiftyJSON
 import Kingfisher
 
 class BeerViewController: UIViewController {
-
+    
+    
     @IBOutlet weak var randomButton: UIButton!
-    @IBOutlet weak var beerNameLabel: UILabel!
+ 
+    @IBOutlet weak var liskButton: UIButton!
+    
+    @IBOutlet weak var beerLabel: UILabel!
     @IBOutlet weak var beerTextView: UITextView!
     @IBOutlet weak var beerImageView: UIImageView!
-    
+    var beername : [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemYellow
         randomButton.setTitle("랜덤뽑기", for: .normal)
+        liskButton.setTitle("뽑은이력", for: .normal)
         randomBeerTake()
 
     }
+//    override func viewWillAppear(_ animated: Bool) {
+//        showBeer()
+//    }
+    
+
     func randomBeerTake() {
         let url = "https://api.punkapi.com/v2/beers/random"
         AF.request(url, method: .get).validate().responseJSON { [self] response in
@@ -32,9 +42,9 @@ class BeerViewController: UIViewController {
             case .success(let value):
                 let json = JSON(value)  // 받아온 데이터를 JSON으로 변환하여 json 변수에 저장
                 print("JSON: \(json)")
-                //맥주 이름
-                beerNameLabel.text = json[0]["name"].stringValue
+                beerLabel.text = json[0]["name"].stringValue
                 
+                beername.append(json[0]["name"].stringValue)
                 //맥주 설명
                 beerTextView.text = json[0]["description"].stringValue
                 
@@ -47,11 +57,22 @@ class BeerViewController: UIViewController {
             }
         }
     }
+    
+    
 
     @IBAction func randomButtonClicked(_ sender: UIButton) {
         randomBeerTake()
     }
+    @IBAction func listButtonClicked(_ sender: UIButton) {
+
+        if let mainviewController = self.storyboard?.instantiateViewController(withIdentifier: BeerTableViewController.reuseIdentifier) as? BeerTableViewController {
+            mainviewController.modalPresentationStyle = .fullScreen
+            mainviewController.beerList = beername
+            present(mainviewController, animated: true, completion: nil)
+        }
+    }
 }
+
 
 
 

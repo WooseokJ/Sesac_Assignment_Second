@@ -9,9 +9,6 @@ import UIKit
 
 class ViewController: UIViewController ,ViewPresentableProtocol {
     
-    
-
-    
 //    let standard = UserDefalutHelper() // 이거 매번해주기 귀찮다. 그래서 이거만든 클래스에서 static으로 선언
     
     override func viewDidLoad() {

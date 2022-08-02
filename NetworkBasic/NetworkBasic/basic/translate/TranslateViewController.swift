@@ -47,11 +47,11 @@ class TranslateViewController: UIViewController {
                 print("JSON: \(json)")
                 transTextView.text = json["message"]["result"]["translatedText"].stringValue
                 
-                let statusCode = response.response?.statusCode ?? 500
-                guard  statusCode == 200 else{ // 
-                    userTextview.text = json["errorMessage"].stringValue
-                    return
-                }
+//                let statusCode = response.response?.statusCode ?? 500
+//                guard  statusCode == 200 else{ // 
+//                    userTextview.text = json["errorMessage"].stringValue
+//                    return
+//                }
                 
             case .failure(let error):
                 print(error)
