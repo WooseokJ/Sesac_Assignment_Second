@@ -17,49 +17,32 @@ class LottoViewController: UIViewController {
 //    @IBOutlet weak var lottoPickerView: UIPickerView!
   
     var lottoPickerView = UIPickerView()
-    
     @IBOutlet weak var numberTextField: UITextField!
-    
     let numberList : [Int] = Array(1...1025).reversed() // 역순정렬
    
-    
     @IBOutlet var lottoNoLabel: [UILabel]!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        numberTextField.textContentType = .oneTimeCode //이건 인증번호로 자동완성띄우기
-        
-        
         numberTextField.tintColor = .clear // 커서깜빡이는거 없어짐
         numberTextField.inputView = lottoPickerView // 텍스트필드 클릭시 키보드가 올라오지않음.(피커뷰 올라옴)   , 텍스트필드,뷰에만있음(키보드대신해서사용)
-        
-        
+
         lottoPickerView.delegate = self
         lottoPickerView.dataSource = self
         requestLotto(number: 1025)
-      
     }
-    
-  
-    
     func requestLotto(number: Int) {
-        
         // AF: 200~299 를 성공(status code 가 success)
-        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
-        
+        let url = "\(EndPoint.lottoURL)&drwNo=\(number)"
         AF.request(url, method: .get).validate(statusCode: 200..<300).responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
 //                let bonuse = json["bnusNo"].intValue //int 와 intValue는 옵셔널차이
-                
                 let drwNo = json["drwNo"].stringValue
-                
-                
                 self.numberTextField.text = drwNo+"회" //날짜를 텍스트필드에 보여줄게
-                
                 var cnt = 1
                 for num in self.lottoNoLabel{
                     num.textAlignment = .center
@@ -71,7 +54,6 @@ class LottoViewController: UIViewController {
                     num.text = json["drwtNo\(cnt)"].stringValue
                     cnt+=1
                 }
-   
             case .failure(let error):
                 print(error)
             }

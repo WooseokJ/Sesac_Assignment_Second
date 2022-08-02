@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E13979AD2898BD340036CD72 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13979AC2898BD340036CD72 /* BoxOfficeModel.swift */; };
 		E13B9AC028920CCF00D6001A /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13B9ABF28920CCF00D6001A /* ViewPresentableProtocol.swift */; };
 		E13B9AC22892238300D6001A /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13B9AC12892238300D6001A /* LottoViewController.swift */; };
 		E13B9AC42892306400D6001A /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13B9AC32892306400D6001A /* TranslateViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E13979AC2898BD340036CD72 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		E13B9ABF28920CCF00D6001A /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
 		E13B9AC12892238300D6001A /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		E13B9AC32892306400D6001A /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		E1485D312890E49C00BE8A71 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				E13979AC2898BD340036CD72 /* BoxOfficeModel.swift */,
 				E1485D2D2890E1F400BE8A71 /* SearchViewController.swift */,
 				E1485D392890EA6600BE8A71 /* ListTableViewCell.swift */,
 				E1485D3A2890EA6600BE8A71 /* ListTableViewCell.xib */,
@@ -278,6 +281,7 @@
 				E1485D1E2890DD7900BE8A71 /* ViewController.swift in Sources */,
 				E13B9AC728923AA600D6001A /* WebViewController.swift in Sources */,
 				E16596262897A95400418C6D /* BeerViewController.swift in Sources */,
+				E13979AD2898BD340036CD72 /* BoxOfficeModel.swift in Sources */,
 				E1485D1A2890DD7900BE8A71 /* AppDelegate.swift in Sources */,
 				E1485D2E2890E1F400BE8A71 /* SearchViewController.swift in Sources */,
 				E13B9AC22892238300D6001A /* LottoViewController.swift in Sources */,

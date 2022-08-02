@@ -55,16 +55,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "68B4982B-6A9B-441F-A442-9D788A131394"
-            shouldBeEnabled = "Yes"
+            uuid = "DF1A5C7B-61C5-41AF-8C78-2847109309A8"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NetworkBasic/basic/lotto/LottoViewController.swift"
+            filePath = "NetworkBasic/basic/translate/TranslateViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "requestLotto(number:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "requestTranslateDate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5CCBB0FD-7065-463D-9808-FFBE7E34BD16"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetworkBasic/basic/translate/TranslateViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "requestTranslateDate()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
