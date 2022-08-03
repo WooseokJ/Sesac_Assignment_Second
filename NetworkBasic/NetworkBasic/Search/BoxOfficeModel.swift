@@ -11,6 +11,4 @@ struct BoxOfficeModel {
     let movieTitle: String
     let releseDate: String
     let totalCount: String
-    
-    
 }

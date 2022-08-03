@@ -54,5 +54,6 @@ struct EndPoint { //url 작성을 EndPoint라해서 url들 모음
     static let boxOfficeURL = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?"
     static let translateURL = "https://openapi.naver.com/v1/papago/n2mt"
     static let lottoURL = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber"
+    static let imageSearchURL = "https://openapi.naver.com/v1/search/image.json?"
     
 }

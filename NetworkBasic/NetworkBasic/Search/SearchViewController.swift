@@ -34,15 +34,33 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
     var list: [BoxOfficeModel] = []
     var inputDate : String {
         get{
-            let date = Date(timeInterval: -(60*24*60), since: Date())
-            print(date)
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyyMMdd"
-            let yesterday = formatter.string(from: date)
-            return yesterday
-                    
+            //내풀이
+//            let date = Date(timeInterval: -(60*24*60), since: Date())
+//            print(date)
+//            let formatter = DateFormatter()
+//            formatter.dateFormat = "yyyyMMdd"
+//            let yesterday = formatter.string(from: date)
+//            return yesterday
+            //수업
+            let format = DateFormatter()
+            format.dateFormat = "yyyyMMdd" // yyyy, YYYY 결과는같지만 차이가있음. yyyy쓰면 괜찮
+            
+            //방법1
+            let dateResult1 = Date(timeInterval: -86400, since: Date())
+            
+            //방법2
+            let yesterday = Calendar.current.date(byAdding: .day, value: -1 ,to: Date())
+            let dateResult2 = format.string(from: yesterday!)
+            return dateResult2
+            // 네트워크 통신: 서버점검등에 대한 예외처리는 항상해줘야ㅕ한다.
+            // 네트워크 느린환경에대한 테스트도 중요 : 실제기기로 테스트시 confition조절가능,
+            // 시뮬레이션도 가능하지만 추가설치필요(권장하진않음)
         }
     }
+    // 타입 어노테이션 vs 타입추론 -> 누가더빠른가?   과거엔 어노테이션이 빨랏지만 요즘엔 추론이더빠름 (하지만 큰차이없음.)
+    // what's new in swift
+    var nickname: String = "" //타입 어노테이션
+    var username = "" //타입추론
     
     override func viewDidLoad() {
         super.viewDidLoad()
