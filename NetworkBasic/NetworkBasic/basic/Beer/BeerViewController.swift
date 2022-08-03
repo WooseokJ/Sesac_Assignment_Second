@@ -42,6 +42,7 @@ class BeerViewController: UIViewController {
             case .success(let value):
                 let json = JSON(value)  // 받아온 데이터를 JSON으로 변환하여 json 변수에 저장
                 print("JSON: \(json)")
+                //맥주이름
                 beerLabel.text = json[0]["name"].stringValue
                 
                 beername.append(json[0]["name"].stringValue)
