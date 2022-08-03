@@ -30,8 +30,7 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
     var inputDate : String {
         get{
             //내풀이
-//            let date = Date(timeInterval: -(60*24*60), since: Date())
-//            print(date)
+//            let date = Date(timeInterval: -86400, since: Date())
 //            let formatter = DateFormatter()
 //            formatter.dateFormat = "yyyyMMdd"
 //            let yesterday = formatter.string(from: date)
@@ -39,11 +38,6 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
             //수업
             let format = DateFormatter()
             format.dateFormat = "yyyyMMdd" // yyyy, YYYY 결과는같지만 차이가있음. yyyy쓰면 괜찮
-            
-            //방법1
-            let dateResult1 = Date(timeInterval: -86400, since: Date())
-            
-            //방법2
             let yesterday = Calendar.current.date(byAdding: .day, value: -1 ,to: Date())
             let dateResult2 = format.string(from: yesterday!)
             return dateResult2
@@ -51,6 +45,10 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
             // 네트워크 느린환경에대한 테스트도 중요 : 실제기기로 테스트시 confition조절가능,
             // 시뮬레이션도 가능하지만 추가설치필요(권장하진않음)
         }
+        set{
+            
+        }
+        
     }
     // 타입 어노테이션 vs 타입추론 -> 누가더빠른가?   과거엔 어노테이션이 빨랏지만 요즘엔 추론이더빠름 (하지만 큰차이없음.)
     // what's new in swift
