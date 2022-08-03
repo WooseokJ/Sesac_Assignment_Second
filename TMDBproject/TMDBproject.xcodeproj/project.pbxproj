@@ -7,33 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1A303992899F6BB00924F2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A303982899F6BB00924F2B /* AppDelegate.swift */; };
-		E1A3039B2899F6BB00924F2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3039A2899F6BB00924F2B /* SceneDelegate.swift */; };
-		E1A3039D2899F6BB00924F2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3039C2899F6BB00924F2B /* ViewController.swift */; };
-		E1A303A02899F6BB00924F2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A3039E2899F6BB00924F2B /* Main.storyboard */; };
-		E1A303A22899F6BD00924F2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A303A12899F6BD00924F2B /* Assets.xcassets */; };
-		E1A303A52899F6BD00924F2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A303A32899F6BD00924F2B /* LaunchScreen.storyboard */; };
-		E1A303AD2899F7BE00924F2B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E1A303AC2899F7BE00924F2B /* .gitignore */; };
-		E1A303AF2899F83400924F2B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A303AE2899F83400924F2B /* SearchViewController.swift */; };
-		E1A303B12899F89600924F2B /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A303B02899F89600924F2B /* APIKey.swift */; };
+		E1AFDEC12899F98900D10A39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AFDEC02899F98900D10A39 /* AppDelegate.swift */; };
+		E1AFDEC32899F98900D10A39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AFDEC22899F98900D10A39 /* SceneDelegate.swift */; };
+		E1AFDEC52899F98900D10A39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AFDEC42899F98900D10A39 /* ViewController.swift */; };
+		E1AFDEC82899F98900D10A39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1AFDEC62899F98900D10A39 /* Main.storyboard */; };
+		E1AFDECA2899F98A00D10A39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AFDEC92899F98A00D10A39 /* Assets.xcassets */; };
+		E1AFDECD2899F98A00D10A39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1AFDECB2899F98A00D10A39 /* LaunchScreen.storyboard */; };
+		E1AFDED52899F9B100D10A39 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E1AFDED42899F9B100D10A39 /* .gitignore */; };
+		E1AFDED72899F9CF00D10A39 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AFDED62899F9CF00D10A39 /* APIKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E1A303952899F6BB00924F2B /* TMDBproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDBproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1A303982899F6BB00924F2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1A3039A2899F6BB00924F2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E1A3039C2899F6BB00924F2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E1A3039F2899F6BB00924F2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E1A303A12899F6BD00924F2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E1A303A42899F6BD00924F2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E1A303A62899F6BD00924F2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1A303AC2899F7BE00924F2B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = TMDBproject/.gitignore; sourceTree = "<group>"; };
-		E1A303AE2899F83400924F2B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = SOURCE_ROOT; };
-		E1A303B02899F89600924F2B /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = SOURCE_ROOT; };
+		E1AFDEBD2899F98900D10A39 /* TMDBproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDBproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1AFDEC02899F98900D10A39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E1AFDEC22899F98900D10A39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E1AFDEC42899F98900D10A39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1AFDEC72899F98900D10A39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E1AFDEC92899F98A00D10A39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1AFDECC2899F98A00D10A39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E1AFDECE2899F98A00D10A39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1AFDED42899F9B100D10A39 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E1AFDED62899F9CF00D10A39 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E1A303922899F6BB00924F2B /* Frameworks */ = {
+		E1AFDEBA2899F98900D10A39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,35 +41,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E1A3038C2899F6BB00924F2B = {
+		E1AFDEB42899F98900D10A39 = {
 			isa = PBXGroup;
 			children = (
-				E1A303AC2899F7BE00924F2B /* .gitignore */,
-				E1A303972899F6BB00924F2B /* TMDBproject */,
-				E1A303962899F6BB00924F2B /* Products */,
+				E1AFDED42899F9B100D10A39 /* .gitignore */,
+				E1AFDEBF2899F98900D10A39 /* TMDBproject */,
+				E1AFDEBE2899F98900D10A39 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E1A303962899F6BB00924F2B /* Products */ = {
+		E1AFDEBE2899F98900D10A39 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E1A303952899F6BB00924F2B /* TMDBproject.app */,
+				E1AFDEBD2899F98900D10A39 /* TMDBproject.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E1A303972899F6BB00924F2B /* TMDBproject */ = {
+		E1AFDEBF2899F98900D10A39 /* TMDBproject */ = {
 			isa = PBXGroup;
 			children = (
-				E1A303B02899F89600924F2B /* APIKey.swift */,
-				E1A303AE2899F83400924F2B /* SearchViewController.swift */,
-				E1A303982899F6BB00924F2B /* AppDelegate.swift */,
-				E1A3039A2899F6BB00924F2B /* SceneDelegate.swift */,
-				E1A3039C2899F6BB00924F2B /* ViewController.swift */,
-				E1A3039E2899F6BB00924F2B /* Main.storyboard */,
-				E1A303A12899F6BD00924F2B /* Assets.xcassets */,
-				E1A303A32899F6BD00924F2B /* LaunchScreen.storyboard */,
-				E1A303A62899F6BD00924F2B /* Info.plist */,
+				E1AFDED62899F9CF00D10A39 /* APIKey.swift */,
+				E1AFDEC02899F98900D10A39 /* AppDelegate.swift */,
+				E1AFDEC22899F98900D10A39 /* SceneDelegate.swift */,
+				E1AFDEC42899F98900D10A39 /* ViewController.swift */,
+				E1AFDEC62899F98900D10A39 /* Main.storyboard */,
+				E1AFDEC92899F98A00D10A39 /* Assets.xcassets */,
+				E1AFDECB2899F98A00D10A39 /* LaunchScreen.storyboard */,
+				E1AFDECE2899F98A00D10A39 /* Info.plist */,
 			);
 			path = TMDBproject;
 			sourceTree = "<group>";
@@ -79,13 +76,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E1A303942899F6BB00924F2B /* TMDBproject */ = {
+		E1AFDEBC2899F98900D10A39 /* TMDBproject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1A303A92899F6BD00924F2B /* Build configuration list for PBXNativeTarget "TMDBproject" */;
+			buildConfigurationList = E1AFDED12899F98A00D10A39 /* Build configuration list for PBXNativeTarget "TMDBproject" */;
 			buildPhases = (
-				E1A303912899F6BB00924F2B /* Sources */,
-				E1A303922899F6BB00924F2B /* Frameworks */,
-				E1A303932899F6BB00924F2B /* Resources */,
+				E1AFDEB92899F98900D10A39 /* Sources */,
+				E1AFDEBA2899F98900D10A39 /* Frameworks */,
+				E1AFDEBB2899F98900D10A39 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -93,25 +90,25 @@
 			);
 			name = TMDBproject;
 			productName = TMDBproject;
-			productReference = E1A303952899F6BB00924F2B /* TMDBproject.app */;
+			productReference = E1AFDEBD2899F98900D10A39 /* TMDBproject.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E1A3038D2899F6BB00924F2B /* Project object */ = {
+		E1AFDEB52899F98900D10A39 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					E1A303942899F6BB00924F2B = {
+					E1AFDEBC2899F98900D10A39 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
-			buildConfigurationList = E1A303902899F6BB00924F2B /* Build configuration list for PBXProject "TMDBproject" */;
+			buildConfigurationList = E1AFDEB82899F98900D10A39 /* Build configuration list for PBXProject "TMDBproject" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,58 +116,57 @@
 				en,
 				Base,
 			);
-			mainGroup = E1A3038C2899F6BB00924F2B;
-			productRefGroup = E1A303962899F6BB00924F2B /* Products */;
+			mainGroup = E1AFDEB42899F98900D10A39;
+			productRefGroup = E1AFDEBE2899F98900D10A39 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E1A303942899F6BB00924F2B /* TMDBproject */,
+				E1AFDEBC2899F98900D10A39 /* TMDBproject */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E1A303932899F6BB00924F2B /* Resources */ = {
+		E1AFDEBB2899F98900D10A39 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A303AD2899F7BE00924F2B /* .gitignore in Resources */,
-				E1A303A52899F6BD00924F2B /* LaunchScreen.storyboard in Resources */,
-				E1A303A22899F6BD00924F2B /* Assets.xcassets in Resources */,
-				E1A303A02899F6BB00924F2B /* Main.storyboard in Resources */,
+				E1AFDED52899F9B100D10A39 /* .gitignore in Resources */,
+				E1AFDECD2899F98A00D10A39 /* LaunchScreen.storyboard in Resources */,
+				E1AFDECA2899F98A00D10A39 /* Assets.xcassets in Resources */,
+				E1AFDEC82899F98900D10A39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E1A303912899F6BB00924F2B /* Sources */ = {
+		E1AFDEB92899F98900D10A39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A3039D2899F6BB00924F2B /* ViewController.swift in Sources */,
-				E1A303992899F6BB00924F2B /* AppDelegate.swift in Sources */,
-				E1A303AF2899F83400924F2B /* SearchViewController.swift in Sources */,
-				E1A3039B2899F6BB00924F2B /* SceneDelegate.swift in Sources */,
-				E1A303B12899F89600924F2B /* APIKey.swift in Sources */,
+				E1AFDEC52899F98900D10A39 /* ViewController.swift in Sources */,
+				E1AFDEC12899F98900D10A39 /* AppDelegate.swift in Sources */,
+				E1AFDED72899F9CF00D10A39 /* APIKey.swift in Sources */,
+				E1AFDEC32899F98900D10A39 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E1A3039E2899F6BB00924F2B /* Main.storyboard */ = {
+		E1AFDEC62899F98900D10A39 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E1A3039F2899F6BB00924F2B /* Base */,
+				E1AFDEC72899F98900D10A39 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		E1A303A32899F6BD00924F2B /* LaunchScreen.storyboard */ = {
+		E1AFDECB2899F98A00D10A39 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E1A303A42899F6BD00924F2B /* Base */,
+				E1AFDECC2899F98A00D10A39 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -178,7 +174,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E1A303A72899F6BD00924F2B /* Debug */ = {
+		E1AFDECF2899F98A00D10A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -238,7 +234,7 @@
 			};
 			name = Debug;
 		};
-		E1A303A82899F6BD00924F2B /* Release */ = {
+		E1AFDED02899F98A00D10A39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -292,7 +288,7 @@
 			};
 			name = Release;
 		};
-		E1A303AA2899F6BD00924F2B /* Debug */ = {
+		E1AFDED22899F98A00D10A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -316,11 +312,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		E1A303AB2899F6BD00924F2B /* Release */ = {
+		E1AFDED32899F98A00D10A39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -344,32 +340,32 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E1A303902899F6BB00924F2B /* Build configuration list for PBXProject "TMDBproject" */ = {
+		E1AFDEB82899F98900D10A39 /* Build configuration list for PBXProject "TMDBproject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1A303A72899F6BD00924F2B /* Debug */,
-				E1A303A82899F6BD00924F2B /* Release */,
+				E1AFDECF2899F98A00D10A39 /* Debug */,
+				E1AFDED02899F98A00D10A39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1A303A92899F6BD00924F2B /* Build configuration list for PBXNativeTarget "TMDBproject" */ = {
+		E1AFDED12899F98A00D10A39 /* Build configuration list for PBXNativeTarget "TMDBproject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1A303AA2899F6BD00924F2B /* Debug */,
-				E1A303AB2899F6BD00924F2B /* Release */,
+				E1AFDED22899F98A00D10A39 /* Debug */,
+				E1AFDED32899F98A00D10A39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E1A3038D2899F6BB00924F2B /* Project object */;
+	rootObject = E1AFDEB52899F98900D10A39 /* Project object */;
 }
