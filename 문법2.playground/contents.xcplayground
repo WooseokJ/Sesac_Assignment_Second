@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
-        <page name='환율계산기'/>
         <page name='Untitled Page'/>
+        <page name='환율계산기'/>
+        <page name='일급객체,클로저'/>
     </pages>
 </playground>
