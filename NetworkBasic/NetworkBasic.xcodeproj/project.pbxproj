@@ -25,6 +25,7 @@
 		E1485D3C2890EA6600BE8A71 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1485D3A2890EA6600BE8A71 /* ListTableViewCell.xib */; };
 		E16596262897A95400418C6D /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16596252897A95400418C6D /* BeerViewController.swift */; };
 		E16596292897ABB400418C6D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E16596282897ABB400418C6D /* Kingfisher */; };
+		E167A009289A4EA200260785 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167A008289A4EA200260785 /* ImageCollectionViewCell.swift */; };
 		E199C6D028935D4800A4B91E /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E199C6CF28935D4800A4B91E /* LocationViewController.swift */; };
 		E1AFDF28289A096A00D10A39 /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AFDF27289A096A00D10A39 /* ImageSearchViewController.swift */; };
 		E1C0C8C02897528300873CDE /* ReusebleViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0C8BF2897528300873CDE /* ReusebleViewProtocol.swift */; };
@@ -54,6 +55,7 @@
 		E1485D392890EA6600BE8A71 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		E1485D3A2890EA6600BE8A71 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		E16596252897A95400418C6D /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
+		E167A008289A4EA200260785 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		E17E1C1C2892B9E00093690A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E199C6CF28935D4800A4B91E /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		E199C6D5289388D700A4B91E /* BinggraeSamanco-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeSamanco-Bold.otf"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				E1485D2D2890E1F400BE8A71 /* SearchViewController.swift */,
 				E1485D392890EA6600BE8A71 /* ListTableViewCell.swift */,
 				E1AFDF27289A096A00D10A39 /* ImageSearchViewController.swift */,
+				E167A008289A4EA200260785 /* ImageCollectionViewCell.swift */,
 				E1485D3A2890EA6600BE8A71 /* ListTableViewCell.xib */,
 			);
 			path = Search;
@@ -305,6 +308,7 @@
 				E124190A28990DCC00FEED65 /* BeerTableViewCell.swift in Sources */,
 				E13B9AC028920CCF00D6001A /* ViewPresentableProtocol.swift in Sources */,
 				E1485D3B2890EA6600BE8A71 /* ListTableViewCell.swift in Sources */,
+				E167A009289A4EA200260785 /* ImageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

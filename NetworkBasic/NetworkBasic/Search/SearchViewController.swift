@@ -17,11 +17,6 @@ import SwiftyJSON
 /*
  
  */
-extension UIViewController{
-    func BackgroundColor(){
-        view.backgroundColor = .red
-    }
-}
 
 class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
@@ -76,12 +71,6 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
         
     }
     
-    func configureView() {
-        
-    }
-    func configureLabel() {
-        
-    }
     func requestBoxOffice(text: String) {
         list.removeAll()
         //인증키 제한
@@ -136,4 +125,10 @@ extension SearchViewController: UISearchBarDelegate {
         guard let searchText = searchBar.text else {return}
         requestBoxOffice(text: searchText)
     }
+}
+
+extension UIViewController{
+   func BackgroundColor(){
+       view.backgroundColor = .red
+   }
 }

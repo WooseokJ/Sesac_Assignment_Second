@@ -22,8 +22,6 @@ class LottoViewController: UIViewController {
     let formatter = DateFormatter()
     var recentNum : String {
         get{
-            
-            
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
 //            formatter.locale  = Locale(identifier: "ko_KR")
@@ -36,14 +34,12 @@ class LottoViewController: UIViewController {
             let startDate = formatter.date(from: "2002-12-07 12:00:00") ?? Date()
 //            let converDate = formatter.string(from: startDate!)
 //            print(converDate)
-            
 //            let endDate = formatter.string(from: Date())
 //            print(endDate)
             let endDate = Date()
-         
             let day = Int(endDate.timeIntervalSince(startDate) / 86400) //(최근날짜-시작날짜)의총sec / 하루 총sec
 //            print(day)
-            return String(7)
+            return String((day/7)+1 )
         }
     }
 //    let numberList : [Int] = Array(1...1025).reversed() // 역순정렬
@@ -55,7 +51,6 @@ class LottoViewController: UIViewController {
 //        numberTextField.textContentType = .oneTimeCode //이건 인증번호로 자동완성띄우기
         numberTextField.tintColor = .clear // 커서깜빡이는거 없어짐
         numberTextField.inputView = lottoPickerView // 텍스트필드 클릭시 키보드가 올라오지않음.(피커뷰 올라옴)   , 텍스트필드,뷰에만있음(키보드대신해서사용)
-
         lottoPickerView.delegate = self
         lottoPickerView.dataSource = self
         
