@@ -508,7 +508,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DKd-cJ-brx">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="801"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LdC-Pf-Uf5">
                                     <size key="itemSize" width="128" height="128"/>
@@ -541,18 +541,26 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="NfW-8Z-FaP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lYI-zm-15t"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DKd-cJ-brx" firstAttribute="trailing" secondItem="lYI-zm-15t" secondAttribute="trailing" id="4td-AW-C8j"/>
-                            <constraint firstItem="DKd-cJ-brx" firstAttribute="top" secondItem="Z29-s3-cJk" secondAttribute="top" id="P43-mC-FSj"/>
+                            <constraint firstItem="NfW-8Z-FaP" firstAttribute="top" secondItem="lYI-zm-15t" secondAttribute="top" id="6AO-Rs-Awh"/>
+                            <constraint firstItem="NfW-8Z-FaP" firstAttribute="trailing" secondItem="lYI-zm-15t" secondAttribute="trailing" id="8pX-Px-ain"/>
+                            <constraint firstItem="DKd-cJ-brx" firstAttribute="top" secondItem="NfW-8Z-FaP" secondAttribute="bottom" id="PZH-5P-fgM"/>
                             <constraint firstItem="DKd-cJ-brx" firstAttribute="leading" secondItem="lYI-zm-15t" secondAttribute="leading" id="ldh-Nh-Edr"/>
+                            <constraint firstItem="NfW-8Z-FaP" firstAttribute="leading" secondItem="lYI-zm-15t" secondAttribute="leading" id="s1P-5c-T6g"/>
                             <constraint firstAttribute="bottom" secondItem="DKd-cJ-brx" secondAttribute="bottom" id="zOJ-Nw-crf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="DKd-cJ-brx" id="c15-vT-VEi"/>
+                        <outlet property="searchBar" destination="NfW-8Z-FaP" id="NWG-zz-QSj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlS-Fq-8tN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
