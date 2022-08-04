@@ -9,7 +9,8 @@ var greeting = "Hello, playground"
 // 스위프트 특성 1.객체지향,2.함수형프로그래밍,3.프로토콜지향
 // 1급객체 특성
 1. var,let에 함수를 대입할수있다.
-2. 함수의 인자값
+2. 함수의 인자값 함수를 사용할수있다
+3.함수의 반환 타입으로 함수사용가능
 
 
 */
@@ -53,18 +54,77 @@ func hello(nickname: String) -> String {
     return "저는\(nickname)이에요 nickname"
 }
 
+
+// 2.함수의 반환 타입으로 함수사용가능
+func currentAccount() -> String {
+    return "계좌잇음"
+}
+
+func noCurrentAccount() -> String {
+    return "계좌없음"
+}
+currentAccount // ()->String
+
+// 가장 왼쪽에 위치한 -> 를 기준으로 오른쪽에 놓인 모든타입을 반환값을 의미한다.
+
+func checkBank(bank: String) -> () -> String {
+    let bankArray = ["우리","신한","국민"]
+    return bankArray.contains(bank) ? currentAccount : noCurrentAccount // 함수를 호출하는것은 아니고 함수를 던져줌
+}
+
+let result = checkBank(bank: "농협")
+result() // 계좌없음
+
+
+
+
+
+// 2-1 Calculate
+
+func plus(a:Int,b:Int) -> Int{
+    return a+b
+}
+func mius(a:Int,b:Int) -> Int{
+    return a-b
+}
+func multiply(a:Int,b:Int) -> Int{
+    return a*b
+}
+func divide(a:Int,b:Int) -> Int{
+    return a/b
+}
+func calculate(operand: String) -> (Int, Int) -> Int {
+    switch operand{
+    case "+" : return plus
+    case "-" : return mius
+    case "*" : return multiply
+    case "/" : return divide
+    default: return plus
+    }
+}
+let resultCalc = calculate(operand: "+") // 함수 실행상태아님 (Int, Int) -> Int
+resultCalc(4,5) //9
+
 //2번 특성
 func oddNum() {
     print("홀")
 }
-func evenNum() {
+func evenNum() { // ()->()
     print("짝")
 }
+evenNum // ()->()
 func resultNum(num:Int, odd:() -> (), even: ()-> () ) { //odd,even은 함수타입
     return num.isMultiple(of: 2) ? even() : odd()
 }
+
 //메개변수로 함수전달
+resultNum(num: 9, odd: {print("홀수")}, even: {print("짝수")})
+
 resultNum(num: 9, odd: oddNum, even: evenNum)
 
+resultNum(num: 9){
+} even: {
+    
+}
 
 //: [Next](@next)
