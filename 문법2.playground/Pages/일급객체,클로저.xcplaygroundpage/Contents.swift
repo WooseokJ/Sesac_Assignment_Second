@@ -7,6 +7,7 @@ var greeting = "Hello, playground"
 //1급 객체(함수의확장) , 클로저
 
 // 스위프트 특성 1.객체지향,2.함수형프로그래밍,3.프로토콜지향
+ 
 // 1급객체 특성
 1. var,let에 함수를 대입할수있다.
 2. 함수의 인자값 함수를 사용할수있다
@@ -127,4 +128,124 @@ resultNum(num: 9){
     
 }
 
+
+//MARK: 클로저는 이름없는함수
+// () -> ()      in 기준으로      클로저해더()->()   in   클로저바디(print)
+let studyios = { () -> () in
+    print("주말에도 공부하기")
+}
+studyios // ()->()           printt실행 안됨. 함수만 정의한거
+studyios() // print실행   ()는 함수실행(호출)
+
+func getStudyWithMe(study: ()->() ) {
+    study()
+}
+//코드를 생략하지않고 클로저 구문씀, 함수 매개변수내에 클로저가 그대로 들어간형태   -> 인라인 클로저
+getStudyWithMe(study: { () -> () in //getStudyWithMe(study: studyios) 와 동일 (
+    print("주말에도 공부하기")
+})
+
+//MARK:
+
+
+func randomNum(result : (Int) -> String) {
+//    result() //오류 input에 int값 필요
+    result(Int.random(in: 1...10))
+}
+
+//넷다 동일( 클로저 표현식)
+randomNum(result: { (number: Int) -> String in
+    return "행운의숫자는 \(number)"
+})
+
+randomNum(result: { ( number )in
+    return "행운의숫자는 \(number)"
+})
+// 매개변수 생략되면 할당된 내부상수 $0, $1, $2...를 사용할수있다.
+randomNum(result: {
+    "행운의숫자는 \($0)"
+})
+randomNum() { //이거 를 가장많이사용   함수안에 함수를 정의햇구나로 생각해도됨.
+    "행운의숫자는 \($0)"
+}
+
+// 시간측정
+func processTime(code: () -> () ) {
+    let start = CFAbsoluteTimeGetCurrent() //2001년기준으로 double 타입으로 나옴
+    code()
+    let end = CFAbsoluteTimeGetCurrent() - start
+    print(end)
+}
+
+
+//MARK: 고차함수 filter map reduce
+let student = [2.2, 4.4, 3.3, 1.1, 4.2,4.2 ,1.3 ,4.4 ,4.5 ,3.4 ,2.3]
+//processTime {
+//    var newStudent : [Double] = []
+//    for s in student {
+//        if s >= 4.0 {
+//            newStudent.append(s)
+//
+//        }
+//    }
+//    print(newStudent)
+//}
+//4.0 이상학생 필터
+let filterStudent = student.filter{ value in
+    value >= 4.0
+}
+let filterStudent2 = student.filter{ $0 >= 4.0} //이게 더 성능빨라
+//processTime {
+//    print(filterStudent2)
+//}
+
+// map: 기존 요소를 원하는 클로저 통해 원하는 결과값으로 변경
+let num = [Int](1...100) // [1,2,3...100]
+
+let mapnum = num.map{$0 * 3}
+mapnum //[3,6,9...300]
+let movie = [
+    "a":"A",
+    "b":"B",
+    "c":"C",
+    "d":"A"
+]
+
+let movieResult = movie.filter {$0.value == "A"}
+print(movieResult) //["a":"A","d":"A"]
+let movieResult2 = movie.filter {$0.value == "A"}.map { $0.key}
+print(movieResult2) // ["a","d"]
+
+let examScore : [Double] = [1,2,3,4,5]
+
+let totalCountUsingReduce = examScore.reduce(10){// 배열에 10 더하기
+    return $0 + $1 // 10더한 배열값 모두다 더하기
+    
+}
+print(totalCountUsingReduce)
+
+
+//클로저 사용 문제점
+func game(item: Int) -> String {
+    func luckNum(num: Int) -> String {
+        return "\(num * Int.random(in: 1...10))"
+    }
+    let result = luckNum(num: item)
+    return result
+}
+
+game(item: 10) // 외부함수의 생명주기가 끝난다.
+
+// 내부함수 반환하는 외부함수만들수있음. (일반적으론 외부함수에서 내부함수를 쓸수밖에없음)
+
+func game2(item: Int)-> ()->String {
+    func luckNum2()->String {
+        return "\(item * Int.random(in: 1...10))"
+    }
+    return luckNum2
+}
+game2(item: 30)() // 외부함수는 생명주기 끝났지만 내부함수는 사용가능
+
+
 //: [Next](@next)
+

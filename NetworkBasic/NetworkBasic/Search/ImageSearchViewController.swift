@@ -56,7 +56,6 @@ class ImageSearchViewController: UIViewController, UICollectionViewDelegate, UIC
         collectionView.collectionViewLayout = layout
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageArray.count
     }
