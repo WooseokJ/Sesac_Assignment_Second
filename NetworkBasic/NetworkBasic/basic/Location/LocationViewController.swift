@@ -3,13 +3,9 @@ import UIKit
 
 class LocationViewController: UIViewController {
 //    static var reuseIdentifier: String = String(describing: LocationViewController.self) //LocationViewController.self(메타타입) => "LocationViewController"
-
-
-
+    @IBOutlet weak var CenterimaveView: UIImageView!
     //MARK: notification 1.
     let notificationCenter = UNUserNotificationCenter.current() // 알람할떄 선행되야됨.
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         requestAuthorization()
@@ -60,7 +56,7 @@ class LocationViewController: UIViewController {
      
     */
     
-    
+    //MARK:
     func sendNotification(){
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = "다마고치 키워보세요"
@@ -75,22 +71,30 @@ class LocationViewController: UIViewController {
 //
 //        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: true)
         
-        
         // 알림요청
-        
         // 만약 알림관리할 필요 x - > 알림 클릭하면 앱을켜주는정도
         // 만약 알림 관리할필요 o -> +1해주거나,고유이름 등
         // identifier: 알림이 스택으로쌓일지 아닐지 정함
         // 12개 >
         let request = UNNotificationRequest(identifier: "\(Date())", content: notificationContent, trigger: trigger) //identifier: "\(Date())"
         notificationCenter.add(request) //등록시 시간,날짜 계속체크 앱이꺼져도
-        
-        
-        
     }
-    
-    
 
+    @IBAction func downloadImage(_ sender: UIButton) {
+        let url = "https://apod.nasa.gov/apod/image/2208/M13_final2_sinfirma.jpg"
+//        print("11111",Thread.isMainThread)
+        DispatchQueue.global().async { // 동시 여러작업 가능하게 해줘! (이미지다운받을동안 다른기능가능하게가능), 클로저 구문
+//            print("2222",Thread.isMainThread)
+            let data = try! Data(contentsOf: URL(string: url)!) // Data는 0101로 바꿔주는거
+            let image = UIImage(data: data)
+//            self.CenterimaveView.image = image
+            DispatchQueue.main.async {
+//                print("33333",Thread.isMainThread)
+                self.CenterimaveView.image = image
+            }
+            
+        }
+    }
     
     
     
