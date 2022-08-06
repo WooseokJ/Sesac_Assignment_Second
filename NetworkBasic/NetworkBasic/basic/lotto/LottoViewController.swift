@@ -24,19 +24,21 @@ class LottoViewController: UIViewController {
         get{
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-//            formatter.locale  = Locale(identifier: "ko_KR")
+            formatter.locale  = Locale(identifier: "ko_KR")
 //            formatter.timeZone = TimeZone(abbreviation: "KST")
 //            let localeID = Locale.preferredLanguages.first
 //            let deviceLocale = Locale(identifier: localeID ?? "ko-kr").languageCode
 //            formatter.locale = Locale(identifier: deviceLocale ?? "ko-kr")
-//            formatter.timeZone = TimeZone.current
+            formatter.timeZone = TimeZone.current
             
             let startDate = formatter.date(from: "2002-12-07 12:00:00") ?? Date()
+            print(startDate)
 //            let converDate = formatter.string(from: startDate!)
 //            print(converDate)
 //            let endDate = formatter.string(from: Date())
 //            print(endDate)
             let endDate = Date()
+            print(endDate)
             let day = Int(endDate.timeIntervalSince(startDate) / 86400) //(최근날짜-시작날짜)의총sec / 하루 총sec
 //            print(day)
             return String((day/7)+1 )

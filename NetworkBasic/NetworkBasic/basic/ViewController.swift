@@ -33,12 +33,6 @@ class ViewController: UIViewController ,ViewPresentableProtocol {
     }
     */
     var backgroundColor: UIColor = .blue // 저장프로퍼티로사용
-
-        
-            
-        
-    
-    
     func configureView() {
         navigationTitleString = "고래밥님 다마고치" //set사용
         backgroundColor = .red // get밖에안햇지만(읽기전용) 값변경가능

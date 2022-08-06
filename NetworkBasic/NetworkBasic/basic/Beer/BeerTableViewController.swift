@@ -36,7 +36,6 @@ class BeerTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BeerTableViewCell.reuseIdentifier,for: indexPath) as! BeerTableViewCell
-        
         cell.beerNameLabel.text = beerList[indexPath.row]
         cell.beerNameLabel.textAlignment = .center
         cell.beerNameLabel.textColor = .blue
@@ -58,8 +57,7 @@ class BeerTableViewController: UITableViewController {
     
     //밑에꺼 안되는건 row영역을 클릭이 안되므로
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        UserDefaults.standard.set(beerList[indexPath.row],forKey:"takename") 
-       
+        UserDefaults.standard.set(beerList[indexPath.row],forKey:"takename")
         dismiss(animated: true)
     }
     

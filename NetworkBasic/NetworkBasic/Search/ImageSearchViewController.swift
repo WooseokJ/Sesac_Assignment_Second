@@ -29,9 +29,7 @@ class ImageSearchViewController: UIViewController, UICollectionViewDelegate, UIC
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
-            
         }
-        
     }
     //MARK: 레이아웃잡기
     func layoutSetting() {
@@ -91,6 +89,7 @@ extension ImageSearchViewController: UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         //indexPaths는 배열, 0부터 시작
         for index in indexPaths{
+            print(imageArray.count)
             if (imageArray.count - 1 == index.item) && (imageArray.count < totalCount){
                 startpage += 30
                 fetchImage(query: searchBar.text!)
