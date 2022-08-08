@@ -17,6 +17,10 @@
 		E137140328A0905700A6F5C4 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = E137140228A0905700A6F5C4 /* SwiftyJSON */; };
 		E137140628A0906200A6F5C4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E137140528A0906200A6F5C4 /* Kingfisher */; };
 		E137140828A0911600A6F5C4 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137140728A0911600A6F5C4 /* APIKey.swift */; };
+		E137140B28A0949B00A6F5C4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137140A28A0949B00A6F5C4 /* Endpoint.swift */; };
+		E137140D28A0952600A6F5C4 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137140C28A0952600A6F5C4 /* URL+Extension.swift */; };
+		E137140F28A0A79200A6F5C4 /* KakaoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137140E28A0A79200A6F5C4 /* KakaoAPIManager.swift */; };
+		E137141128A0ABF700A6F5C4 /* CloserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137141028A0ABF700A6F5C4 /* CloserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		E13713F628A08FEA00A6F5C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E13713F828A08FEA00A6F5C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E137140728A0911600A6F5C4 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		E137140A28A0949B00A6F5C4 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		E137140C28A0952600A6F5C4 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		E137140E28A0A79200A6F5C4 /* KakaoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIManager.swift; sourceTree = "<group>"; };
+		E137141028A0ABF700A6F5C4 /* CloserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +76,24 @@
 				E13713EA28A08FE800A6F5C4 /* AppDelegate.swift */,
 				E13713EC28A08FE800A6F5C4 /* SceneDelegate.swift */,
 				E13713EE28A08FE800A6F5C4 /* ViewController.swift */,
+				E137140928A0948700A6F5C4 /* Network */,
 				E13713F028A08FE900A6F5C4 /* Main.storyboard */,
+				E137141028A0ABF700A6F5C4 /* CloserViewController.swift */,
 				E13713F328A08FEA00A6F5C4 /* Assets.xcassets */,
 				E13713F528A08FEA00A6F5C4 /* LaunchScreen.storyboard */,
 				E13713F828A08FEA00A6F5C4 /* Info.plist */,
 			);
 			path = week6;
+			sourceTree = "<group>";
+		};
+		E137140928A0948700A6F5C4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E137140A28A0949B00A6F5C4 /* Endpoint.swift */,
+				E137140E28A0A79200A6F5C4 /* KakaoAPIManager.swift */,
+				E137140C28A0952600A6F5C4 /* URL+Extension.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +181,10 @@
 				E13713EB28A08FE800A6F5C4 /* AppDelegate.swift in Sources */,
 				E137140828A0911600A6F5C4 /* APIKey.swift in Sources */,
 				E13713ED28A08FE800A6F5C4 /* SceneDelegate.swift in Sources */,
+				E137141128A0ABF700A6F5C4 /* CloserViewController.swift in Sources */,
+				E137140F28A0A79200A6F5C4 /* KakaoAPIManager.swift in Sources */,
+				E137140B28A0949B00A6F5C4 /* Endpoint.swift in Sources */,
+				E137140D28A0952600A6F5C4 /* URL+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
