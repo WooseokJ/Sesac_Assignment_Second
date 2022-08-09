@@ -21,10 +21,6 @@ import SwiftyJSON //가져온 json파일을 이용,활용
  - 조건 tableview height 설정
 -  조건 레이아웃 잘잡기
 
-
-
-
-
  */
 
 

@@ -48,8 +48,6 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
     var username = "" //타입추론
     
     override func viewDidLoad() {
-
-        
         super.viewDidLoad()
         //연결고리 작업 : 테이블뷰가 해야할 역할 > 뷰컨트롤러에게 요청
         searchtableView.delegate = self
@@ -60,15 +58,11 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
         requestBoxOffice(text: inputDate)
         searchBar.delegate = self
     }
-    
-    
-    
+
     func requestBoxOffice(text: String) {
-        
         hud.textLabel.text = "Loading"
         hud.show(in: view)
         list.removeAll()
-        
         //인증키 제한
         let url = "\(EndPoint.boxOfficeURL)key=\(APIKey.BOXOFICE)&targetDt=\(text)"
         //경고창 제거방법 두가지 1. alamofire+ codable, 2. alamofire + response(json,data,string)를알맞은걸로바꾸기
@@ -82,8 +76,7 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
                 //                //배열 리스트 추가
                 //                ls.append(movieNm1)
                 //                ls.append(movieNm2)
-
-             
+                
                 for item in json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue { //arrayValue하면 그 값의 배열원소 하나하나가 item이 된다.
 //                    print(item)
                     let movieNm = item["movieNm"].stringValue
@@ -101,14 +94,12 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
                 print(error)
             }
         }
-        
     }
     
     // UIviewController에 있는게 아니잖아 그래서 override하면 오류남
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
     }
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell else{return UITableViewCell()}
         cell.backgroundColor = .clear

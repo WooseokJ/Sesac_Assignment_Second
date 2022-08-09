@@ -20,7 +20,6 @@ class ImageSearchViewController: UIViewController, UICollectionViewDelegate, UIC
         layoutSetting()
     }
     
-    
     // fetchImage, requestImage, getImage, callRequestImage ...etc response에 따라 네이밍설명해주기도함.
     func fetchImage(query: String) {
         ImageSearchAPIManager.shared.fetchImageData(query: query, startpage: startpage) { totalCount, imageArray in
@@ -47,8 +46,6 @@ class ImageSearchViewController: UIViewController, UICollectionViewDelegate, UIC
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageArray.count
     }
-    
- 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as! ImageCollectionViewCell
@@ -87,18 +84,18 @@ class ImageSearchViewController: UIViewController, UICollectionViewDelegate, UIC
 extension ImageSearchViewController: UICollectionViewDataSourcePrefetching {
     // 셀이 화면에 보이기 직전에 필요한 리소스를 미리 다운받는기능
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        //indexPaths는 배열, 0부터 시작
+        // indexPaths는 배열, 0부터 시작
         for index in indexPaths{
             print(imageArray.count)
+            
             if (imageArray.count - 1 == index.item) && (imageArray.count < totalCount){
                 startpage += 30
                 fetchImage(query: searchBar.text!)
             }
         }
-        
         print("==========\(indexPaths)")
     }
-    //취소(엄청빠르게 사용자가 스크롤할떄)
+    // 취소(엄청빠르게 사용자가 스크롤할떄)
     func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
         print("취소취소취소취소\(indexPaths)")
     }
@@ -107,7 +104,7 @@ extension ImageSearchViewController: UICollectionViewDataSourcePrefetching {
 
 
 extension ImageSearchViewController : UISearchBarDelegate {
-    //검색 버튼 클릭시 실행
+    // 검색 버튼 클릭시 실행
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text {
             imageArray.removeAll()

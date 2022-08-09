@@ -21,6 +21,13 @@
 		E137140D28A0952600A6F5C4 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137140C28A0952600A6F5C4 /* URL+Extension.swift */; };
 		E137140F28A0A79200A6F5C4 /* KakaoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137140E28A0A79200A6F5C4 /* KakaoAPIManager.swift */; };
 		E137141128A0ABF700A6F5C4 /* CloserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137141028A0ABF700A6F5C4 /* CloserViewController.swift */; };
+		E1B4DF1028A1E03500739392 /* SeSacButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4DF0F28A1E03500739392 /* SeSacButton.swift */; };
+		E1B4DF1228A1E60D00739392 /* cardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B4DF1128A1E60D00739392 /* cardView.xib */; };
+		E1B4DF1428A1E62C00739392 /* cardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4DF1328A1E62C00739392 /* cardView.swift */; };
+		E1B4DF1628A1F38100739392 /* cardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4DF1528A1F38100739392 /* cardCollectionViewCell.swift */; };
+		E1B4DF1828A1F3AC00739392 /* cardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B4DF1728A1F3AC00739392 /* cardCollectionViewCell.xib */; };
+		E1B4DF1C28A1F63A00739392 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4DF1B28A1F63A00739392 /* MainViewController.swift */; };
+		E1B4DF1E28A1FC2400739392 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4DF1D28A1FC2400739392 /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,13 @@
 		E137140C28A0952600A6F5C4 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		E137140E28A0A79200A6F5C4 /* KakaoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIManager.swift; sourceTree = "<group>"; };
 		E137141028A0ABF700A6F5C4 /* CloserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloserViewController.swift; sourceTree = "<group>"; };
+		E1B4DF0F28A1E03500739392 /* SeSacButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSacButton.swift; sourceTree = "<group>"; };
+		E1B4DF1128A1E60D00739392 /* cardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cardView.xib; sourceTree = "<group>"; };
+		E1B4DF1328A1E62C00739392 /* cardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardView.swift; sourceTree = "<group>"; };
+		E1B4DF1528A1F38100739392 /* cardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = cardCollectionViewCell.swift; path = week6/View/cardCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		E1B4DF1728A1F3AC00739392 /* cardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cardCollectionViewCell.xib; sourceTree = "<group>"; };
+		E1B4DF1B28A1F63A00739392 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E1B4DF1D28A1FC2400739392 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,16 +86,12 @@
 		E13713E928A08FE800A6F5C4 /* week6 */ = {
 			isa = PBXGroup;
 			children = (
-				E137140728A0911600A6F5C4 /* APIKey.swift */,
-				E13713EA28A08FE800A6F5C4 /* AppDelegate.swift */,
-				E13713EC28A08FE800A6F5C4 /* SceneDelegate.swift */,
-				E13713EE28A08FE800A6F5C4 /* ViewController.swift */,
-				E137140928A0948700A6F5C4 /* Network */,
-				E13713F028A08FE900A6F5C4 /* Main.storyboard */,
-				E137141028A0ABF700A6F5C4 /* CloserViewController.swift */,
-				E13713F328A08FEA00A6F5C4 /* Assets.xcassets */,
-				E13713F528A08FEA00A6F5C4 /* LaunchScreen.storyboard */,
 				E13713F828A08FEA00A6F5C4 /* Info.plist */,
+				E137140728A0911600A6F5C4 /* APIKey.swift */,
+				E137140928A0948700A6F5C4 /* Network */,
+				E1B4DF0D28A1DFE200739392 /* Main */,
+				E1B4DF0E28A1DFF800739392 /* View */,
+				E137141028A0ABF700A6F5C4 /* CloserViewController.swift */,
 			);
 			path = week6;
 			sourceTree = "<group>";
@@ -94,6 +104,33 @@
 				E137140C28A0952600A6F5C4 /* URL+Extension.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E1B4DF0D28A1DFE200739392 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E13713EE28A08FE800A6F5C4 /* ViewController.swift */,
+				E13713EA28A08FE800A6F5C4 /* AppDelegate.swift */,
+				E13713EC28A08FE800A6F5C4 /* SceneDelegate.swift */,
+				E13713F328A08FEA00A6F5C4 /* Assets.xcassets */,
+				E13713F528A08FEA00A6F5C4 /* LaunchScreen.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E1B4DF0E28A1DFF800739392 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1B4DF1B28A1F63A00739392 /* MainViewController.swift */,
+				E1B4DF1D28A1FC2400739392 /* MainTableViewCell.swift */,
+				E1B4DF1528A1F38100739392 /* cardCollectionViewCell.swift */,
+				E1B4DF1728A1F3AC00739392 /* cardCollectionViewCell.xib */,
+				E1B4DF1128A1E60D00739392 /* cardView.xib */,
+				E1B4DF1328A1E62C00739392 /* cardView.swift */,
+				E13713F028A08FE900A6F5C4 /* Main.storyboard */,
+				E1B4DF0F28A1E03500739392 /* SeSacButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +203,8 @@
 			files = (
 				E13713F728A08FEA00A6F5C4 /* LaunchScreen.storyboard in Resources */,
 				E13713F428A08FEA00A6F5C4 /* Assets.xcassets in Resources */,
+				E1B4DF1828A1F3AC00739392 /* cardCollectionViewCell.xib in Resources */,
+				E1B4DF1228A1E60D00739392 /* cardView.xib in Resources */,
 				E13713F228A08FE900A6F5C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,12 +216,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B4DF1E28A1FC2400739392 /* MainTableViewCell.swift in Sources */,
 				E13713EF28A08FE800A6F5C4 /* ViewController.swift in Sources */,
 				E13713EB28A08FE800A6F5C4 /* AppDelegate.swift in Sources */,
+				E1B4DF1628A1F38100739392 /* cardCollectionViewCell.swift in Sources */,
+				E1B4DF1C28A1F63A00739392 /* MainViewController.swift in Sources */,
 				E137140828A0911600A6F5C4 /* APIKey.swift in Sources */,
 				E13713ED28A08FE800A6F5C4 /* SceneDelegate.swift in Sources */,
+				E1B4DF1428A1E62C00739392 /* cardView.swift in Sources */,
 				E137141128A0ABF700A6F5C4 /* CloserViewController.swift in Sources */,
 				E137140F28A0A79200A6F5C4 /* KakaoAPIManager.swift in Sources */,
+				E1B4DF1028A1E03500739392 /* SeSacButton.swift in Sources */,
 				E137140B28A0949B00A6F5C4 /* Endpoint.swift in Sources */,
 				E137140D28A0952600A6F5C4 /* URL+Extension.swift in Sources */,
 			);

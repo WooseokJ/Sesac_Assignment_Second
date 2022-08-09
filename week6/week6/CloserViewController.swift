@@ -1,16 +1,16 @@
-//
-//  CloserViewController.swift
-//  week6
-//
-//  Created by useok on 2022/08/08.
-//
-
 import UIKit
 
 class CloserViewController: UIViewController {
 
+    @IBOutlet weak var cardView: cardView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        cardView.posterImageVIew.backgroundColor = .lightGray
+        cardView.likeButton.backgroundColor = .red
+        cardView.likeButton.addTarget(self, action: #selector(likeButtonClicked), for: .touchUpInside)
+    }
+    @objc func likeButtonClicked() {
+        print("버튼클릭")
     }
 
     @IBAction func colorPickerButtonClicked(_ sender: UIButton) {
