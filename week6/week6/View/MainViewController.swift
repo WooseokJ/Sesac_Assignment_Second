@@ -68,7 +68,6 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCollectionViewCell", for: indexPath) as? cardCollectionViewCell else{return UICollectionViewCell()}
-//
         let cellcolor = (collectionView == bannerCollectionView) ? color[indexPath.item] : (collectionView.tag.isMultiple(of: 2) ? .yellow: .green)
         cell.cardView.cardLabel.text = "\(numberList[collectionView.tag][indexPath.item])"
         cell.cardView.posterImageVIew.backgroundColor = cellcolor

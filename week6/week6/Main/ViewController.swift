@@ -141,7 +141,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "kakaoCell", for: indexPath) as? kakaoCell else{
             return UITableViewCell()
-            
         }
         cell.testLabel.numberOfLines = isExpaneded ? 0 : 2
         cell.testLabel.text = indexPath.section == 0 ? bloglist[indexPath.row] : cafelist[indexPath.row]
