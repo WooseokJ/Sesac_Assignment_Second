@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gnq-ox-kL3">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="2Oo-or-KAz" customClass="CloserViewController" customModule="week6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uMx-bi-fg3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZ5-cP-3d6" customClass="SeSacButton" customModule="week6" customModuleProvider="target">
-                                <rect key="frame" x="50" y="144" width="314" height="60"/>
+                                <rect key="frame" x="50" y="100" width="275" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Tky-vv-B5T"/>
                                 </constraints>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctd-TG-yxc">
-                                <rect key="frame" x="50" y="224" width="314" height="60"/>
+                                <rect key="frame" x="50" y="180" width="275" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="M6N-qI-6ku"/>
                                 </constraints>
@@ -48,7 +48,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k65-Nc-WOT" customClass="cardView" customModule="week6" customModuleProvider="target">
-                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Y5K-M6-td5"/>
@@ -77,6 +77,11 @@
                                     <action selector="colorPickerButtonClicked:" destination="2Oo-or-KAz" eventType="touchUpInside" id="noN-qK-eHV"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gvJ-yW-CBw">
+                                <rect key="frame" x="70" y="482" width="234" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z48-go-pdZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -96,36 +101,37 @@
                     </view>
                     <connections>
                         <outlet property="cardView" destination="k65-Nc-WOT" id="tsy-qU-d8t"/>
+                        <outlet property="purpleView" destination="gvJ-yW-CBw" id="QQQ-Qg-Lb5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8F-tF-DVW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816" y="33"/>
+            <point key="canvasLocation" x="815.20000000000005" y="32.833583208395808"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AxP-zu-3ic">
             <objects>
                 <tableViewController id="rEh-xK-WIY" customClass="ViewController" customModule="week6" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2v7-ap-nAd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="kakaoCell" rowHeight="212" id="3vL-BM-Tqw" customClass="kakaoCell" customModule="week6" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="212"/>
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="212"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3vL-BM-Tqw" id="e1E-bj-6v7">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="212"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pH2-VQ-Sg9">
-                                            <rect key="frame" x="116" y="19" width="262" height="174"/>
+                                            <rect key="frame" x="112" y="19" width="231" height="174"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hx5-xI-zxm">
-                                            <rect key="frame" x="31" y="67" width="69" height="68"/>
+                                            <rect key="frame" x="27" y="67" width="69" height="68"/>
                                             <color key="backgroundColor" red="1" green="0.79249245199999996" blue="0.49559089890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="69" id="xhB-KB-C3b"/>
@@ -174,11 +180,11 @@
             <objects>
                 <viewController id="gnq-ox-kL3" customClass="MainViewController" customModule="week6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xB1-Ww-0HL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gGJ-AK-g6h">
-                                <rect key="frame" x="0.0" y="44" width="414" height="179"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HrE-Ae-8Qy">
                                     <size key="itemSize" width="120" height="126"/>
@@ -199,18 +205,18 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gJs-8w-6M0">
-                                <rect key="frame" x="0.0" y="223" width="414" height="639"/>
+                                <rect key="frame" x="0.0" y="133.5" width="375" height="533.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" rowHeight="168" id="Wan-no-WGy" customClass="MainTableViewCell" customModule="week6" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="168"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="375" height="168"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wan-no-WGy" id="nMl-Qr-Cvh">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="168"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6XD-cr-rsa">
-                                                    <rect key="frame" x="36" y="27" width="342" height="28"/>
+                                                    <rect key="frame" x="32" y="27" width="311" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="RxG-4b-bhr"/>
                                                     </constraints>
@@ -219,7 +225,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tHF-9m-PPo">
-                                                    <rect key="frame" x="20" y="63" width="374" height="102"/>
+                                                    <rect key="frame" x="16" y="63" width="343" height="102"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uPX-gy-xLO">
                                                         <size key="itemSize" width="122" height="69"/>
@@ -278,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bpt-h9-R0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3268.115942028986" y="40.178571428571423"/>
+            <point key="canvasLocation" x="3386" y="33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WSL-xh-33g">
@@ -286,7 +292,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QKY-qC-2LG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DUr-kE-iMB">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -310,6 +316,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -33,6 +33,11 @@ class cardView: UIView {
         view.backgroundColor = .black
         self.addSubview(view)
         
+        // 카드뷰를 인터페이스 빌더 기반으로 만들고 레이아웃도 설정햇는데 false가 아닌 true로 나온다.
+        // 위부분에서 코드로 addSubView를 추가햇으므로 false -> true로 변경된거
+        // true는 오토레이아웃적용되는 관점보다 오토리사이지잉 내부적으로 constraints 처리가됨.
+//        print(view.translatesAutoresizingMaskIntoConstraints)
+        
     }
 //    override init(frame: CGRect) {
 //        <#code#>

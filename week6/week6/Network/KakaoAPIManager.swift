@@ -11,7 +11,7 @@ class KakaoAPIManager {
     let header : HTTPHeaders = ["Authorization" : "KakaoAK \(APIKey.kakao)"]
     
     func callRequest(query: String,type: EndPoint, completionHandler: @escaping(JSON) -> () ) { //json파일 인풋
-        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}   // 글자가 들어올떄 인코딩 
         // EndPoint.blog.requestURL: ~blog?query=
         let url = type.requestURL + query // EndPoint.(blog,cafe).requestURL + query
         
@@ -19,7 +19,7 @@ class KakaoAPIManager {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print(#function)
+
                 print("JSON: \(json)")
                 
                 completionHandler(json)

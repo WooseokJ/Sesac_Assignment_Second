@@ -14,6 +14,13 @@ class cardCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        cardView.cardLabel.text = "A"
+        
+        
     }
     func setupUI() {
         cardView.backgroundColor = .clear

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E113C52D28A3307300F0FB8A /* ReusebleViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113C52C28A3307300F0FB8A /* ReusebleViewProtocol.swift */; };
+		E113C53028A343E500F0FB8A /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113C52F28A343E500F0FB8A /* TMDBAPIManager.swift */; };
 		E13713EB28A08FE800A6F5C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13713EA28A08FE800A6F5C4 /* AppDelegate.swift */; };
 		E13713ED28A08FE800A6F5C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13713EC28A08FE800A6F5C4 /* SceneDelegate.swift */; };
 		E13713EF28A08FE800A6F5C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13713EE28A08FE800A6F5C4 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E113C52C28A3307300F0FB8A /* ReusebleViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusebleViewProtocol.swift; sourceTree = "<group>"; };
+		E113C52F28A343E500F0FB8A /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
 		E13713E728A08FE800A6F5C4 /* week6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13713EA28A08FE800A6F5C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E13713EC28A08FE800A6F5C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E113C52E28A3307C00F0FB8A /* Protorol */ = {
+			isa = PBXGroup;
+			children = (
+				E113C52C28A3307300F0FB8A /* ReusebleViewProtocol.swift */,
+			);
+			path = Protorol;
+			sourceTree = "<group>";
+		};
 		E13713DE28A08FE800A6F5C4 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +100,7 @@
 			children = (
 				E13713F828A08FEA00A6F5C4 /* Info.plist */,
 				E137140728A0911600A6F5C4 /* APIKey.swift */,
+				E113C52E28A3307C00F0FB8A /* Protorol */,
 				E137140928A0948700A6F5C4 /* Network */,
 				E1B4DF0D28A1DFE200739392 /* Main */,
 				E1B4DF0E28A1DFF800739392 /* View */,
@@ -121,6 +134,7 @@
 		E1B4DF0E28A1DFF800739392 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E113C52F28A343E500F0FB8A /* TMDBAPIManager.swift */,
 				E1B4DF1B28A1F63A00739392 /* MainViewController.swift */,
 				E1B4DF1D28A1FC2400739392 /* MainTableViewCell.swift */,
 				E1B4DF1528A1F38100739392 /* cardCollectionViewCell.swift */,
@@ -223,11 +237,13 @@
 				E1B4DF1C28A1F63A00739392 /* MainViewController.swift in Sources */,
 				E137140828A0911600A6F5C4 /* APIKey.swift in Sources */,
 				E13713ED28A08FE800A6F5C4 /* SceneDelegate.swift in Sources */,
+				E113C52D28A3307300F0FB8A /* ReusebleViewProtocol.swift in Sources */,
 				E1B4DF1428A1E62C00739392 /* cardView.swift in Sources */,
 				E137141128A0ABF700A6F5C4 /* CloserViewController.swift in Sources */,
 				E137140F28A0A79200A6F5C4 /* KakaoAPIManager.swift in Sources */,
 				E1B4DF1028A1E03500739392 /* SeSacButton.swift in Sources */,
 				E137140B28A0949B00A6F5C4 /* Endpoint.swift in Sources */,
+				E113C53028A343E500F0FB8A /* TMDBAPIManager.swift in Sources */,
 				E137140D28A0952600A6F5C4 /* URL+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
