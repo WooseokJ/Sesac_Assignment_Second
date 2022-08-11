@@ -18,6 +18,7 @@ class cardCollectionViewCell: UICollectionViewCell {
     }
     override func prepareForReuse() {
         super.prepareForReuse()
+        print(#function)
         cardView.cardLabel.text = "A"
         
         

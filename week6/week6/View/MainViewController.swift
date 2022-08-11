@@ -52,16 +52,23 @@ class MainViewController: UIViewController {
         TMDBAPIManager.shared.requestImage { value in
             //            dump(value)
             //  네트워크 통신 ->배열생성(episodeList) -> 배열담기 -> 뷰 등에 표현(ex. 테이블뷰 섹션,컬렉션뷰 셀)
-            self.episodeList = value
-            self.mainTableView.reloadData()
+
+            DispatchQueue.main.async {
+                self.episodeList = value
+                self.mainTableView.reloadData()
+            }
         }
+        print(episodeList)
     }
+    
     
 }
 // 테이블뷰
 extension MainViewController: UITableViewDelegate,UITableViewDataSource {
+
     //  테이블뷰 색션개수
     func numberOfSections(in tableView: UITableView) -> Int {
+
         return episodeList.count
     }
     //  테이블뷰 셀개수
@@ -94,13 +101,19 @@ extension MainViewController: UITableViewDelegate,UITableViewDataSource {
 
 // 하나의 프로토콜,메서드에서 여러 컬렉션뷰 delegate,datasource구현해야함
 // 내부 매개변수(collectionview)가 아닌 명확한 아울렛변수를 사용할경우 특정 collectionView셀을 재사용할수있게 될수있음.
-extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+//UICollectionViewDelegateFlowLayout 에서 sizeforitemat을 쓰면 각각다른 높이변화를 줄수있다.
+extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    //        <#code#>
+    //    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionView == bannerCollectionView ? color.count : episodeList[collectionView.tag].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cardCollectionViewCell.reuseIdentifier, for: indexPath) as? cardCollectionViewCell else{return UICollectionViewCell()}
+        
         let cellcolor = (collectionView == bannerCollectionView) ? color[indexPath.item] : (collectionView.tag.isMultiple(of: 2) ? .yellow: .green)
         
         if collectionView == bannerCollectionView {
@@ -109,7 +122,7 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
         else{
             cell.cardView.cardLabel.text = ""
             cell.cardView.posterImageVIew.backgroundColor = cellcolor
-            
+            print(collectionView.tag)
             let url = URL(string: "\(TMDBAPIManager.shared.imageURL)\(episodeList[collectionView.tag][indexPath.item])")
             cell.cardView.posterImageVIew.kf.setImage(with: url)
             //화면과 데이터는 별개,모든 indexPath.item에대한 조건이 없다면 재사용시 오류발생할수있음.

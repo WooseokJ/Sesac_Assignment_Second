@@ -9,6 +9,7 @@ class MainTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        print(#function)
         setupUI()
 //        print("MainTableViewCell",#function)
     }

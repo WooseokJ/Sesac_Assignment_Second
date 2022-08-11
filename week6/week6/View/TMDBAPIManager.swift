@@ -18,8 +18,7 @@ class TMDBAPIManager {
         ("호텔 델루나", 90447)
     ]
     let imageURL = "https://image.tmdb.org/t/p/w500"
-//    let seasonURL = "https://api.themoviedb.org/3/tv/135157/season/1?api_key=\(APIKey.tmdb)&language=ko-KR"
-    
+
     func callRequest(query: Int, completionHandler: @escaping([String]) -> () ) { //json파일 인풋
         let url  = "https://api.themoviedb.org/3/tv/\(query)/season/1?api_key=\(APIKey.tmdb)&language=ko-KR"
         AF.request(url, method: .get).validate().responseData { response in
@@ -32,11 +31,8 @@ class TMDBAPIManager {
                 for item in json["episodes"].arrayValue {
                     stillArray.append(item["still_path"].stringValue)
                 }
-//                dump(self.tvList)
-//                dump(stillArray) 복합적인데이터출력시좋아(배열,튜플,등등)
-                print(stillArray)
+//              dump(stillArray) 복합적인데이터출력시좋아(배열,튜플,등등)
                 let value = json["episodes"].arrayValue.map{$0["still_path"].stringValue}
-                print(value)
                 completionHandler(value)
             case .failure(let error):
                 print(error)
@@ -45,12 +41,9 @@ class TMDBAPIManager {
 
     }
     
-    // 나중에 배울거! async/await(ios 13이상) 아래 문제 해결위해 나옴. 
-    
+    // 나중에 배울거! async/await(ios 13이상) 아래 문제 해결위해 나옴.     , dispatchgroup 으로 함수반복줄일수있음.
     func requestImage(completionHandler: @escaping ([[String]]) -> ()) {
-        
         var posterList: [[String]] = []
-        
         TMDBAPIManager.shared.callRequest(query: tvList[0].1) { value in
             posterList.append(value)
             

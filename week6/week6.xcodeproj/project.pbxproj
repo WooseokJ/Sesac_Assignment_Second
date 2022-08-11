@@ -30,6 +30,7 @@
 		E1B4DF1828A1F3AC00739392 /* cardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B4DF1728A1F3AC00739392 /* cardCollectionViewCell.xib */; };
 		E1B4DF1C28A1F63A00739392 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4DF1B28A1F63A00739392 /* MainViewController.swift */; };
 		E1B4DF1E28A1FC2400739392 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4DF1D28A1FC2400739392 /* MainTableViewCell.swift */; };
+		E1D541E628A493B00092228D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D541E528A493B00092228D /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		E1B4DF1728A1F3AC00739392 /* cardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cardCollectionViewCell.xib; sourceTree = "<group>"; };
 		E1B4DF1B28A1F63A00739392 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E1B4DF1D28A1FC2400739392 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		E1D541E528A493B00092228D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				E1B4DF1128A1E60D00739392 /* cardView.xib */,
 				E1B4DF1328A1E62C00739392 /* cardView.swift */,
 				E13713F028A08FE900A6F5C4 /* Main.storyboard */,
+				E1D541E528A493B00092228D /* MapViewController.swift */,
 				E1B4DF0F28A1E03500739392 /* SeSacButton.swift */,
 			);
 			path = View;
@@ -245,6 +248,7 @@
 				E137140B28A0949B00A6F5C4 /* Endpoint.swift in Sources */,
 				E113C53028A343E500F0FB8A /* TMDBAPIManager.swift in Sources */,
 				E137140D28A0952600A6F5C4 /* URL+Extension.swift in Sources */,
+				E1D541E628A493B00092228D /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +398,8 @@
 				DEVELOPMENT_TEAM = 5MHUF29PV8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = week6/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WEEK6;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "서브타이틀";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -422,6 +428,8 @@
 				DEVELOPMENT_TEAM = 5MHUF29PV8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = week6/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WEEK6;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "서브타이틀";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

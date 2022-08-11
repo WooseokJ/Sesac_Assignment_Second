@@ -121,7 +121,6 @@ class ViewController: UIViewController {
             print("cafe///////",self.cafelist)
             self.tableView.reloadData()
         }
-        
     }
     
     @IBAction func expandCell(_ sender: UIBarButtonItem) {
@@ -139,6 +138,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return section == 0 ? bloglist.count : cafelist.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(#function)
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "kakaoCell", for: indexPath) as? kakaoCell else{
             return UITableViewCell()
         }
