@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E113C52D28A3307300F0FB8A /* ReusebleViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113C52C28A3307300F0FB8A /* ReusebleViewProtocol.swift */; };
 		E113C53028A343E500F0FB8A /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113C52F28A343E500F0FB8A /* TMDBAPIManager.swift */; };
+		E135B50D28A6341400D05D8E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E135B50C28A6341400D05D8E /* .gitignore */; };
 		E13713EB28A08FE800A6F5C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13713EA28A08FE800A6F5C4 /* AppDelegate.swift */; };
 		E13713ED28A08FE800A6F5C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13713EC28A08FE800A6F5C4 /* SceneDelegate.swift */; };
 		E13713EF28A08FE800A6F5C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13713EE28A08FE800A6F5C4 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		E113C52C28A3307300F0FB8A /* ReusebleViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusebleViewProtocol.swift; sourceTree = "<group>"; };
 		E113C52F28A343E500F0FB8A /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
+		E135B50C28A6341400D05D8E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = week6/.gitignore; sourceTree = "<group>"; };
 		E13713E728A08FE800A6F5C4 /* week6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13713EA28A08FE800A6F5C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E13713EC28A08FE800A6F5C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		E13713DE28A08FE800A6F5C4 = {
 			isa = PBXGroup;
 			children = (
+				E135B50C28A6341400D05D8E /* .gitignore */,
 				E13713E928A08FE800A6F5C4 /* week6 */,
 				E13713E828A08FE800A6F5C4 /* Products */,
 			);
@@ -229,6 +232,7 @@
 				E13713F428A08FEA00A6F5C4 /* Assets.xcassets in Resources */,
 				E1B4DF1828A1F3AC00739392 /* cardCollectionViewCell.xib in Resources */,
 				E1B4DF1228A1E60D00739392 /* cardView.xib in Resources */,
+				E135B50D28A6341400D05D8E /* .gitignore in Resources */,
 				E13713F228A08FE900A6F5C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
