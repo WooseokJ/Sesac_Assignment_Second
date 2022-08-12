@@ -10,6 +10,7 @@
 		E113C52D28A3307300F0FB8A /* ReusebleViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113C52C28A3307300F0FB8A /* ReusebleViewProtocol.swift */; };
 		E113C53028A343E500F0FB8A /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113C52F28A343E500F0FB8A /* TMDBAPIManager.swift */; };
 		E135B50D28A6341400D05D8E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E135B50C28A6341400D05D8E /* .gitignore */; };
+		E135B50F28A6345900D05D8E /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135B50E28A6345900D05D8E /* test.swift */; };
 		E13713EB28A08FE800A6F5C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13713EA28A08FE800A6F5C4 /* AppDelegate.swift */; };
 		E13713ED28A08FE800A6F5C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13713EC28A08FE800A6F5C4 /* SceneDelegate.swift */; };
 		E13713EF28A08FE800A6F5C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13713EE28A08FE800A6F5C4 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 		E113C52C28A3307300F0FB8A /* ReusebleViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusebleViewProtocol.swift; sourceTree = "<group>"; };
 		E113C52F28A343E500F0FB8A /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
 		E135B50C28A6341400D05D8E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = week6/.gitignore; sourceTree = "<group>"; };
+		E135B50E28A6345900D05D8E /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = SOURCE_ROOT; };
 		E13713E728A08FE800A6F5C4 /* week6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13713EA28A08FE800A6F5C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E13713EC28A08FE800A6F5C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		E13713E928A08FE800A6F5C4 /* week6 */ = {
 			isa = PBXGroup;
 			children = (
+				E135B50E28A6345900D05D8E /* test.swift */,
 				E13713F828A08FEA00A6F5C4 /* Info.plist */,
 				E137140728A0911600A6F5C4 /* APIKey.swift */,
 				E113C52E28A3307C00F0FB8A /* Protorol */,
@@ -257,6 +260,7 @@
 				E137141128A0ABF700A6F5C4 /* CloserViewController.swift in Sources */,
 				E137140F28A0A79200A6F5C4 /* KakaoAPIManager.swift in Sources */,
 				E1B4DF1028A1E03500739392 /* SeSacButton.swift in Sources */,
+				E135B50F28A6345900D05D8E /* test.swift in Sources */,
 				E137140B28A0949B00A6F5C4 /* Endpoint.swift in Sources */,
 				E113C53028A343E500F0FB8A /* TMDBAPIManager.swift in Sources */,
 				E137140D28A0952600A6F5C4 /* URL+Extension.swift in Sources */,
