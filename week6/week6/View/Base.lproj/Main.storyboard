@@ -378,7 +378,7 @@
                                     <action selector="clovaFaceButtonClicked:" destination="wG2-fn-waH" eventType="touchUpInside" id="q7C-yY-4Ul"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuI-cW-Jly">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너와닮은 연예인이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuI-cW-Jly">
                                 <rect key="frame" x="30" y="566" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="FYV-ON-gpI"/>
