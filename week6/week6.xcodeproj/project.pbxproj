@@ -23,6 +23,8 @@
 		E137140D28A0952600A6F5C4 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137140C28A0952600A6F5C4 /* URL+Extension.swift */; };
 		E137140F28A0A79200A6F5C4 /* KakaoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137140E28A0A79200A6F5C4 /* KakaoAPIManager.swift */; };
 		E137141128A0ABF700A6F5C4 /* CloserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137141028A0ABF700A6F5C4 /* CloserViewController.swift */; };
+		E182E7E328A5D6C600AE6B10 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = E182E7E228A5D6C600AE6B10 /* YPImagePicker */; };
+		E182E7E528A5DD6200AE6B10 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E182E7E428A5DD6200AE6B10 /* CameraViewController.swift */; };
 		E1B4DF1028A1E03500739392 /* SeSacButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4DF0F28A1E03500739392 /* SeSacButton.swift */; };
 		E1B4DF1228A1E60D00739392 /* cardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B4DF1128A1E60D00739392 /* cardView.xib */; };
 		E1B4DF1428A1E62C00739392 /* cardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B4DF1328A1E62C00739392 /* cardView.swift */; };
@@ -49,6 +51,7 @@
 		E137140C28A0952600A6F5C4 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		E137140E28A0A79200A6F5C4 /* KakaoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIManager.swift; sourceTree = "<group>"; };
 		E137141028A0ABF700A6F5C4 /* CloserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloserViewController.swift; sourceTree = "<group>"; };
+		E182E7E428A5DD6200AE6B10 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		E1B4DF0F28A1E03500739392 /* SeSacButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSacButton.swift; sourceTree = "<group>"; };
 		E1B4DF1128A1E60D00739392 /* cardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cardView.xib; sourceTree = "<group>"; };
 		E1B4DF1328A1E62C00739392 /* cardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardView.swift; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 				E137140628A0906200A6F5C4 /* Kingfisher in Frameworks */,
 				E137140328A0905700A6F5C4 /* SwiftyJSON in Frameworks */,
 				E137140028A0904800A6F5C4 /* Alamofire in Frameworks */,
+				E182E7E328A5D6C600AE6B10 /* YPImagePicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +148,7 @@
 				E1B4DF1128A1E60D00739392 /* cardView.xib */,
 				E1B4DF1328A1E62C00739392 /* cardView.swift */,
 				E13713F028A08FE900A6F5C4 /* Main.storyboard */,
+				E182E7E428A5DD6200AE6B10 /* CameraViewController.swift */,
 				E1D541E528A493B00092228D /* MapViewController.swift */,
 				E1B4DF0F28A1E03500739392 /* SeSacButton.swift */,
 			);
@@ -170,6 +175,7 @@
 				E13713FF28A0904800A6F5C4 /* Alamofire */,
 				E137140228A0905700A6F5C4 /* SwiftyJSON */,
 				E137140528A0906200A6F5C4 /* Kingfisher */,
+				E182E7E228A5D6C600AE6B10 /* YPImagePicker */,
 			);
 			productName = week6;
 			productReference = E13713E728A08FE800A6F5C4 /* week6.app */;
@@ -203,6 +209,7 @@
 				E13713FE28A0904800A6F5C4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E137140128A0905700A6F5C4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				E137140428A0906200A6F5C4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				E182E7E128A5D6C600AE6B10 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 			);
 			productRefGroup = E13713E828A08FE800A6F5C4 /* Products */;
 			projectDirPath = "";
@@ -236,6 +243,7 @@
 				E1B4DF1E28A1FC2400739392 /* MainTableViewCell.swift in Sources */,
 				E13713EF28A08FE800A6F5C4 /* ViewController.swift in Sources */,
 				E13713EB28A08FE800A6F5C4 /* AppDelegate.swift in Sources */,
+				E182E7E528A5DD6200AE6B10 /* CameraViewController.swift in Sources */,
 				E1B4DF1628A1F38100739392 /* cardCollectionViewCell.swift in Sources */,
 				E1B4DF1C28A1F63A00739392 /* MainViewController.swift in Sources */,
 				E137140828A0911600A6F5C4 /* APIKey.swift in Sources */,
@@ -496,6 +504,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		E182E7E128A5D6C600AE6B10 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yummypets/YPImagePicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -513,6 +529,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E137140428A0906200A6F5C4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		E182E7E228A5D6C600AE6B10 /* YPImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E182E7E128A5D6C600AE6B10 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
+			productName = YPImagePicker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

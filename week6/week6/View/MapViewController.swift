@@ -75,7 +75,6 @@ extension MapViewController {
     // 사용자가 위치를 허용,거부햇는지,아직선택하지않앗는지등 확인(단,사전에 ios 위치서비스 활성화 꼭 확인)
     func checkUserCurrentLocationAuthorization(_ authorizationStatus: CLAuthorizationStatus) {
         switch authorizationStatus {
-        //사용자가 앨럿은 떳지만 선택하지않은상태.
         case .notDetermined :
             print("notDetermined")
             locationManager.desiredAccuracy = kCLLocationAccuracyBest

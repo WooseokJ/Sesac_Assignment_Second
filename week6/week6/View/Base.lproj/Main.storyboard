@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dLZ-zJ-ysq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wG2-fn-waH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -314,6 +314,114 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elc-l9-wP9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4218" y="33"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="zb0-VB-O1j">
+            <objects>
+                <viewController id="wG2-fn-waH" customClass="CameraViewController" customModule="week6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lKk-ff-Mgt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vas-Z4-5Dx">
+                                <rect key="frame" x="20" y="64" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kg0-KA-Jqf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="openapicamera"/>
+                                <connections>
+                                    <action selector="YPImagePickerButtonClicked:" destination="wG2-fn-waH" eventType="touchUpInside" id="tNc-Zm-u57"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzw-LL-ydH">
+                                <rect key="frame" x="20" y="134" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lPz-gu-WL5"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="general camera"/>
+                                <connections>
+                                    <action selector="cameraButtonClicked:" destination="wG2-fn-waH" eventType="touchUpInside" id="e2Y-zo-TwC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bf-Tz-Dom" userLabel="갤러리보기">
+                                <rect key="frame" x="20" y="204" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aM2-hr-GQM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="갤러리보기"/>
+                                <connections>
+                                    <action selector="photoLibraryButtonClicked:" destination="wG2-fn-waH" eventType="touchUpInside" id="7Tt-pG-FAn"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="taa-7R-Gkw">
+                                <rect key="frame" x="20" y="264" width="374" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="T2t-qH-QRZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7y-zy-NsY" userLabel="저장">
+                                <rect key="frame" x="40" y="444" width="334" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="저장"/>
+                                <connections>
+                                    <action selector="saveToPhotoLibaray:" destination="wG2-fn-waH" eventType="touchUpInside" id="6w4-sZ-pRZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8e-Jl-a2f">
+                                <rect key="frame" x="30" y="505" width="354" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="나닮은꼴"/>
+                                <connections>
+                                    <action selector="clovaFaceButtonClicked:" destination="wG2-fn-waH" eventType="touchUpInside" id="q7C-yY-4Ul"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuI-cW-Jly">
+                                <rect key="frame" x="30" y="566" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FYV-ON-gpI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Z7-5y-j3s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="taa-7R-Gkw" firstAttribute="leading" secondItem="4Z7-5y-j3s" secondAttribute="leading" constant="20" id="1wk-z4-q01"/>
+                            <constraint firstItem="M8e-Jl-a2f" firstAttribute="top" secondItem="O7y-zy-NsY" secondAttribute="bottom" constant="30" id="6OR-8o-eOH"/>
+                            <constraint firstItem="vas-Z4-5Dx" firstAttribute="leading" secondItem="4Z7-5y-j3s" secondAttribute="leading" constant="20" id="7Q7-ng-BbT"/>
+                            <constraint firstItem="8bf-Tz-Dom" firstAttribute="leading" secondItem="4Z7-5y-j3s" secondAttribute="leading" constant="20" id="Bmb-T2-UPt"/>
+                            <constraint firstItem="O7y-zy-NsY" firstAttribute="leading" secondItem="4Z7-5y-j3s" secondAttribute="leading" constant="40" id="CXK-fG-g76"/>
+                            <constraint firstItem="jzw-LL-ydH" firstAttribute="top" secondItem="vas-Z4-5Dx" secondAttribute="bottom" constant="20" id="GPe-iP-0Sg"/>
+                            <constraint firstItem="4Z7-5y-j3s" firstAttribute="trailing" secondItem="8bf-Tz-Dom" secondAttribute="trailing" constant="20" id="Hpu-Qg-RMD"/>
+                            <constraint firstItem="8bf-Tz-Dom" firstAttribute="top" secondItem="jzw-LL-ydH" secondAttribute="bottom" constant="20" id="Pnd-HO-Hbq"/>
+                            <constraint firstItem="vas-Z4-5Dx" firstAttribute="top" secondItem="4Z7-5y-j3s" secondAttribute="top" constant="20" id="X2m-qw-cNV"/>
+                            <constraint firstItem="4Z7-5y-j3s" firstAttribute="trailing" secondItem="taa-7R-Gkw" secondAttribute="trailing" constant="20" id="Zih-y3-3FJ"/>
+                            <constraint firstItem="4Z7-5y-j3s" firstAttribute="trailing" secondItem="M8e-Jl-a2f" secondAttribute="trailing" constant="30" id="aT5-Cn-gAZ"/>
+                            <constraint firstItem="4Z7-5y-j3s" firstAttribute="trailing" secondItem="O7y-zy-NsY" secondAttribute="trailing" constant="40" id="bkD-1X-FfZ"/>
+                            <constraint firstItem="4Z7-5y-j3s" firstAttribute="trailing" secondItem="xuI-cW-Jly" secondAttribute="trailing" constant="30" id="gen-iZ-IX8"/>
+                            <constraint firstItem="xuI-cW-Jly" firstAttribute="top" secondItem="M8e-Jl-a2f" secondAttribute="bottom" constant="30" id="iba-Hm-V2y"/>
+                            <constraint firstItem="xuI-cW-Jly" firstAttribute="leading" secondItem="4Z7-5y-j3s" secondAttribute="leading" constant="30" id="moH-37-4Ez"/>
+                            <constraint firstItem="4Z7-5y-j3s" firstAttribute="trailing" secondItem="jzw-LL-ydH" secondAttribute="trailing" constant="20" id="nOm-sp-7nr"/>
+                            <constraint firstItem="4Z7-5y-j3s" firstAttribute="trailing" secondItem="vas-Z4-5Dx" secondAttribute="trailing" constant="20" id="px9-Qt-mEK"/>
+                            <constraint firstItem="jzw-LL-ydH" firstAttribute="leading" secondItem="4Z7-5y-j3s" secondAttribute="leading" constant="20" id="tJw-vU-Ggz"/>
+                            <constraint firstItem="O7y-zy-NsY" firstAttribute="top" secondItem="taa-7R-Gkw" secondAttribute="bottom" constant="30" id="vms-sd-Zmm"/>
+                            <constraint firstItem="M8e-Jl-a2f" firstAttribute="leading" secondItem="4Z7-5y-j3s" secondAttribute="leading" constant="30" id="xN3-aC-rXq"/>
+                            <constraint firstItem="taa-7R-Gkw" firstAttribute="top" secondItem="8bf-Tz-Dom" secondAttribute="bottom" constant="10" id="xwm-Hf-eyV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="xuI-cW-Jly" id="z8m-EK-tsh"/>
+                        <outlet property="resultImageView" destination="taa-7R-Gkw" id="7RD-yX-uC1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbG-pG-rKD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5007.2463768115949" y="32.8125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WSL-xh-33g">
