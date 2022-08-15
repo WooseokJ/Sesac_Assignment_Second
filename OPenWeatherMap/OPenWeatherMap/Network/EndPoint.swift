@@ -8,5 +8,6 @@
 import Foundation
 
 struct EndPoint {
-    static var weatherURL = "https://api.openweathermap.org/data/2.5/weather?"
+    static var weatherURL = "http://api.openweathermap.org/data/2.5/weather?"
+    static var imageURL = "http://openweathermap.org/img/wn/"
 }
