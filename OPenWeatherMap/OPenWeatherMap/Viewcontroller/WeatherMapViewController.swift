@@ -154,18 +154,9 @@ extension WeatherMapViewController: CLLocationManagerDelegate {
             geocoder.reverseGeocodeLocation(findLocation, preferredLocale: locale) { [weak self] placemarks, _ in
                 guard let placemarks = placemarks, let address = placemarks.last else { return }
                 let name : CLPlacemark? = placemarks[0]
-                print(name?.country,name?.administrativeArea,name?.subAdministrativeArea,name?.subLocality,name?.thoroughfare,name?.subThoroughfare)
-                guard let firstName = name?.subLocality , let secondName = name?.thoroughfare else{
-                    self?.locationName = "위치를 찾을수없습니다."
-                    APIManager.shared.weatherDataNetwork(lat: cooridinate.latitude, longi: cooridinate.longitude) { data in
-                        DispatchQueue.main.async {
-                            self?.design(data: data)
-                        }
-                    }
-                    return
-                }
-                print(secondName)
-                self?.locationName = firstName + " " + secondName
+                print(name?.country,name?.administrativeArea,name?.locality,name?.subAdministrativeArea,name?.subLocality,name?.thoroughfare,name?.subThoroughfare)
+             
+                self?.locationName = (name?.administrativeArea)! + " " + (name?.subLocality)!
                 
                 APIManager.shared.weatherDataNetwork(lat: cooridinate.latitude, longi: cooridinate.longitude) { data in
                     DispatchQueue.main.async {
@@ -174,8 +165,7 @@ extension WeatherMapViewController: CLLocationManagerDelegate {
                 }
             }
         }
-//        locationManager.s
-        topUpdatingHeading()
+        locationManager.stopUpdatingHeading()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
