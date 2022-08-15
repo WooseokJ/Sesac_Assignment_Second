@@ -128,10 +128,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7C0-G8-vQ3">
-                                <rect key="frame" x="10" y="334.5" width="200" height="100"/>
+                                <rect key="frame" x="10" y="334.5" width="200" height="150"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pqd-MM-q62">
-                                        <rect key="frame" x="8" y="8" width="184" height="84"/>
+                                        <rect key="frame" x="8" y="8" width="184" height="134"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -139,13 +139,13 @@
                                     <constraint firstItem="pqd-MM-q62" firstAttribute="top" secondItem="7C0-G8-vQ3" secondAttribute="top" constant="8" id="6pj-wN-11k"/>
                                     <constraint firstItem="pqd-MM-q62" firstAttribute="leading" secondItem="7C0-G8-vQ3" secondAttribute="leading" constant="8" id="CyR-kQ-iKj"/>
                                     <constraint firstAttribute="trailing" secondItem="pqd-MM-q62" secondAttribute="trailing" constant="8" id="FQB-gG-xb8"/>
-                                    <constraint firstAttribute="height" constant="100" id="LlK-ZQ-teV"/>
+                                    <constraint firstAttribute="height" constant="150" id="LlK-ZQ-teV"/>
                                     <constraint firstAttribute="bottom" secondItem="pqd-MM-q62" secondAttribute="bottom" constant="8" id="Sem-Lv-kRK"/>
                                     <constraint firstAttribute="width" constant="200" id="mKi-Bp-Jss"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ik-2E-S6W">
-                                <rect key="frame" x="10" y="454.5" width="219" height="40"/>
+                                <rect key="frame" x="10" y="504.5" width="219" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wa-Nc-YJc">
                                         <rect key="frame" x="8" y="8" width="41.5" height="24"/>

@@ -14,7 +14,7 @@ class APIManager {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print(json)
+//                print(json)
                 let valueList = datastruct (
                         icon: json["weather"][0]["icon"].stringValue,
                         humidity:json["main"]["humidity"].stringValue,

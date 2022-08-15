@@ -46,6 +46,7 @@ class WeatherMapViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     
+    var locationName : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -72,7 +73,7 @@ extension WeatherMapViewController {
         //위치 버튼 디자인
         locationButton.ButtonDesign(imageName: "location.fill")
         // 위치 라벨 디자인
-        locationLabel.locationLabelDesign(text: "")
+        locationLabel.locationLabelDesign(text: locationName)
         //공유하기 버튼 디자인
         sharedButton.ButtonDesign(imageName: "square.and.arrow.up")
         // 새로고침 버튼 디자인
@@ -113,7 +114,7 @@ extension WeatherMapViewController {
         }
         
         if CLLocationManager.locationServicesEnabled() {
-          
+            
             checkUserCurrentLocationAuthorization(authorizationStatus)
         } else {
             print("위치 서비스꺼져있어 위치권한요청 못함")
@@ -128,10 +129,10 @@ extension WeatherMapViewController {
             print("notDetermined")
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestWhenInUseAuthorization()
-
-        
+            
+            
         case .restricted, .denied: print("denied, 아이폰 설정 유도")
-        
+            
         case .authorizedWhenInUse:
             print("when in use")
             
@@ -144,7 +145,7 @@ extension WeatherMapViewController {
 
 extension WeatherMapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(#function,locations)
+        print(#function)
         
         if let cooridinate = locations.last?.coordinate {
             let findLocation = CLLocation(latitude: cooridinate.latitude, longitude: cooridinate.longitude)
@@ -152,30 +153,35 @@ extension WeatherMapViewController: CLLocationManagerDelegate {
             let locale = Locale(identifier: "Ko-kr") //원하는 언어의 나라 코드를 넣어주시면 됩니다.
             geocoder.reverseGeocodeLocation(findLocation, preferredLocale: locale) { [weak self] placemarks, _ in
                 guard let placemarks = placemarks, let address = placemarks.last else { return }
-                let s : CLPlacemark? = placemarks[0]
+                let name : CLPlacemark? = placemarks[0]
+                print(name?.country,name?.administrativeArea,name?.subAdministrativeArea,name?.subLocality,name?.thoroughfare,name?.subThoroughfare)
+                guard let firstName = name?.subLocality , let secondName = name?.thoroughfare else{
+                    self?.locationName = "위치를 찾을수없습니다."
+                    APIManager.shared.weatherDataNetwork(lat: cooridinate.latitude, longi: cooridinate.longitude) { data in
+                        DispatchQueue.main.async {
+                            self?.design(data: data)
+                        }
+                    }
+                    return
+                }
+                print(secondName)
+                self?.locationName = firstName + " " + secondName
                 
-                print(s?.region)
-                print(s?.administrativeArea)
-                print(s?.subLocality)
-                print(s?.thoroughfare)
-                print(s?.subThoroughfare)
-//                APIManager.shared.weatherDataNetwork(lat: cooridinate.latitude, longi: cooridinate.longitude) { data in
-//                DispatchQueue.main.async {
-//                    self!.design(data: data)
-//                    }
-//                }
+                APIManager.shared.weatherDataNetwork(lat: cooridinate.latitude, longi: cooridinate.longitude) { data in
+                    DispatchQueue.main.async {
+                        self?.design(data: data)
+                    }
+                }
             }
-            
         }
-       
-        
-        locationManager.stopUpdatingHeading()
+//        locationManager.s
+        topUpdatingHeading()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(#function)
     }
-
+    
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         print(#function)
         checkUserDeviceLocationSeriveAuthorization()
