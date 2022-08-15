@@ -32,7 +32,6 @@ class MapViewController: UIViewController {
     }
     // 지도띄우기함수
     func setReginAndAnnotation(center:CLLocationCoordinate2D) {
-
         // 지도 중심기반으로 보여질범위설정.
         let region = MKCoordinateRegion(center: center, latitudinalMeters: 1000, longitudinalMeters: 1000) // center 는 지도에서 처음나오는부문 에 중앙위치 ,lati~,long~은 지도 줌 크기
         mapView.setRegion(region, animated: true)
