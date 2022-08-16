@@ -33,6 +33,9 @@ class ViewController: UIViewController {
     var isExpaneded = false // 라벨길이 false면 두줄 ture면 전체보기
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let user = User() // 오류가 생겨야 되는거 아닌가?
+        
         // start -> end -> requestBlog 순서로 실행  ( 네트워크 통신시 코드가 꼭 순서대로 진행되진않음)
         print(#function,"start")
 //        requestBlog(query: "고래밥")
@@ -43,11 +46,13 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension //모든섹션의 셀에대해 유동적
     }
+        
+    
     
     // almofire + swiftjson
     // 검색키워드
     // 인증키
-    func requestBlog(query: String) {
+    private func requestBlog(query: String) {
         guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
         // EndPoint.blog.requestURL: ~blog?query=
         let url = EndPoint.blog.requestURL + query
@@ -59,7 +64,7 @@ class ViewController: UIViewController {
 
         // alamofire -> URLSession Framework(alamofire가 포함된 프레임워크)로 인해 코드로 구현안해도 비동기로 요청, 메인쓰레드로 바뀜.(메인쓰레드로 안바뀌면 원래 보라색오류뜸)
         //이제부터 비동기부문(코드순서가 이거떄매 달라진다)
-        AF.request(url, method: .get ,headers: header).validate().responseJSON { [self] response in
+        AF.request(url, method: .get ,headers: header).validate().responseData { [self] response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -83,7 +88,7 @@ class ViewController: UIViewController {
         let url = EndPoint.cafe.requestURL + query
         let header : HTTPHeaders = ["Authorization" : "KakaoAK \(APIKey.kakao)"]
         
-        AF.request(url, method: .get ,headers: header).validate().responseJSON { [self] response in
+        AF.request(url, method: .get ,headers: header).validate().responseData { [self] response in
             switch response.result {
             case .success(let value):
                 print(#function)
