@@ -20,6 +20,10 @@
 		E1C560DF28AB836D00C6F794 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C560DE28AB836D00C6F794 /* SecondViewController.swift */; };
 		E1C560E428AB899F00C6F794 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C560E328AB899F00C6F794 /* ThirdViewController.swift */; };
 		E1C560E628AB89DE00C6F794 /* WalkThorughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C560E528AB89DE00C6F794 /* WalkThorughViewController.swift */; };
+		E1C560ED28AC71B000C6F794 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C560EC28AC71B000C6F794 /* CodeViewController.swift */; };
+		E1C560F028AC81B000C6F794 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E1C560EF28AC81B000C6F794 /* SnapKit */; };
+		E1C560F228AC826800C6F794 /* CodeSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C560F128AC826800C6F794 /* CodeSnapViewController.swift */; };
+		E1C560F428AC8C1500C6F794 /* CodeSnap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C560F328AC8C1500C6F794 /* CodeSnap2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,9 @@
 		E1C560DE28AB836D00C6F794 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E1C560E328AB899F00C6F794 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		E1C560E528AB89DE00C6F794 /* WalkThorughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThorughViewController.swift; sourceTree = "<group>"; };
+		E1C560EC28AC71B000C6F794 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		E1C560F128AC826800C6F794 /* CodeSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnapViewController.swift; sourceTree = "<group>"; };
+		E1C560F328AC8C1500C6F794 /* CodeSnap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnap2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1C560D628AB78E900C6F794 /* SeSac2UIFramework.framework in Frameworks */,
+				E1C560F028AC81B000C6F794 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +149,11 @@
 		E1C560E128AB847400C6F794 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E1C560DC28AB836400C6F794 /* FirstViewController.swift */,
+				E1C560F328AC8C1500C6F794 /* CodeSnap2ViewController.swift */,
+				E1C560EC28AC71B000C6F794 /* CodeViewController.swift */,
+				E1C560F128AC826800C6F794 /* CodeSnapViewController.swift */,
 				E1C560B328AB72BA00C6F794 /* ViewController.swift */,
+				E1C560DC28AB836400C6F794 /* FirstViewController.swift */,
 				E1C560DE28AB836D00C6F794 /* SecondViewController.swift */,
 				E1C560E328AB899F00C6F794 /* ThirdViewController.swift */,
 			);
@@ -184,6 +195,9 @@
 			dependencies = (
 			);
 			name = SeSacWeek7Diary;
+			packageProductDependencies = (
+				E1C560EF28AC81B000C6F794 /* SnapKit */,
+			);
 			productName = SeSacWeek7Diary;
 			productReference = E1C560AC28AB72BA00C6F794 /* SeSacWeek7Diary.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +226,9 @@
 				Base,
 			);
 			mainGroup = E1C560A328AB72B900C6F794;
+			packageReferences = (
+				E1C560EE28AC81B000C6F794 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = E1C560AD28AB72BA00C6F794 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -265,9 +282,12 @@
 			files = (
 				E1C560E628AB89DE00C6F794 /* WalkThorughViewController.swift in Sources */,
 				E1C560B428AB72BA00C6F794 /* ViewController.swift in Sources */,
+				E1C560F428AC8C1500C6F794 /* CodeSnap2ViewController.swift in Sources */,
 				E1C560B028AB72BA00C6F794 /* AppDelegate.swift in Sources */,
 				E1C560B228AB72BA00C6F794 /* SceneDelegate.swift in Sources */,
+				E1C560F228AC826800C6F794 /* CodeSnapViewController.swift in Sources */,
 				E1C560DF28AB836D00C6F794 /* SecondViewController.swift in Sources */,
+				E1C560ED28AC71B000C6F794 /* CodeViewController.swift in Sources */,
 				E1C560E428AB899F00C6F794 /* ThirdViewController.swift in Sources */,
 				E1C560DD28AB836400C6F794 /* FirstViewController.swift in Sources */,
 			);
@@ -487,6 +507,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E1C560EE28AC81B000C6F794 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E1C560EF28AC81B000C6F794 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1C560EE28AC81B000C6F794 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1C560A428AB72B900C6F794 /* Project object */;
 }

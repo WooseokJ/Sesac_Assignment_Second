@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OgR-Jb-lUK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rua-ln-fOt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -72,13 +72,22 @@
                                     <constraint firstAttribute="height" constant="5" id="kGp-vY-sMc"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.dash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sL3-zS-SoH">
+                                <rect key="frame" x="334" y="33" width="50" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sGF-ea-CIt"/>
+                                    <constraint firstAttribute="width" constant="50" id="sgC-HZ-y2w"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                         <constraints>
                             <constraint firstItem="3vg-wS-1Xb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="0dh-sl-jH3"/>
                             <constraint firstItem="wZU-4w-FJa" firstAttribute="top" secondItem="3vg-wS-1Xb" secondAttribute="bottom" constant="8" id="DSe-wo-OvK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sL3-zS-SoH" secondAttribute="trailing" constant="30" id="JAb-h1-O6X"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3vg-wS-1Xb" secondAttribute="trailing" constant="30" id="beH-ds-mLy"/>
+                            <constraint firstItem="sL3-zS-SoH" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="30" id="ev4-It-M5Y"/>
                             <constraint firstItem="3vg-wS-1Xb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="xiK-73-Ju4"/>
                             <constraint firstItem="wZU-4w-FJa" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="yKS-kC-naj"/>
                         </constraints>
@@ -86,12 +95,58 @@
                     <connections>
                         <outlet property="blackView" destination="wZU-4w-FJa" id="xQS-Ym-V8x"/>
                         <outlet property="blackViewWidth" destination="5bn-A7-9Aa" id="cPK-iq-dhS"/>
+                        <outlet property="starImageView" destination="sL3-zS-SoH" id="6Ri-Mg-nc8"/>
                         <outlet property="tutorialLabel" destination="3vg-wS-1Xb" id="j1D-hc-3iB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="76"/>
+            <point key="canvasLocation" x="469.56521739130437" y="75.669642857142847"/>
+        </scene>
+        <!--Code View Controller-->
+        <scene sceneID="Udt-7l-GFx">
+            <objects>
+                <viewController id="mIp-B2-pAi" customClass="CodeViewController" customModule="SeSacWeek7Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E1O-xn-csq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Qcj-D0-a8c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KvO-l1-05O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="972"/>
+        </scene>
+        <!--Code Snap View Controller-->
+        <scene sceneID="s5b-vh-lZ7">
+            <objects>
+                <viewController id="wM4-ef-Fda" customClass="CodeSnapViewController" customModule="SeSacWeek7Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hug-Qw-AyM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="W41-FO-kGR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="laH-WL-IWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310" y="972"/>
+        </scene>
+        <!--Code Snap2 View Controller-->
+        <scene sceneID="San-iM-6Qg">
+            <objects>
+                <viewController id="rua-ln-fOt" customClass="CodeSnap2ViewController" customModule="SeSacWeek7Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tJX-mp-3hu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BZg-Ly-RdV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Cw-3Y-41t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2244" y="1023"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="QoB-0M-5f3">
@@ -125,6 +180,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
