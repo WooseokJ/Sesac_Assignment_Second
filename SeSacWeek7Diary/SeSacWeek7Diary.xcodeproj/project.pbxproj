@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E147943C28AE391E00FE897F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E147943B28AE391E00FE897F /* Kingfisher */; };
+		E147944228AE40DF00FE897F /* Example2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147944128AE40DF00FE897F /* Example2ViewController.swift */; };
 		E1AEAF1F28ACF9AE00AFBE66 /* Example1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEAF1E28ACF9AE00AFBE66 /* Example1ViewController.swift */; };
 		E1AEAF2228ADDF1D00AFBE66 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEAF2128ADDF1D00AFBE66 /* UIViewController+Extension.swift */; };
 		E1AEAF2828ADE5FD00AFBE66 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEAF2728ADE5FD00AFBE66 /* ProfileViewController.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E147944128AE40DF00FE897F /* Example2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example2ViewController.swift; sourceTree = "<group>"; };
 		E1AEAF1E28ACF9AE00AFBE66 /* Example1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1ViewController.swift; sourceTree = "<group>"; };
 		E1AEAF2128ADDF1D00AFBE66 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		E1AEAF2728ADE5FD00AFBE66 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		E1AEAF1B28ACF98500AFBE66 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				E147944128AE40DF00FE897F /* Example2ViewController.swift */,
 				E1AEAF1E28ACF9AE00AFBE66 /* Example1ViewController.swift */,
 			);
 			path = Assignment;
@@ -306,6 +309,7 @@
 			files = (
 				E1AEAF2228ADDF1D00AFBE66 /* UIViewController+Extension.swift in Sources */,
 				E1AEAF1F28ACF9AE00AFBE66 /* Example1ViewController.swift in Sources */,
+				E147944228AE40DF00FE897F /* Example2ViewController.swift in Sources */,
 				E1AEAF2D28ADEB3E00AFBE66 /* ProViewController.swift in Sources */,
 				E1C560E628AB89DE00C6F794 /* WalkThorughViewController.swift in Sources */,
 				E1C560B428AB72BA00C6F794 /* ViewController.swift in Sources */,

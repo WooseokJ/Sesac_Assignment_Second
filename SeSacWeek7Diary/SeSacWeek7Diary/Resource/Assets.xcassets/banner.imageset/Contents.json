@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "스크린샷 2022-08-18 오후 9.08.26.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
