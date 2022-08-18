@@ -78,8 +78,8 @@
             filePath = "OPenWeatherMap/Viewcontroller/WeatherMapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "locationManagerDidChangeAuthorization(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "OPenWeatherMap/Viewcontroller/WeatherMapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>

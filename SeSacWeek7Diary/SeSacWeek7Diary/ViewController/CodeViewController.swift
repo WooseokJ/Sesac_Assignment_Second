@@ -16,7 +16,7 @@ import UIKit
  -> NsLayoutConstraints (이거로 코드로 ui구성가능해짐)
  */
 class CodeViewController: UIViewController {
-    //MARK: 1. 뷰객체 프로퍼티선언,클래스의 인스턴스생성
+    // MARK: 1. 뷰객체 프로퍼티선언,클래스의 인스턴스생성
     let emailTextField = UITextField()
     let passwordTextField = UITextField()
     let signButton = UIButton()
@@ -24,17 +24,17 @@ class CodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //MARK: 2.명시적으로 로드뷰 추가
+        // MARK: 2.명시적으로 로드뷰 추가
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
         view.addSubview(signButton)
         
-        //MARK: 3. 크기.위치및 속성정의(frame기반)   순서1
+        // MARK: 3. 크기.위치및 속성정의(frame기반)   순서1
         emailTextField.frame = CGRect(x: 50, y: 50, width: UIScreen.main.bounds.width - 100, height: 50)
         emailTextField.borderStyle = .line
         emailTextField.backgroundColor = .lightGray
         
-        //MARK: NSlayoutconstraints(이것을 코드를 쓰진않아) 순서2
+        // MARK: NSlayoutconstraints(이것을 코드를 쓰진않아) 순서2
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false // autoresizing기반으로 하는건 false로 설정
         passwordTextField.backgroundColor = .lightGray
         // top
@@ -47,7 +47,7 @@ class CodeViewController: UIViewController {
 //        // height
 //        NSLayoutConstraint(item: passwordTextField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 60).isActive = true
         
-        //MARK: NSlayoutconstraints addConstraints 순서3
+        // MARK: NSlayoutconstraints addConstraints 순서3
         //top
         let top = NSLayoutConstraint(item: passwordTextField, attribute: .top, relatedBy: .equal, toItem: view.safeAreaLayoutGuide, attribute: .top, multiplier: 1, constant: 100)
         // leading
@@ -58,7 +58,7 @@ class CodeViewController: UIViewController {
         let height = NSLayoutConstraint(item: passwordTextField, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 60)
         view.addConstraints([top, leading, trailing, height])
         
-        //MARK: NSlayoutAnchor 순서4
+        // MARK: NSlayoutAnchor 순서4
         signButton.translatesAutoresizingMaskIntoConstraints = false
         signButton.backgroundColor = .orange
         NSLayoutConstraint.activate([

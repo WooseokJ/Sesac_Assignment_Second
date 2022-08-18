@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E147943C28AE391E00FE897F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E147943B28AE391E00FE897F /* Kingfisher */; };
+		E1AEAF1F28ACF9AE00AFBE66 /* Example1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEAF1E28ACF9AE00AFBE66 /* Example1ViewController.swift */; };
+		E1AEAF2228ADDF1D00AFBE66 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEAF2128ADDF1D00AFBE66 /* UIViewController+Extension.swift */; };
+		E1AEAF2828ADE5FD00AFBE66 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEAF2728ADE5FD00AFBE66 /* ProfileViewController.swift */; };
+		E1AEAF2D28ADEB3E00AFBE66 /* ProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEAF2C28ADEB3E00AFBE66 /* ProViewController.swift */; };
 		E1C560B028AB72BA00C6F794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C560AF28AB72BA00C6F794 /* AppDelegate.swift */; };
 		E1C560B228AB72BA00C6F794 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C560B128AB72BA00C6F794 /* SceneDelegate.swift */; };
 		E1C560B428AB72BA00C6F794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C560B328AB72BA00C6F794 /* ViewController.swift */; };
@@ -58,6 +63,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E1AEAF1E28ACF9AE00AFBE66 /* Example1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1ViewController.swift; sourceTree = "<group>"; };
+		E1AEAF2128ADDF1D00AFBE66 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		E1AEAF2728ADE5FD00AFBE66 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E1AEAF2C28ADEB3E00AFBE66 /* ProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProViewController.swift; sourceTree = "<group>"; };
 		E1C560AC28AB72BA00C6F794 /* SeSacWeek7Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSacWeek7Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1C560AF28AB72BA00C6F794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1C560B128AB72BA00C6F794 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E147943C28AE391E00FE897F /* Kingfisher in Frameworks */,
 				E1C560D628AB78E900C6F794 /* SeSac2UIFramework.framework in Frameworks */,
 				E1C560F028AC81B000C6F794 /* SnapKit in Frameworks */,
 			);
@@ -90,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1AEAF1B28ACF98500AFBE66 /* Assignment */ = {
+			isa = PBXGroup;
+			children = (
+				E1AEAF1E28ACF9AE00AFBE66 /* Example1ViewController.swift */,
+			);
+			path = Assignment;
+			sourceTree = "<group>";
+		};
 		E1C560A328AB72B900C6F794 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +129,8 @@
 		E1C560AE28AB72BA00C6F794 /* SeSacWeek7Diary */ = {
 			isa = PBXGroup;
 			children = (
+				E1AEAF2128ADDF1D00AFBE66 /* UIViewController+Extension.swift */,
+				E1AEAF1B28ACF98500AFBE66 /* Assignment */,
 				E1C560E728AB89EA00C6F794 /* PageViewController */,
 				E1C560E128AB847400C6F794 /* ViewController */,
 				E1C560E228AB848D00C6F794 /* Resource */,
@@ -156,6 +176,8 @@
 				E1C560DC28AB836400C6F794 /* FirstViewController.swift */,
 				E1C560DE28AB836D00C6F794 /* SecondViewController.swift */,
 				E1C560E328AB899F00C6F794 /* ThirdViewController.swift */,
+				E1AEAF2C28ADEB3E00AFBE66 /* ProViewController.swift */,
+				E1AEAF2728ADE5FD00AFBE66 /* ProfileViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -197,6 +219,7 @@
 			name = SeSacWeek7Diary;
 			packageProductDependencies = (
 				E1C560EF28AC81B000C6F794 /* SnapKit */,
+				E147943B28AE391E00FE897F /* Kingfisher */,
 			);
 			productName = SeSacWeek7Diary;
 			productReference = E1C560AC28AB72BA00C6F794 /* SeSacWeek7Diary.app */;
@@ -228,6 +251,7 @@
 			mainGroup = E1C560A328AB72B900C6F794;
 			packageReferences = (
 				E1C560EE28AC81B000C6F794 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E147943A28AE391E00FE897F /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = E1C560AD28AB72BA00C6F794 /* Products */;
 			projectDirPath = "";
@@ -280,8 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1AEAF2228ADDF1D00AFBE66 /* UIViewController+Extension.swift in Sources */,
+				E1AEAF1F28ACF9AE00AFBE66 /* Example1ViewController.swift in Sources */,
+				E1AEAF2D28ADEB3E00AFBE66 /* ProViewController.swift in Sources */,
 				E1C560E628AB89DE00C6F794 /* WalkThorughViewController.swift in Sources */,
 				E1C560B428AB72BA00C6F794 /* ViewController.swift in Sources */,
+				E1AEAF2828ADE5FD00AFBE66 /* ProfileViewController.swift in Sources */,
 				E1C560F428AC8C1500C6F794 /* CodeSnap2ViewController.swift in Sources */,
 				E1C560B028AB72BA00C6F794 /* AppDelegate.swift in Sources */,
 				E1C560B228AB72BA00C6F794 /* SceneDelegate.swift in Sources */,
@@ -509,6 +537,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E147943A28AE391E00FE897F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		E1C560EE28AC81B000C6F794 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -520,6 +556,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E147943B28AE391E00FE897F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E147943A28AE391E00FE897F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		E1C560EF28AC81B000C6F794 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E1C560EE28AC81B000C6F794 /* XCRemoteSwiftPackageReference "SnapKit" */;

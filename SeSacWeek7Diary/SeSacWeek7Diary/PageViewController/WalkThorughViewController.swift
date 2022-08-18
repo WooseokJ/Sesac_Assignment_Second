@@ -55,9 +55,7 @@ extension WalkThorughViewController : UIPageViewControllerDelegate,UIPageViewCon
         return pageViewControllerList.count
     }
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        guard let first = viewControllers?.first,
-              let index = pageViewControllerList
-            .firstIndex(of: first) else {return 0 }
+        guard let first = viewControllers?.first, let index = pageViewControllerList.firstIndex(of: first) else {return 0 }
         print("======",index)
         return index
     }

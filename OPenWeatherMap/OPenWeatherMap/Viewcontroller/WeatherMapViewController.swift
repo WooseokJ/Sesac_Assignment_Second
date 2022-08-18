@@ -152,10 +152,21 @@ extension WeatherMapViewController: CLLocationManagerDelegate {
             let geocoder = CLGeocoder()
             let locale = Locale(identifier: "Ko-kr") //원하는 언어의 나라 코드를 넣어주시면 됩니다.
             geocoder.reverseGeocodeLocation(findLocation, preferredLocale: locale) { [weak self] placemarks, _ in
-                guard let placemarks = placemarks, let address = placemarks.last else { return }
-                let name : CLPlacemark? = placemarks[0]
-                print(name?.country,name?.administrativeArea,name?.locality,name?.subAdministrativeArea,name?.subLocality,name?.thoroughfare,name?.subThoroughfare)
-             
+                
+                let name : CLPlacemark? = placemarks?.last
+                print("placemark:",placemarks)
+                print("name:",name)
+                print("country",name?.country)
+                print("administrativeArea:", name?.administrativeArea)  // 경기도  // 서울특별시
+                
+                print("locality:", name?.locality)  // 파주시  // 서울특별시
+                print("subAdministrativeArea:", name?.subAdministrativeArea)  // nil
+                print("subLocality:", name?.subLocality)  // 마장리
+                print("thoroughfare:", name?.thoroughfare)  // nil
+                print("subThoroughfare:", name?.subThoroughfare)  // nil
+                print("location",name?.location)
+                print(name?.name)
+                
                 self?.locationName = (name?.administrativeArea)! + " " + (name?.subLocality)!
                 
                 APIManager.shared.weatherDataNetwork(lat: cooridinate.latitude, longi: cooridinate.longitude) { data in
@@ -165,7 +176,7 @@ extension WeatherMapViewController: CLLocationManagerDelegate {
                 }
             }
         }
-        locationManager.stopUpdatingHeading()
+        locationManager.stopUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

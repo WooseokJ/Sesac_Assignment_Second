@@ -2,7 +2,7 @@ import UIKit
 import SeSac2UIFramework
 
 class ViewController: UIViewController {
-
+    
     // 사각형 네개 -> counterparts -> viewController(interface)
     var name = "고래밥" // internal var name 와 동일
     private var age = 22
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         
     }
 
+    
 
 }
 
