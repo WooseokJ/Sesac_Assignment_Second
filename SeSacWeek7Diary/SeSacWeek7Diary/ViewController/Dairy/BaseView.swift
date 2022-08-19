@@ -3,7 +3,7 @@ import Foundation
 import UIKit
 
 class BaseView: UIView {
-    
+
     //코드베이스일떄
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -13,15 +13,24 @@ class BaseView: UIView {
     // xib, 스토리보드일떄 이니셜라이저(init) 호출 (프로토콜기반)
     required init?(coder: NSCoder) { // 프로토콜떄문에 어쩔수없이 호출
         super.init(coder: coder)
-//        fatalError("init(coder:) has not been implemented") //런타임에러 
+//        fatalError("init(coder:) has not been implemented") //런타임에러
     }
-    
-    func configureUI() {
-        
-    }
+
+    func configureUI() { }
     func setConstrains() { }
-    
+
 }
+
+//
+
+
+
+
+
+
+
+
+
 
 
 
@@ -40,6 +49,7 @@ class Mobile: example { //  example이 NSCoder뜻함
 
 class Apple: Mobile { // Mobile 이 UIView와 비슷한상황
     let wwdc: String
+    
     init(wwdc: String) {
         //순서중요 자식꺼다하고 부모꺼해야함.
         self.wwdc = wwdc

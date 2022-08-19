@@ -36,11 +36,10 @@ class WriteView: BaseView {
     }
     
     required init?(coder: NSCoder) {
+
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    
+
     override func configureUI() { // BaseView  상속받은거 오버라이딩
         [photoImageView,titleTextField,dateTextField,contentTextView].forEach {
             self.addSubview($0)

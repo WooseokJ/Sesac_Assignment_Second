@@ -17,8 +17,8 @@ class BlackRediusTextField: UITextField {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     func setupView() {
-        
         self.backgroundColor = .clear
         self.textAlignment = .center
         self.borderStyle = .none

@@ -36,17 +36,16 @@ class ProViewController: UIViewController {
     }
     @objc func nameButtonClicked() {
         
-//        let vc = WriteViewController()
-//        present(vc, animated: true)
-        NotificationCenter.default.post(name: NSNotification.Name("TEST"), object: nil , userInfo: ["name": Int.random(in: 1...100), "value": 123456] )
+        let vc = WriteViewController()
+        present(vc, animated: true)
         
         
-        let vc = ProfileViewController()
-        vc.saveButtonActionHandler = { name in
-              self.nameButton.setTitle(name, for: .normal)   // name은 vc.nameTextField.text의미
-        }
-        
-        present(vc,animated: true)
+//        NotificationCenter.default.post(name: NSNotification.Name("TEST"), object: nil , userInfo: ["name": Int.random(in: 1...100), "value": 123456] )
+//        let vc = ProfileViewController()
+//        vc.saveButtonActionHandler = { name in
+//              self.nameButton.setTitle(name, for: .normal)   // name은 vc.nameTextField.text의미
+//        }
+//        present(vc,animated: true)
     }
     
 

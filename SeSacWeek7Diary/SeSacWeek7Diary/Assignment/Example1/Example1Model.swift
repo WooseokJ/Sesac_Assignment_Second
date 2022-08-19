@@ -1,16 +1,25 @@
 //
-//  Example1ViewController.swift
+//  Example1.swift
 //  SeSacWeek7Diary
 //
-//  Created by useok on 2022/08/17.
+//  Created by useok on 2022/08/20.
 //
 
+import Foundation
 import UIKit
-
-import SnapKit
 import Kingfisher
 
-class Example1ViewController: UIViewController {
+class Example1Model: Example1View {
+    //MARK: 연결하기
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    //MARK: 크기잡기
     //백그라운드 이미지
     let backImageView: UIImageView = {
         let backimage = UIImageView()
@@ -37,7 +46,7 @@ class Example1ViewController: UIViewController {
         label.numberOfLines = 0
         return label
     }()
-    
+
     //취소버튼
     lazy var cancelButton: UIButton = {
         topButtonConfig(name: "xmark")
@@ -53,7 +62,7 @@ class Example1ViewController: UIViewController {
     // 선물하기버튼
     lazy var presentButton: UIButton = {
         topButtonConfig(name: "gift.circle")
-        
+
     }()
     // 프로필편집 버튼
     lazy var profileEditingButton: UIButton = {
@@ -85,45 +94,43 @@ class Example1ViewController: UIViewController {
         return view
     }()
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       configureUI()
-        
-    }
-    
-    func configureUI() {
+    //MARK: 위치잡기
+    // view에 그리기
+    override func configureUI() {
         [backImageView,foreView,cancelButton,settingButton,bankButton,presentButton,profileImageVIew,blackLine,profileEditingButton,myChatButton,kakaoStoryButton,profileName].forEach {
-            view.addSubview($0)
+            self.addSubview($0)
         }
+    }
+    override func setConstrains() {
         //백그라운드 이미지
         backImageView.snp.makeConstraints {
-            $0.topMargin.equalTo(view.safeAreaLayoutGuide)
-            $0.leadingMargin.equalTo(view.safeAreaLayoutGuide)
-            $0.trailingMargin.equalTo(view.safeAreaLayoutGuide)
-            $0.bottomMargin.equalTo(view.safeAreaLayoutGuide)
+            $0.topMargin.equalTo(self.safeAreaLayoutGuide)
+            $0.leadingMargin.equalTo(self.safeAreaLayoutGuide)
+            $0.trailingMargin.equalTo(self.safeAreaLayoutGuide)
+            $0.bottomMargin.equalTo(self.safeAreaLayoutGuide)
         }
         //백그라운드 효과주기위한 뷰
         foreView.snp.makeConstraints {
-            $0.topMargin.equalTo(view.safeAreaLayoutGuide)
-            $0.leadingMargin.equalTo(view.safeAreaLayoutGuide)
-            $0.trailingMargin.equalTo(view.safeAreaLayoutGuide)
-            $0.bottomMargin.equalTo(view.safeAreaLayoutGuide)
+            $0.topMargin.equalTo(self.safeAreaLayoutGuide)
+            $0.leadingMargin.equalTo(self.safeAreaLayoutGuide)
+            $0.trailingMargin.equalTo(self.safeAreaLayoutGuide)
+            $0.bottomMargin.equalTo(self.safeAreaLayoutGuide)
         }
-        
+
         //취소 버튼
         cancelButton.snp.makeConstraints {
-            $0.size.width.height.equalTo(view.bounds.width / 7)
-            $0.leading.equalTo(view.safeAreaLayoutGuide).offset(3)
-            $0.top.equalTo(view.safeAreaLayoutGuide)
             
+//            $0.width.height.equalTo(self.bounds.width / 7)
+            $0.leading.equalTo(self.safeAreaLayoutGuide).offset(self.bounds.width / 2) // 숫자는 적용되는데 왜 안떨어져? ㅠ 이유를 찾자!  원래는 3
+            $0.top.equalTo(self.safeAreaLayoutGuide)
+
         }
         //설정 버튼
         settingButton.snp.makeConstraints {
-            $0.size.width.height.equalTo(view.bounds.width / 7)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide)
-            $0.top.equalTo(view.safeAreaLayoutGuide)
-            
+            $0.size.width.height.equalTo(self.bounds.width / 7)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide)
+            $0.top.equalTo(self.safeAreaLayoutGuide)
+
         }
         //송금하기 버튼
         bankButton.snp.makeConstraints {
@@ -140,21 +147,21 @@ class Example1ViewController: UIViewController {
         //프로필 이미지
         profileImageVIew.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.size.width.height.equalTo(view.bounds.width / 4)
-            $0.bottom.equalTo(blackLine.snp.bottom).offset(-view.bounds.height/8)
+            $0.size.width.height.equalTo(self.bounds.width / 4)
+            $0.bottom.equalTo(blackLine.snp.bottom).offset(-(self.bounds.height/8))
 
         }
         //프로필이름
         profileName.snp.makeConstraints{
             $0.centerX.equalToSuperview()
-            
-            $0.size.height.equalTo(view.bounds.height/20)
-            $0.bottom.equalTo(profileImageVIew.snp.bottom).offset(view.bounds.height/15)
-            
+
+            $0.size.height.equalTo(self.bounds.height/20)
+            $0.bottom.equalTo(profileImageVIew.snp.bottom).offset(self.bounds.height/15)
+
         }
         //하단뷰 검은선
         blackLine.snp.makeConstraints {
-            $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-(view.bounds.height/7))
+            $0.bottom.equalTo(self.safeAreaLayoutGuide).offset(-(self.bounds.height/7))
             $0.leadingMargin.equalTo(0)
             $0.trailingMargin.equalTo(0)
             $0.height.equalTo(1)
@@ -162,7 +169,7 @@ class Example1ViewController: UIViewController {
         //프로필 편집 버튼
         profileEditingButton.snp.makeConstraints {
             $0.top.equalTo(blackLine.snp.bottom).offset(20)
-            $0.centerX.equalTo(view)
+            $0.centerX.equalTo(self)
         }
         // 카카오스토리 버튼
         kakaoStoryButton.snp.makeConstraints {
@@ -174,10 +181,8 @@ class Example1ViewController: UIViewController {
             $0.trailing.equalTo(profileEditingButton.snp.leading).offset(-40)
             $0.top.equalTo(profileEditingButton.snp.top)
         }
-        
-        
     }
-    
+
     //하단 버튼 디자인
     func bottomButtonConfig(name: String, title: String)-> UIButton {
         let buttonView = UIButton()
@@ -186,18 +191,17 @@ class Example1ViewController: UIViewController {
         configuration.imagePlacement = .top
         configuration.imagePadding = 5
         configuration.titleAlignment = .center
+        buttonView.configuration = configuration
         buttonView.tintColor = .black
         let config = UIImage.SymbolConfiguration(pointSize: 35, weight: .thin, scale: .default)
         buttonView.setImage(UIImage(systemName: name, withConfiguration: config), for: .normal)
-        buttonView.configuration = configuration
         buttonView.tintColor = .white
         return buttonView
     }
-    
+
     //상단 버튼 디자인
     func topButtonConfig(name: String)-> UIButton {
         let buttonView = UIButton()
-        
         let config = UIImage.SymbolConfiguration(pointSize: 25, weight: .thin, scale: .default)
         buttonView.setImage(UIImage(systemName: name, withConfiguration: config), for: .normal)
         buttonView.tintColor = .white
@@ -205,5 +209,5 @@ class Example1ViewController: UIViewController {
     }
     
     
-
+    
 }

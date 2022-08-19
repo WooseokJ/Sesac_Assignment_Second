@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E147943C28AE391E00FE897F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E147943B28AE391E00FE897F /* Kingfisher */; };
 		E147944228AE40DF00FE897F /* Example2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147944128AE40DF00FE897F /* Example2ViewController.swift */; };
+		E1724C6428AFE85500DE292F /* Example1Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1724C6328AFE85500DE292F /* Example1Model.swift */; };
+		E1724C6A28AFF13300DE292F /* Example1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1724C6928AFF13300DE292F /* Example1View.swift */; };
 		E195F33528AE97680093B00C /* Example3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E195F33428AE97680093B00C /* Example3ViewController.swift */; };
 		E1AEAF1F28ACF9AE00AFBE66 /* Example1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEAF1E28ACF9AE00AFBE66 /* Example1ViewController.swift */; };
 		E1AEAF2228ADDF1D00AFBE66 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEAF2128ADDF1D00AFBE66 /* UIViewController+Extension.swift */; };
@@ -71,6 +73,8 @@
 
 /* Begin PBXFileReference section */
 		E147944128AE40DF00FE897F /* Example2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example2ViewController.swift; sourceTree = "<group>"; };
+		E1724C6328AFE85500DE292F /* Example1Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1Model.swift; sourceTree = "<group>"; };
+		E1724C6928AFF13300DE292F /* Example1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1View.swift; sourceTree = "<group>"; };
 		E195F33428AE97680093B00C /* Example3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example3ViewController.swift; sourceTree = "<group>"; };
 		E1AEAF1E28ACF9AE00AFBE66 /* Example1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1ViewController.swift; sourceTree = "<group>"; };
 		E1AEAF2128ADDF1D00AFBE66 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -114,25 +118,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1724C6B28AFF1BA00DE292F /* Example1 */ = {
+			isa = PBXGroup;
+			children = (
+				E1AEAF1E28ACF9AE00AFBE66 /* Example1ViewController.swift */,
+				E1724C6328AFE85500DE292F /* Example1Model.swift */,
+				E1724C6928AFF13300DE292F /* Example1View.swift */,
+			);
+			path = Example1;
+			sourceTree = "<group>";
+		};
 		E1AEAF1B28ACF98500AFBE66 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
 				E195F33428AE97680093B00C /* Example3ViewController.swift */,
 				E147944128AE40DF00FE897F /* Example2ViewController.swift */,
-				E1AEAF1E28ACF9AE00AFBE66 /* Example1ViewController.swift */,
+				E1724C6B28AFF1BA00DE292F /* Example1 */,
 			);
 			path = Assignment;
-			sourceTree = "<group>";
-		};
-		E1B4833328AF125B0026862A /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				E1B4834128AF2CDF0026862A /* CustomView */,
-				E1B4833628AF12770026862A /* BaseViewController.swift */,
-				E1B4833D28AF169F0026862A /* BaseView.swift */,
-				E1B4833F28AF17970026862A /* WriteView.swift */,
-			);
-			path = Utility;
 			sourceTree = "<group>";
 		};
 		E1B4833828AF14130026862A /* CodeSnap */ = {
@@ -158,17 +161,13 @@
 		E1B4833C28AF145F0026862A /* Dairy */ = {
 			isa = PBXGroup;
 			children = (
+				E1B4834228AF2CF80026862A /* BlackRediusTextField.swift */,
+				E1B4833628AF12770026862A /* BaseViewController.swift */,
+				E1B4833D28AF169F0026862A /* BaseView.swift */,
+				E1B4833F28AF17970026862A /* WriteView.swift */,
 				E1B4833A28AF14470026862A /* WriteViewController.swift */,
 			);
 			path = Dairy;
-			sourceTree = "<group>";
-		};
-		E1B4834128AF2CDF0026862A /* CustomView */ = {
-			isa = PBXGroup;
-			children = (
-				E1B4834228AF2CF80026862A /* BlackRediusTextField.swift */,
-			);
-			path = CustomView;
 			sourceTree = "<group>";
 		};
 		E1C560A328AB72B900C6F794 = {
@@ -193,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				E1AEAF2128ADDF1D00AFBE66 /* UIViewController+Extension.swift */,
-				E1B4833328AF125B0026862A /* Utility */,
 				E1AEAF1B28ACF98500AFBE66 /* Assignment */,
 				E1C560E728AB89EA00C6F794 /* PageViewController */,
 				E1C560E128AB847400C6F794 /* ViewController */,
@@ -375,6 +373,7 @@
 				E195F33528AE97680093B00C /* Example3ViewController.swift in Sources */,
 				E1C560B428AB72BA00C6F794 /* ViewController.swift in Sources */,
 				E1B4833728AF12770026862A /* BaseViewController.swift in Sources */,
+				E1724C6A28AFF13300DE292F /* Example1View.swift in Sources */,
 				E1AEAF2828ADE5FD00AFBE66 /* ProfileViewController.swift in Sources */,
 				E1C560F428AC8C1500C6F794 /* CodeSnap2ViewController.swift in Sources */,
 				E1C560B028AB72BA00C6F794 /* AppDelegate.swift in Sources */,
@@ -383,6 +382,7 @@
 				E1C560F228AC826800C6F794 /* CodeSnapViewController.swift in Sources */,
 				E1C560DF28AB836D00C6F794 /* SecondViewController.swift in Sources */,
 				E1B4833E28AF169F0026862A /* BaseView.swift in Sources */,
+				E1724C6428AFE85500DE292F /* Example1Model.swift in Sources */,
 				E1C560ED28AC71B000C6F794 /* CodeViewController.swift in Sources */,
 				E1C560E428AB899F00C6F794 /* ThirdViewController.swift in Sources */,
 				E1C560DD28AB836400C6F794 /* FirstViewController.swift in Sources */,
