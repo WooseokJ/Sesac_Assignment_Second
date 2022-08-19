@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9HT-o6-QaF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-804.34782608695662" y="122.54464285714285"/>
+            <point key="canvasLocation" x="-1496" y="410"/>
         </scene>
         <!--Pro View Controller-->
         <scene sceneID="GPC-5a-cuV">
@@ -30,25 +30,13 @@
                     <view key="view" contentMode="scaleToFill" id="1UI-v3-qY7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tz1-e5-J32">
-                                <rect key="frame" x="70" y="549" width="111" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="am3-sb-dWD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="tz1-e5-J32" firstAttribute="leading" secondItem="am3-sb-dWD" secondAttribute="leading" constant="70" id="6jq-7G-Bl0"/>
-                            <constraint firstItem="tz1-e5-J32" firstAttribute="centerX" secondItem="1UI-v3-qY7" secondAttribute="centerX" constant="-81.5" id="GNQ-Js-qjX"/>
-                            <constraint firstItem="tz1-e5-J32" firstAttribute="top" secondItem="am3-sb-dWD" secondAttribute="top" constant="505" id="T7I-5d-yys"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hgC-Bi-Wmu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39" y="135"/>
+            <point key="canvasLocation" x="-316" y="-403"/>
         </scene>
     </scenes>
     <resources>

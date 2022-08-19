@@ -27,6 +27,17 @@ class Example1ViewController: UIViewController {
         view.alpha = 0.4
         return view
     }()
+    //프로필명
+    let profileName: UILabel = {
+        let label = UILabel()
+        label.text = "Mini"
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 20,weight: .bold)
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
+    }()
+    
     //취소버튼
     lazy var cancelButton: UIButton = {
         topButtonConfig(name: "xmark")
@@ -82,7 +93,7 @@ class Example1ViewController: UIViewController {
     }
     
     func configureUI() {
-        [backImageView,foreView,cancelButton,settingButton,bankButton,presentButton,profileImageVIew,blackLine,profileEditingButton,myChatButton,kakaoStoryButton].forEach {
+        [backImageView,foreView,cancelButton,settingButton,bankButton,presentButton,profileImageVIew,blackLine,profileEditingButton,myChatButton,kakaoStoryButton,profileName].forEach {
             view.addSubview($0)
         }
         //백그라운드 이미지
@@ -130,7 +141,15 @@ class Example1ViewController: UIViewController {
         profileImageVIew.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.size.width.height.equalTo(view.bounds.width / 4)
-            $0.bottom.equalTo(blackLine.snp.bottom).offset(-30)
+            $0.bottom.equalTo(blackLine.snp.bottom).offset(-view.bounds.height/8)
+
+        }
+        //프로필이름
+        profileName.snp.makeConstraints{
+            $0.centerX.equalToSuperview()
+            
+            $0.size.height.equalTo(view.bounds.height/20)
+            $0.bottom.equalTo(profileImageVIew.snp.bottom).offset(view.bounds.height/15)
             
         }
         //하단뷰 검은선
@@ -174,6 +193,7 @@ class Example1ViewController: UIViewController {
         buttonView.tintColor = .white
         return buttonView
     }
+    
     //상단 버튼 디자인
     func topButtonConfig(name: String)-> UIButton {
         let buttonView = UIButton()

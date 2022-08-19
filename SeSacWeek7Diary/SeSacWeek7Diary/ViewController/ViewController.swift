@@ -31,8 +31,6 @@ class ViewController: UIViewController {
         // MARK: 3.present로 네이버 띄우기
 //        let web = OpenWebView() //이방법은 오류가 나와서 presentWebViewController를 static으로 바꿈
         OpenWebView.presentWebViewController(self, url: "https://naver.com", transitionStyle: .present)
-        
-        
     }
 
     

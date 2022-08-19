@@ -87,7 +87,6 @@ extension ImageSearchViewController: UICollectionViewDataSourcePrefetching {
         // indexPaths는 배열, 0부터 시작
         for index in indexPaths{
             print(imageArray.count)
-            
             if (imageArray.count - 1 == index.item) && (imageArray.count < totalCount){
                 startpage += 30
                 fetchImage(query: searchBar.text!)

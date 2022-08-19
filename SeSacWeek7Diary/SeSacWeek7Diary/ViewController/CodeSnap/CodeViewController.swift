@@ -16,7 +16,7 @@ import UIKit
  -> NsLayoutConstraints (이거로 코드로 ui구성가능해짐)
  */
 class CodeViewController: UIViewController {
-    // MARK: 1. 뷰객체 프로퍼티선언,클래스의 인스턴스생성
+    // MARK: 1. 뷰객체 프로퍼티선언, 클래스의 인스턴스생성
     let emailTextField = UITextField()
     let passwordTextField = UITextField()
     let signButton = UIButton()

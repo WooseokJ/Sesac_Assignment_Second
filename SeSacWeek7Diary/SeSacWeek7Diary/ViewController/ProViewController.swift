@@ -8,23 +8,25 @@
 import UIKit
 import SnapKit
 
+
 class ProViewController: UIViewController {
 
     let nameButton: UIButton = {
         let view = UIButton()
         view.setTitle("닉네임", for: .normal)
-        view.tintColor = .black
+        view.backgroundColor = .black
         return view
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         configure()
-       
-    }
-    func configure() {
         
+    }
+    
+   
+    
+    func configure() {
         view.addSubview(nameButton)
         nameButton.snp.makeConstraints { make in
             make.width.height.equalTo(200)
@@ -33,9 +35,15 @@ class ProViewController: UIViewController {
         nameButton.addTarget(self, action: #selector(nameButtonClicked), for: .touchUpInside)
     }
     @objc func nameButtonClicked() {
+        
+//        let vc = WriteViewController()
+//        present(vc, animated: true)
+        NotificationCenter.default.post(name: NSNotification.Name("TEST"), object: nil , userInfo: ["name": Int.random(in: 1...100), "value": 123456] )
+        
+        
         let vc = ProfileViewController()
-        vc.saveButtonActionHandler = {
-            self.nameButton.setTitle(vc.nameTextField.text, for: .normal)
+        vc.saveButtonActionHandler = { name in
+              self.nameButton.setTitle(name, for: .normal)   // name은 vc.nameTextField.text의미
         }
         
         present(vc,animated: true)
