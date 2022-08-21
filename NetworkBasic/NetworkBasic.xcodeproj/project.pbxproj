@@ -140,7 +140,6 @@
 				E1C0C8C328975C3A00873CDE /* Cosntant */,
 				E199C6D42893879B00A4B91E /* Resource */,
 				E13B9ABE28920CAB00D6001A /* protocol */,
-				E1485D312890E49C00BE8A71 /* Search */,
 				E1485D322890E4A700BE8A71 /* basic */,
 			);
 			path = NetworkBasic;
@@ -163,6 +162,7 @@
 		E1485D322890E4A700BE8A71 /* basic */ = {
 			isa = PBXGroup;
 			children = (
+				E1485D312890E49C00BE8A71 /* Search */,
 				E1485D1B2890DD7900BE8A71 /* SceneDelegate.swift */,
 				E1485D192890DD7900BE8A71 /* AppDelegate.swift */,
 				E1485D1D2890DD7900BE8A71 /* ViewController.swift */,
