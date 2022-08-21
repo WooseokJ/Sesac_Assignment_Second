@@ -58,7 +58,6 @@
 		E1485D3A2890EA6600BE8A71 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		E16596252897A95400418C6D /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 		E167A008289A4EA200260785 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
-		E17E1C1C2892B9E00093690A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E199C6CF28935D4800A4B91E /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		E199C6D5289388D700A4B91E /* BinggraeSamanco-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeSamanco-Bold.otf"; sourceTree = "<group>"; };
 		E1AFDF27289A096A00D10A39 /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
@@ -136,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				E1485D272890DD7C00BE8A71 /* Info.plist */,
-				E17E1C1C2892B9E00093690A /* README.md */,
 				E1C0C8C328975C3A00873CDE /* Cosntant */,
 				E199C6D42893879B00A4B91E /* Resource */,
 				E13B9ABE28920CAB00D6001A /* protocol */,

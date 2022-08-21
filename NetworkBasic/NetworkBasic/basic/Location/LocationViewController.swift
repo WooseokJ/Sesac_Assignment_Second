@@ -9,12 +9,13 @@ class LocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         requestAuthorization()
-        for i in UIFont.familyNames{
-            print("======\(i)======")
-            for name in UIFont.fontNames(forFamilyName: i){
-                print(name)
-            }
-        }
+        // 폰트확인
+//        for i in UIFont.familyNames{
+//            print("======\(i)======")
+//            for name in UIFont.fontNames(forFamilyName: i){
+//                print(name)
+//            }
+//        }
     }
     
     @IBAction func noticationButtonClicked(_ sender: UIButton) {
@@ -65,12 +66,12 @@ class LocationViewController: UIViewController {
         notificationContent.badge = 40
         
         // 언제 보낼건가? 1. 시간간격,2.캘린더,3.위치에 따라 설정가능
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval:60, repeats: true) // 5초뒤에 보내겟다. false하면 한번만 보냄 true하면 여러번보내
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval:60, repeats: true) // 60 초뒤에 보내겟다. false하면 한번만 보냄 true하면 여러번보내 60초이하는 오류남 (너무빨리 요청해서)
 //        var dateComponent = DateComponents()
 //        dateComponent.minute = 15
 //
 //        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: true)
-        
+//
         // 알림요청
         // 만약 알림관리할 필요 x - > 알림 클릭하면 앱을켜주는정도
         // 만약 알림 관리할필요 o -> +1해주거나,고유이름 등

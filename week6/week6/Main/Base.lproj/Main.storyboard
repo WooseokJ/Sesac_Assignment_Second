@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wG2-fn-waH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Oo-or-KAz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -38,14 +38,6 @@
                                 <connections>
                                     <action selector="backgroundColorChaged:" destination="2Oo-or-KAz" eventType="touchUpInside" id="YcA-0M-XIm"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctd-TG-yxc">
-                                <rect key="frame" x="50" y="224" width="314" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="M6N-qI-6ku"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k65-Nc-WOT" customClass="cardView" customModule="week6" customModuleProvider="target">
                                 <rect key="frame" x="157" y="398" width="100" height="100"/>
@@ -87,14 +79,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Z48-go-pdZ" firstAttribute="trailing" secondItem="fvf-bW-WoY" secondAttribute="trailing" constant="50" id="CxG-JC-xpX"/>
-                            <constraint firstItem="Z48-go-pdZ" firstAttribute="trailing" secondItem="Ctd-TG-yxc" secondAttribute="trailing" constant="50" id="F2a-z8-20z"/>
-                            <constraint firstItem="Ctd-TG-yxc" firstAttribute="top" secondItem="IZ5-cP-3d6" secondAttribute="bottom" constant="20" id="L7P-3g-02v"/>
                             <constraint firstItem="fvf-bW-WoY" firstAttribute="leading" secondItem="Z48-go-pdZ" secondAttribute="leading" constant="50" id="YqI-jw-o9O"/>
                             <constraint firstItem="fvf-bW-WoY" firstAttribute="top" secondItem="Z48-go-pdZ" secondAttribute="top" constant="20" id="dkA-po-kXJ"/>
                             <constraint firstItem="IZ5-cP-3d6" firstAttribute="leading" secondItem="Z48-go-pdZ" secondAttribute="leading" constant="50" id="qPk-1e-c1K"/>
                             <constraint firstItem="Z48-go-pdZ" firstAttribute="trailing" secondItem="IZ5-cP-3d6" secondAttribute="trailing" constant="50" id="vRs-Ea-IiU"/>
                             <constraint firstItem="k65-Nc-WOT" firstAttribute="centerY" secondItem="uMx-bi-fg3" secondAttribute="centerY" id="vwZ-cS-MTe"/>
-                            <constraint firstItem="Ctd-TG-yxc" firstAttribute="leading" secondItem="Z48-go-pdZ" secondAttribute="leading" constant="50" id="wXl-SU-CHj"/>
                             <constraint firstItem="k65-Nc-WOT" firstAttribute="centerX" secondItem="uMx-bi-fg3" secondAttribute="centerX" id="x2f-cL-NMR"/>
                             <constraint firstItem="IZ5-cP-3d6" firstAttribute="top" secondItem="fvf-bW-WoY" secondAttribute="bottom" constant="20" id="ylO-db-SiV"/>
                         </constraints>
@@ -125,28 +114,28 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pH2-VQ-Sg9">
-                                            <rect key="frame" x="116" y="19" width="262" height="174"/>
+                                            <rect key="frame" x="120" y="19" width="258" height="174"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hx5-xI-zxm">
-                                            <rect key="frame" x="31" y="67" width="69" height="68"/>
+                                            <rect key="frame" x="20" y="67" width="80" height="68"/>
                                             <color key="backgroundColor" red="1" green="0.79249245199999996" blue="0.49559089890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="69" id="xhB-KB-C3b"/>
+                                                <constraint firstAttribute="width" constant="80" id="xhB-KB-C3b"/>
                                             </constraints>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="pH2-VQ-Sg9" firstAttribute="leading" secondItem="hx5-xI-zxm" secondAttribute="trailing" constant="16" id="0zm-6Y-mnd"/>
+                                        <constraint firstItem="pH2-VQ-Sg9" firstAttribute="leading" secondItem="hx5-xI-zxm" secondAttribute="trailing" constant="20" id="0zm-6Y-mnd"/>
                                         <constraint firstItem="hx5-xI-zxm" firstAttribute="top" secondItem="e1E-bj-6v7" secondAttribute="topMargin" constant="56" id="ARa-D0-Dgp"/>
                                         <constraint firstItem="pH2-VQ-Sg9" firstAttribute="top" secondItem="e1E-bj-6v7" secondAttribute="topMargin" constant="8" id="FXT-A0-spP"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="hx5-xI-zxm" secondAttribute="bottom" constant="66" id="MOQ-CH-1Hn"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="pH2-VQ-Sg9" secondAttribute="trailing" constant="16" id="TCe-gP-glg"/>
-                                        <constraint firstItem="hx5-xI-zxm" firstAttribute="leading" secondItem="e1E-bj-6v7" secondAttribute="leadingMargin" constant="11" id="g4d-5Z-WSV"/>
+                                        <constraint firstItem="hx5-xI-zxm" firstAttribute="leading" secondItem="e1E-bj-6v7" secondAttribute="leadingMargin" id="g4d-5Z-WSV"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="pH2-VQ-Sg9" secondAttribute="bottom" constant="8" id="u0U-8r-7fa"/>
                                     </constraints>
                                 </tableViewCellContentView>

@@ -15,11 +15,11 @@ class CloserViewController: UIViewController {
         // 인터페이스 빌더 기반 레이아웃 ui -> false
 //        print(sampleButton.translatesAutoresizingMaskIntoConstraints)
 //        print(cardView.translatesAutoresizingMaskIntoConstraints)
-//        print(purpleView.translatesAutoresizingMaskIntoConstraints)
+        print(purpleView.translatesAutoresizingMaskIntoConstraints)
         //     //위치, 크기, 추가
-        sampleButton.frame = CGRect(x: 100, y: 400, width: 100, height: 100)
-        sampleButton.backgroundColor = .red
-        view.addSubview(sampleButton)
+//        sampleButton.frame = CGRect(x: 100, y: 400, width: 100, height: 100)
+//        sampleButton.backgroundColor = .red
+//        view.addSubview(sampleButton)
         
         cardView.posterImageVIew.backgroundColor = .lightGray
         cardView.likeButton.backgroundColor = .red

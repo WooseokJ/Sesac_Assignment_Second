@@ -72,8 +72,8 @@ class LottoViewController: UIViewController {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json)")
-//                let bonuse = json["bnusNo"].intValue //int 와 intValue는 옵셔널차이
+//                print("JSON: \(json)")
+                let bonuse = json["bnusNo"].intValue //int 와 intValue는 옵셔널차이
                 let drwNo = json["drwNo"].intValue
                 let numberList : [Int] = Array(1...drwNo).reversed()
                 recentList = numberList
