@@ -116,9 +116,6 @@ class ViewController: UIViewController {
         KakaoAPIManager.shared.callRequest(query: "고래밥", type: .blog) { json in //json은 문자열 덩아리
             for item in json["documents"].arrayValue {
                 let val = item["contents"].stringValue.replacingOccurrences(of: "</b>", with: "").replacingOccurrences(of: "<b>", with: "") // </b>,<b> -> ""로 바꿈
-                
-                
-                
                 self.cafelist.append(val)
             }
             // 여기서 갱신 or 다른 네트워크 통신 호출(self.searchCafe())

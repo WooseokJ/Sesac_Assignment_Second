@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Kingfisher
 
-class Example1: UIView, ConstraintOffsetTarget, ConstraintOffsetTarget, ConstraintOffsetTarget {
+class Example1: UIView{
     //MARK: 연결하기
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -123,7 +123,7 @@ class Example1: UIView, ConstraintOffsetTarget, ConstraintOffsetTarget, Constrai
         cancelButton.snp.makeConstraints {
             
 //            $0.width.height.equalTo(self.bounds.width / 7)
-            $0.leading.equalTo(self.safeAreaLayoutGuide).offset(self) // 숫자는 적용되는데 왜 안떨어져? ㅠ 이유를 찾자!  원래는 3
+//            $0.leading.equalTo(self.safeAreaLayoutGuide).offset(self) // 숫자는 적용되는데 왜 안떨어져? ㅠ 이유를 찾자!  원래는 3
             $0.top.equalTo(self.safeAreaLayoutGuide)
 
         }

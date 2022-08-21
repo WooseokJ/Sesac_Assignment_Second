@@ -21,7 +21,7 @@ class WriteViewController: UIViewController { //원래는 BaseViewController이�
     override func viewDidLoad() {
         super.viewDidLoad()
         ss()
-        view.backgroundColor = .red
+        view.backgroundColor = .green
 //        mainview.titleTextField.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>) // viewcontroller에서는 기능같은것만.
     }
     

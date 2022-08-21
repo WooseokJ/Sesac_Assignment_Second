@@ -80,7 +80,9 @@ extension MapViewController {
             locationManager.requestWhenInUseAuthorization() //앱사용하는동안 위치관련요청
 //            locationManager.startUpdatingLocation() //없어도 괜찮지않을까?
         //허용 거부
-        case .restricted, .denied: print("denied, 아이폰 설정 유도")
+        case .restricted, .denied:
+            print("denied, 아이폰 설정 유도")
+            showRequestLocationServiceAlert()
         //앱을사용하는동안
         case .authorizedWhenInUse:
             print("when in use")

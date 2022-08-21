@@ -57,7 +57,7 @@
 		E1B4DF0F28A1E03500739392 /* SeSacButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSacButton.swift; sourceTree = "<group>"; };
 		E1B4DF1128A1E60D00739392 /* cardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cardView.xib; sourceTree = "<group>"; };
 		E1B4DF1328A1E62C00739392 /* cardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardView.swift; sourceTree = "<group>"; };
-		E1B4DF1528A1F38100739392 /* cardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = cardCollectionViewCell.swift; path = week6/View/blog/cardCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		E1B4DF1528A1F38100739392 /* cardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = cardCollectionViewCell.swift; path = week6/View/CloserPractive/cardCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		E1B4DF1728A1F3AC00739392 /* cardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cardCollectionViewCell.xib; sourceTree = "<group>"; };
 		E1B4DF1B28A1F63A00739392 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E1B4DF1D28A1FC2400739392 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -147,10 +147,6 @@
 		E149C3E028B20567001BDB68 /* blog */ = {
 			isa = PBXGroup;
 			children = (
-				E1B4DF1528A1F38100739392 /* cardCollectionViewCell.swift */,
-				E1B4DF1728A1F3AC00739392 /* cardCollectionViewCell.xib */,
-				E1B4DF1128A1E60D00739392 /* cardView.xib */,
-				E1B4DF1328A1E62C00739392 /* cardView.swift */,
 				E13713EE28A08FE800A6F5C4 /* ViewController.swift */,
 			);
 			path = blog;
@@ -170,6 +166,10 @@
 			isa = PBXGroup;
 			children = (
 				E137141028A0ABF700A6F5C4 /* CloserViewController.swift */,
+				E1B4DF1528A1F38100739392 /* cardCollectionViewCell.swift */,
+				E1B4DF1728A1F3AC00739392 /* cardCollectionViewCell.xib */,
+				E1B4DF1128A1E60D00739392 /* cardView.xib */,
+				E1B4DF1328A1E62C00739392 /* cardView.swift */,
 			);
 			path = CloserPractive;
 			sourceTree = "<group>";
