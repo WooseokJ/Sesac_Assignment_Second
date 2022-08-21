@@ -10,5 +10,5 @@
 2.[검색](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/NetworkBasic/NetworkBasic/basic/Search)<br>
 3.[알람및동기비동기](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/NetworkBasic/NetworkBasic/basic/Location)<br>
 ## 7주차 
-1.[날씨](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/OPenWeatherMap/OPenWeatherMap)
+1.[날씨](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/OPenWeatherMap/OPenWeatherMap)<br>
 2.[코드베이스 UI(카카오,배민)](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/SeSacWeek7Diary/SeSacWeek7Diary/Assignment)<br>
