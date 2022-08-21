@@ -23,6 +23,7 @@
 3| [TMDB연습](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/week6/week6/View/TMDBMovie) |  |
 4| [맵및권한](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/week6/week6/View/Map) |  |
 5| [카메라및닮은꼴](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/week6/week6/View/Camera) |  |
+6| [TMDB](https://github.com/WooseokJ/TrendMediaDataBaseProject) |  |
 
 7주차| 2022.08.15 ~ 2022.08.21 |
 :---: |--- 
