@@ -30,3 +30,4 @@
 1| [페이지뷰연습](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/SeSacWeek7Diary/SeSacWeek7Diary/ViewController/pageView) |  |
 2| [날씨](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/OPenWeatherMap/OPenWeatherMap) |  |
 3| [코드베이스 UI(카카오,배민)](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/SeSacWeek7Diary/SeSacWeek7Diary/Assignment) |  |
+4| [코드베이스 넷플릭스 다시해보기](https://github.com/WooseokJ/Sesac_Assignment_First/tree/main/MoviePractice/MoviePractice/ViewController) |  |
