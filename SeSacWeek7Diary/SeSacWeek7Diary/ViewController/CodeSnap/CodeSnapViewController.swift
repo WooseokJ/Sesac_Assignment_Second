@@ -17,9 +17,20 @@ class CodeSnapViewController: UIViewController {
         view.contentMode = .scaleAspectFit
         return view
     }()
+    let imageButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Button", for: .normal)
+        button.layer.cornerRadius = 40
+        button.clipsToBounds = true
+        button.layer.borderWidth = 2
+        button.setTitleColor(.blue, for: .normal)
+        
+        
+        return button
+    }()
+    
     //이미지 제목
     let titleTextField : UITextField = {
-        print("titletextField")
         let view = UITextField()
         view.borderStyle = .none
         view.layer.borderColor = UIColor.blue.cgColor
@@ -55,29 +66,40 @@ class CodeSnapViewController: UIViewController {
     }
     func configureUI() {
         //for - in  vs  foreach(클로저를 파라미터로받음)
-        let viewList =  [photoImageView,titleTextField,dateTextField,contentTextField]
+        let viewList =  [photoImageView,imageButton,titleTextField,dateTextField,contentTextField]
        viewList.forEach {
             view.addSubview($0)
         }
- 
+        //이미지뷰 안에 버튼
+        imageButton.snp.makeConstraints {
+            $0.trailing.equalTo(photoImageView.snp.trailing).inset(30)
+            $0.bottom.equalTo(photoImageView.snp.bottom).inset(30)
+            $0.height.equalTo(photoImageView.snp.height).multipliedBy(0.25)
+        }
+        
+        
+        //이미지 뷰
         photoImageView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.leadingMargin.equalTo(20)
             make.trailingMargin.equalTo(-20)
             make.height.equalTo(view).multipliedBy(0.3) //뷰높이 기준에서 * 0.3된거
         }
+        //제목입력 텍스트필드
         titleTextField.snp.makeConstraints { make in
             make.top.equalTo(photoImageView.snp.bottom).offset(20)
             make.leadingMargin.equalTo(20)
             make.trailingMargin.equalTo(-20)
             make.height.equalTo(50) //높이
         }
+        //날짜입력 텏흐트필드
         dateTextField.snp.makeConstraints { make in
             make.top.equalTo(titleTextField.snp.bottom).offset(20)
             make.leadingMargin.equalTo(20)
             make.trailingMargin.equalTo(-20)
             make.height.equalTo(50) //높이
         }
+        //
         contentTextField.snp.makeConstraints { make in
             make.top.equalTo(dateTextField.snp.bottom).offset(20)
             make.leadingMargin.equalTo(20)
