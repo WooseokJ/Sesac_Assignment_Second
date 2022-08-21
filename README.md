@@ -19,5 +19,6 @@
 5.[카메라및닮은꼴](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/week6/week6/View/Camera)<br>
 
 ## 7주차 
-1.[날씨](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/OPenWeatherMap/OPenWeatherMap)<br>
-2.[코드베이스 UI(카카오,배민)](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/SeSacWeek7Diary/SeSacWeek7Diary/Assignment)<br>
+1.[페이지뷰연습](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/SeSacWeek7Diary/SeSacWeek7Diary/ViewController/pageView)<br>
+2.[날씨](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/OPenWeatherMap/OPenWeatherMap)<br>
+3.[코드베이스 UI(카카오,배민)](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/SeSacWeek7Diary/SeSacWeek7Diary/Assignment)<br>
