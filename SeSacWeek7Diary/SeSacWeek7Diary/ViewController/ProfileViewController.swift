@@ -35,7 +35,6 @@ class ProfileViewController: UIViewController {
         view.backgroundColor = .yellow
         configure()
         saveButton.addTarget(self, action: #selector(saveButtonClicked), for: .touchUpInside)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(saveButtonNotificationObserver(notification:)), name:NSNotification.Name.saveButton , object: nil)
         
     }

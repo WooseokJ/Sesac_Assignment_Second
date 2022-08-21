@@ -35,7 +35,7 @@ class CodeSnapViewController: UIViewController {
         view.borderStyle = .none
         view.layer.borderColor = UIColor.blue.cgColor
         view.layer.borderWidth = 1
-        view.placeholder = "제목을 입력해줘"
+        view.placeholder = "날짜를 입력해줘"
         view.textAlignment = .center
         view.font = .boldSystemFont(ofSize: 15)
         return view

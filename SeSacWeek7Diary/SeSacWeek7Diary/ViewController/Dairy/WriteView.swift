@@ -3,7 +3,15 @@ import UIKit
 
 
 class WriteView: BaseView {
+    //MARK: 연결
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    //MARK: 크기구성
     //이미지뷰
     let photoImageView : UIImageView = {
         let view = UIImageView()
@@ -31,20 +39,14 @@ class WriteView: BaseView {
         return view
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder: NSCoder) {
 
-        fatalError("init(coder:) has not been implemented")
-    }
-
+    //MARK: 뷰등록
     override func configureUI() { // BaseView  상속받은거 오버라이딩
         [photoImageView,titleTextField,dateTextField,contentTextView].forEach {
             self.addSubview($0)
         }
     }
+    //MARK: 위치잡기
     override func setConstrains() { // BaseView 상속받은거 오버라이딩
         photoImageView.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide)

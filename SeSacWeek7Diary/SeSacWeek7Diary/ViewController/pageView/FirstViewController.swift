@@ -20,7 +20,7 @@ class FirstViewController: UIViewController {
         animateBlackView()
         animateImageView(name: "star.fill")
     }
-    
+    // 라벨띄우기
     func animateTutorialLabel(){
         self.tutorialLabel.text = """
         일기 씁시다!
@@ -37,7 +37,7 @@ class FirstViewController: UIViewController {
             print("끝")
         }
     }
-    
+    // 밑줄선
     func animateBlackView() {
         self.blackView.backgroundColor = .black
         self.blackView.alpha = 0
@@ -61,7 +61,7 @@ class FirstViewController: UIViewController {
         }
 
     }
-    
+    //이미지 
     func animateImageView(name: String) {
         starImageView.image = UIImage(systemName: name)
         UIView.animate(withDuration: 1, delay: 0 , options: [.repeat,.autoreverse] , animations: { //.repeat은 반복,

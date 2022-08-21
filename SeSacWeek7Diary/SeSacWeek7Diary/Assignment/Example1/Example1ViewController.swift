@@ -12,7 +12,7 @@ import Kingfisher
 
 class Example1ViewController: UIViewController {
    
-    var mainview = Example1Model()
+    var mainview = Example1()
 
     override func loadView() {
         super.view = mainview

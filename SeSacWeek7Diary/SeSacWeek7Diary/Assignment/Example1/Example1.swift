@@ -9,10 +9,12 @@ import Foundation
 import UIKit
 import Kingfisher
 
-class Example1Model: Example1View {
+class Example1: UIView, ConstraintOffsetTarget, ConstraintOffsetTarget, ConstraintOffsetTarget {
     //MARK: 연결하기
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configureUI()
+        setConstrains()
     }
     
     required init?(coder: NSCoder) {
@@ -96,12 +98,12 @@ class Example1Model: Example1View {
     
     //MARK: 위치잡기
     // view에 그리기
-    override func configureUI() {
+    func configureUI() {
         [backImageView,foreView,cancelButton,settingButton,bankButton,presentButton,profileImageVIew,blackLine,profileEditingButton,myChatButton,kakaoStoryButton,profileName].forEach {
             self.addSubview($0)
         }
     }
-    override func setConstrains() {
+    func setConstrains() {
         //백그라운드 이미지
         backImageView.snp.makeConstraints {
             $0.topMargin.equalTo(self.safeAreaLayoutGuide)
@@ -121,7 +123,7 @@ class Example1Model: Example1View {
         cancelButton.snp.makeConstraints {
             
 //            $0.width.height.equalTo(self.bounds.width / 7)
-            $0.leading.equalTo(self.safeAreaLayoutGuide).offset(self.bounds.width / 2) // 숫자는 적용되는데 왜 안떨어져? ㅠ 이유를 찾자!  원래는 3
+            $0.leading.equalTo(self.safeAreaLayoutGuide).offset(self) // 숫자는 적용되는데 왜 안떨어져? ㅠ 이유를 찾자!  원래는 3
             $0.top.equalTo(self.safeAreaLayoutGuide)
 
         }
