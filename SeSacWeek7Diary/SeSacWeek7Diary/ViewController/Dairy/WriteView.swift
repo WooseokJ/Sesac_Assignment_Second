@@ -38,11 +38,17 @@ class WriteView: BaseView {
         let view = UITextView()
         return view
     }()
+    let cancelSamplebutton: UIButton = {
+        let button = UIButton()
+        button.setTitle("취소", for: .normal)
+        button.backgroundColor = .yellow
+        return button
+    }()
     
 
     //MARK: 뷰등록
     override func configureUI() { // BaseView  상속받은거 오버라이딩
-        [photoImageView,titleTextField,dateTextField,contentTextView].forEach {
+        [photoImageView,titleTextField,dateTextField,contentTextView,cancelSamplebutton].forEach {
             self.addSubview($0)
         }
     }
@@ -71,6 +77,11 @@ class WriteView: BaseView {
             make.leadingMargin.equalTo(20)
             make.trailingMargin.equalTo(-20)
             make.bottom.equalTo(self.safeAreaLayoutGuide)
+        }
+        cancelSamplebutton.snp.makeConstraints {
+            $0.top.equalTo(photoImageView.snp.top).multipliedBy(1.25)
+            $0.trailing.equalTo(photoImageView.snp.trailing).multipliedBy(0.9)
+            
         }
     }
 }

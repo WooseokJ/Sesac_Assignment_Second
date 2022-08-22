@@ -14,9 +14,306 @@
             filePath = "SeSacWeek7Diary/ViewController/Dairy/WriteViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "ss()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1893404E-4464-4ED0-A587-D9B25FFE1534"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSacWeek7Diary/ViewController/CodeSnap/CodeSnapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "buttonclciekd()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44739B16-6F0C-4D99-946E-FB40A9B9C7B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSacWeek7Diary/Resource/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "scene(_:willConnectTo:options:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FAB623FE-335D-4525-94F6-4F59D174B7E6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "tableView"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "FAB623FE-335D-4525-94F6-4F59D174B7E6 - d12f4be347775ee9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UITableView in variable initialization expression of SeSacWeek7Diary.HomeViewController.tableView : __C.UITableView"
+                  moduleName = "SeSacWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/useok/Documents/GitHub/Sesac_Assignment_Second/SeSacWeek7Diary/SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "FAB623FE-335D-4525-94F6-4F59D174B7E6 - e4f225bd41d05fd6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSacWeek7Diary.HomeViewController.tableView.getter : __C.UITableView"
+                  moduleName = "SeSacWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/useok/Documents/GitHub/Sesac_Assignment_Second/SeSacWeek7Diary/SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "FAB623FE-335D-4525-94F6-4F59D174B7E6 - d9ad32589c6eb96d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSacWeek7Diary.HomeViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SeSacWeek7Diary.HomeViewController"
+                  moduleName = "SeSacWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/useok/Documents/GitHub/Sesac_Assignment_Second/SeSacWeek7Diary/SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "179">
+               </Location>
+               <Location
+                  uuid = "FAB623FE-335D-4525-94F6-4F59D174B7E6 - 3709a32476897f39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSacWeek7Diary.HomeViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SeSacWeek7Diary.HomeViewController&gt;"
+                  moduleName = "SeSacWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/useok/Documents/GitHub/Sesac_Assignment_Second/SeSacWeek7Diary/SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "147">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16279D25-7F73-4A6A-B6AB-AE4FE7F10CA0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "HomeViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "16279D25-7F73-4A6A-B6AB-AE4FE7F10CA0 - cfeb998e022dd60c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSacWeek7Diary.HomeViewController.localRealm.getter : RealmSwift.Realm"
+                  moduleName = "SeSacWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/useok/Documents/GitHub/Sesac_Assignment_Second/SeSacWeek7Diary/SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "16279D25-7F73-4A6A-B6AB-AE4FE7F10CA0 - d9ad32589c6eb9af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSacWeek7Diary.HomeViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SeSacWeek7Diary.HomeViewController"
+                  moduleName = "SeSacWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/useok/Documents/GitHub/Sesac_Assignment_Second/SeSacWeek7Diary/SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "115">
+               </Location>
+               <Location
+                  uuid = "16279D25-7F73-4A6A-B6AB-AE4FE7F10CA0 - 3709a32476897ffb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSacWeek7Diary.HomeViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SeSacWeek7Diary.HomeViewController&gt;"
+                  moduleName = "SeSacWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/useok/Documents/GitHub/Sesac_Assignment_Second/SeSacWeek7Diary/SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "86">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75A032F1-3332-4369-9C26-A1A6DE71B8AC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "HomeViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "75A032F1-3332-4369-9C26-A1A6DE71B8AC - d200a6aad15c7cf7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSacWeek7Diary.HomeViewController.tasks.getter : Swift.Optional&lt;RealmSwift.Results&lt;SeSacWeek7Diary.Userdiary&gt;&gt;"
+                  moduleName = "SeSacWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/useok/Documents/GitHub/Sesac_Assignment_Second/SeSacWeek7Diary/SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "75A032F1-3332-4369-9C26-A1A6DE71B8AC - 33752bef9dad20fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSacWeek7Diary.HomeViewController.tasks.setter : Swift.Optional&lt;RealmSwift.Results&lt;SeSacWeek7Diary.Userdiary&gt;&gt;"
+                  moduleName = "SeSacWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/useok/Documents/GitHub/Sesac_Assignment_Second/SeSacWeek7Diary/SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "75A032F1-3332-4369-9C26-A1A6DE71B8AC - e660aa19a6b725e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSacWeek7Diary.HomeViewController.tasks.modify : Swift.Optional&lt;RealmSwift.Results&lt;SeSacWeek7Diary.Userdiary&gt;&gt;"
+                  moduleName = "SeSacWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/useok/Documents/GitHub/Sesac_Assignment_Second/SeSacWeek7Diary/SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "75A032F1-3332-4369-9C26-A1A6DE71B8AC - a97b0c3b95db349f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSacWeek7Diary.HomeViewController.tasks.modify : Swift.Optional&lt;RealmSwift.Results&lt;SeSacWeek7Diary.Userdiary&gt;&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SeSacWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/useok/Documents/GitHub/Sesac_Assignment_Second/SeSacWeek7Diary/SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "75A032F1-3332-4369-9C26-A1A6DE71B8AC - d9ad32589c6ebaa7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSacWeek7Diary.HomeViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SeSacWeek7Diary.HomeViewController"
+                  moduleName = "SeSacWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/useok/Documents/GitHub/Sesac_Assignment_Second/SeSacWeek7Diary/SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "75A032F1-3332-4369-9C26-A1A6DE71B8AC - 3709a32476897cf3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSacWeek7Diary.HomeViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SeSacWeek7Diary.HomeViewController&gt;"
+                  moduleName = "SeSacWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/useok/Documents/GitHub/Sesac_Assignment_Second/SeSacWeek7Diary/SeSacWeek7Diary/Assignment/Unsplash/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E8E0ACF-DFE1-4C08-941E-139C7AEE6DE0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSacWeek7Diary/ViewController/CodeSnap/Realm/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

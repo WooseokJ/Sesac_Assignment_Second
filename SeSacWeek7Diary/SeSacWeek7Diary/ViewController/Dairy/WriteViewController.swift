@@ -22,6 +22,8 @@ class WriteViewController: UIViewController { //원래는 BaseViewController이�
         super.viewDidLoad()
         ss()
         view.backgroundColor = .green
+        mainview.cancelSamplebutton.addTarget(self, action: #selector(cancelButtonClicked), for: .touchUpInside)
+        
 //        mainview.titleTextField.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>) // viewcontroller에서는 기능같은것만.
     }
     
@@ -41,12 +43,17 @@ class WriteViewController: UIViewController { //원래는 BaseViewController이�
         }
     }
     
+    @objc func cancelButtonClicked() {
+        dismiss(animated: true)
+    }
+    
     func showAlertMessage(title: String, butoon: String) {
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         let ok = UIAlertAction(title: butoon, style: .cancel)
         alert.addAction(ok)
         present(alert,animated: true)
     }
+    
 }
 
 
