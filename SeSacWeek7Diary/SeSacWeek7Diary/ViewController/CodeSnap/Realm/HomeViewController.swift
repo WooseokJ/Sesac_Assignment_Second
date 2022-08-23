@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
 
         //MARK: Realm 3. Realm데이터를 정렬해 tasks에 담기
         let tasks = localRealm.objects(Userdiary.self).sorted(byKeyPath: "diaryDate",ascending: false)
-        print(tasks)
+        
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -51,7 +51,7 @@ class HomeViewController: UIViewController {
         
         // 화면갱신은 화면전환코드 및 생명주기실행점검 필요
         tasks = localRealm.objects(Userdiary.self).sorted(byKeyPath: "diaryDate",ascending: false) // diaryDate기준으로 정렬, sorted안하면 objectsid기준으로 추가된순서로 정렬된다.
-        // 정렬이된상태로 쿼리에서 가져와서 tasks에 넣음. 
+        // 정렬이된상태로 쿼리에서 가져와서 tasks에 넣음.
         tableView.reloadData()
     }
 }
@@ -61,6 +61,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return tasks.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(#function)
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         cell.textLabel?.text = tasks[indexPath.row].diaryTitle
         return cell
