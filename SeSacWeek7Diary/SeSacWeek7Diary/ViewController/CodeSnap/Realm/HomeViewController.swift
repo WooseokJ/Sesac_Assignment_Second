@@ -14,14 +14,12 @@ class HomeViewController: UIViewController {
     
     let localRealm = try! Realm() // MARK: Realm 2. 선언
 
-
-    
     lazy var tableView: UITableView = {
         let view = UITableView()
         view.backgroundColor = .lightGray
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell") // UITableViewCell.Self를 하면 UITableViewCell에 모든 속성가져옴.
         return view
     }() // let으로 하면 즉시실행 클로저
 
@@ -97,6 +95,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         // 스와이핑시 액션
         let favorite = UIContextualAction(style: .normal, title: "즐겨찾기") { action, view, completionHandler in
          
+            // realm data update
             try! self.localRealm.write {
                 // 1.하나의 레코드에서 특정칼럼 하나만 변경
 //                self.tasks[indexPath.row].favorite = !self.tasks[indexPath.row].favorite
