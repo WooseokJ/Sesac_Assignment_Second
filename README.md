@@ -31,3 +31,7 @@
 2| [날씨](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/OPenWeatherMap/OPenWeatherMap) |  |
 3| [코드베이스 UI(카카오,배민)](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/SeSacWeek7Diary/SeSacWeek7Diary/Assignment) |  |
 4| [코드베이스 넷플릭스 다시해보기](https://github.com/WooseokJ/Sesac_Assignment_First/tree/main/MoviePractice/MoviePractice/ViewController) |  |
+
+8주차| 2022.08.22 ~ 2022.08.28 |
+:---: |--- 
+1| [코드베이스 쇼핑리스트 다시해보기 및 DB적용](https://github.com/WooseokJ/Sesac_Assignment_First/tree/main/TrendMedia/TrendMedia/Shopping/Codebase) |  |
