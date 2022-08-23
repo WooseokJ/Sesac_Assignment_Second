@@ -11,6 +11,6 @@ https://user-images.githubusercontent.com/55547933/185777066-0daa5fbc-fa0f-4e60-
 
 
 ## 학습내용
-- 페이지네이션으로 무한스크롤구현
-- alamofire, swiftyJson, kingfisher로 이미지 및 데이터 띄우기
-- 서치바 하단에 따로 컬렉션뷰와 테이블뷰 를 사용하여 구현
+- [x] 페이지네이션으로 무한스크롤구현
+- [x] alamofire, swiftyJson, kingfisher로 이미지 및 데이터 띄우기
+- [x] 서치바 하단에 따로 컬렉션뷰와 테이블뷰 를 사용하여 구현
