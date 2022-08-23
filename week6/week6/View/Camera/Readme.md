@@ -4,6 +4,6 @@ https://user-images.githubusercontent.com/55547933/185779629-1626b828-8744-478c-
 
 
 ## 학습내용
-- 카메라 openAPI [TLPhotoPicker](https://github.com/tilltue/TLPhotoPicker) 로구현
-- 내장된 UIImagePickerController로 일반카메라 및 갤러리 구현
-- 네이버 클로바 api로 닮은꼴 
+- [x] 카메라 openAPI [TLPhotoPicker](https://github.com/tilltue/TLPhotoPicker) 로구현
+- [x] 내장된 UIImagePickerController로 일반카메라 및 갤러리 구현
+- [x] 네이버 클로바 api로 닮은꼴 
