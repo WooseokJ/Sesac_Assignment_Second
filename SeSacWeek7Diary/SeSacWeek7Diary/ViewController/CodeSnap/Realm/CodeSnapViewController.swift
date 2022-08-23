@@ -31,6 +31,16 @@ class CodeSnapViewController: UIViewController {
         return button
     }()
     
+    //MARK: 스택뷰
+    lazy var stackView: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [titleTextField,dateTextField])
+        view.axis = .vertical
+        view.alignment = .top
+        view.spacing = 2
+        view.distribution = .fillEqually
+        return view
+    }()
+    
     //이미지 제목
     let titleTextField : UITextField = {
         let view = UITextField()
@@ -42,6 +52,7 @@ class CodeSnapViewController: UIViewController {
         view.font = .boldSystemFont(ofSize: 15)
         return view
     }()
+
     //날짜
     let dateTextField : UITextField={
         let view = UITextField()
@@ -131,7 +142,7 @@ class CodeSnapViewController: UIViewController {
     }
     
     @objc func buttonclciekd() {
-        let task = Userdiary(diaryTitle: "\(Int.random(in: 1...1000))오늘의일기", diaryContent: "일기내용", diaryDate: Date(), regdate: Date(), photo: nil)  // record
+        let task = Userdiary(diaryTitle: "v오늘의일기\(Int.random(in: 1...1000))", diaryContent: "일기내용", diaryDate: Date(), regdate: Date(), photo: nil)  // record
 
         try! localRealm.write {
             localRealm.add(task) // record 생성
