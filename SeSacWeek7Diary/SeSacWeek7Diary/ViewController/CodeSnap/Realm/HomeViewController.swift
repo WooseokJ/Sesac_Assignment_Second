@@ -32,7 +32,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("test")
         //MARK: Realm 3. Realm데이터를 정렬해 tasks에 담기
         let tasks = localRealm.objects(Userdiary.self).sorted(byKeyPath: "diaryDate",ascending: false)
         
@@ -135,3 +135,5 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     //참고 : tableView editing mode
 
 }
+
+
