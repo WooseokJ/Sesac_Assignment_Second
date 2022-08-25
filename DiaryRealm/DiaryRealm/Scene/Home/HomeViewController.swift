@@ -46,17 +46,15 @@ class HomeViewController: BaseViewController {
     
     override func configure() {
         view.addSubview(tableView)
-        
-        
+
         let plusButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(plusButtonClicked))
         let backupButton = UIBarButtonItem(title:"백업화면" ,style: .plain, target: self, action: #selector(backupClicked2))
         navigationItem.rightBarButtonItems = [plusButton,backupButton]
         let sortButton = UIBarButtonItem(title: "정렬", style: .plain, target: self, action: #selector(sortButtonClicked))
         let filterButton = UIBarButtonItem(title: "필터", style: .plain, target: self, action: #selector(filterButtonClicked))
         let backupleftButton = UIBarButtonItem(title: "백업", style: .plain, target: self, action: #selector(backupButtonClicked2))
-        navigationItem.leftBarButtonItems = [sortButton, filterButton,backupleftButton]
-        
-        
+        navigationItem.leftBarButtonItems = [sortButton, filterButton, backupleftButton]
+
     }
     @objc func backupClicked2() {
         let vc = BackupViewController()
@@ -64,7 +62,6 @@ class HomeViewController: BaseViewController {
     }
     
     @objc func backupButtonClicked2() {
-        
         let vc = ViewController()
         transition(vc, transitionStyle: .present)
     }

@@ -27,7 +27,6 @@ class WriteViewController: BaseViewController {
         
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(saveButtonClicked))
-        
     }
     
     @objc func closeButtonClicked() {
@@ -59,7 +58,6 @@ class WriteViewController: BaseViewController {
         let vc = SearchImageViewController()
         vc.delegate = self // self는 WriteViewController인스턴스 전달
         transition(vc, transitionStyle: .presentNavigation)
-        
     }
 }
 
@@ -68,7 +66,6 @@ protocol SelectImageDelegate {
 }
 
 extension WriteViewController: SelectImageDelegate {
-    
     // 언제 실행되면 될까? -> 선택버튼 누를때
     func sendImageData(image: UIImage) {
         mainView.userImageView.image = image

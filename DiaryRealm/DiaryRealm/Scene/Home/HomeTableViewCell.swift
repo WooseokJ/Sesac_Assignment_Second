@@ -12,6 +12,7 @@ class HomeTableViewCell: BaseTableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: 크기
     let diaryImageView: DiaryImageView = {
         let view = DiaryImageView(frame: .zero)
         return view
@@ -47,9 +48,6 @@ class HomeTableViewCell: BaseTableViewCell {
         return view
     }()
     
-    
-    
-
     
     func setData(data: UserDiary) {
         titleLabel.text = data.diaryTitle

@@ -42,9 +42,6 @@ class WriteView: BaseView {
         return view
     }()
     
-
-
-    
     // MARK: - Methods
     override func configureUI() {
         [userImageView, titleTextField, dateTextField, contentTextView, searchImageButton].forEach {

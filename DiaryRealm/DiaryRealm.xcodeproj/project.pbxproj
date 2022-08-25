@@ -278,8 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				E1CC1E9A28B7A5400038651C /* UnsplashEndPoint.swift */,
-				E1CC1E9E28B7A56C0038651C /* UnsplashAPIManger.swift */,
 				E1CC1EA928B7A8F30038651C /* UnsplashAPIKey.swift */,
+				E1CC1E9E28B7A56C0038651C /* UnsplashAPIManger.swift */,
 			);
 			path = Unsplash;
 			sourceTree = "<group>";

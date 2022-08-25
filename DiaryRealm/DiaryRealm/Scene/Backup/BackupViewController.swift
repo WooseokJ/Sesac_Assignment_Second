@@ -82,7 +82,7 @@ class BackupViewController: BaseViewController {
     // activityviewController 성공할떄
     func showActivityViewController() {
         guard let path = documentDirectoryPath() else {
-            showAlertMessage(title: "도큐먼트 위치 ")
+            showAlertMessage(title: "도큐먼트 위치 오류 ")
             return
         }
         let backupFileURL = path.appendingPathComponent("sesacDiary.zip")
@@ -167,9 +167,8 @@ extension BackupViewController: UIDocumentPickerDelegate{
                 }, fileOutputHandler: { unzippedFile in
                     print("unzippedFile: \(unzippedFile)")
                     self.showAlertMessage(title: "복구가완료되얷습니다.")
-                    self.inital()
-             
                 }) //overwrite은 덮어씌우기
+                self.inital()
                 
             } catch {
                 showAlertMessage(title: "압축해제 실패")
