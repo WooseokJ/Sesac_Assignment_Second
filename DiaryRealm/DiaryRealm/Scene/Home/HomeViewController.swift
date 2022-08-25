@@ -5,7 +5,7 @@ import RealmSwift //Realm 1. import
 
 class HomeViewController: BaseViewController {
     
-    let localRealm = try! Realm() // Realm 2.
+    let localRealm = try! Realm() // Realm 2.   Realm은 default.realm
     
     let tableView: UITableView = {
         let view = UITableView()
@@ -23,7 +23,6 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "cell")
@@ -34,14 +33,10 @@ class HomeViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print(#function)
-        
-        tasks = localRealm.objects(UserDiary.self).sorted(byKeyPath: "diaryTitle", ascending: true)
-        
-        
+        print(localRealm.objects(UserDiary.self))
         //화면 갱신은 화면 전환 코드 및 생명 주기 실행 점검 필요!
         //present, overCurrentContext, overFullScreen > viewWillAppear X
-        tableView.reloadData()
-        
+        fetchRealm()
     }
     
     func fetchRealm() {
@@ -54,20 +49,24 @@ class HomeViewController: BaseViewController {
         
         
         let plusButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(plusButtonClicked))
-        
-        let backupButton = UIBarButtonItem(title:"백업화면" ,style: .plain, target: self, action: #selector(backupClicked))
-        
+        let backupButton = UIBarButtonItem(title:"백업화면" ,style: .plain, target: self, action: #selector(backupClicked2))
         navigationItem.rightBarButtonItems = [plusButton,backupButton]
-        
         let sortButton = UIBarButtonItem(title: "정렬", style: .plain, target: self, action: #selector(sortButtonClicked))
         let filterButton = UIBarButtonItem(title: "필터", style: .plain, target: self, action: #selector(filterButtonClicked))
-        navigationItem.leftBarButtonItems = [sortButton, filterButton]
+        let backupleftButton = UIBarButtonItem(title: "백업", style: .plain, target: self, action: #selector(backupButtonClicked2))
+        navigationItem.leftBarButtonItems = [sortButton, filterButton,backupleftButton]
         
         
     }
-    @objc func backupClicked() {
+    @objc func backupClicked2() {
         let vc = BackupViewController()
         transition(vc, transitionStyle: .presentFullNavigation)
+    }
+    
+    @objc func backupButtonClicked2() {
+        
+        let vc = ViewController()
+        transition(vc, transitionStyle: .present)
     }
     
     

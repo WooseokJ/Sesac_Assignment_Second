@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1400BF428B7017500791E7E /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = E1400BF328B7017500791E7E /* Zip */; };
 		E179EE8228B6A03A00F24CF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E179EE8128B6A03A00F24CF6 /* AppDelegate.swift */; };
 		E179EE8428B6A03A00F24CF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E179EE8328B6A03A00F24CF6 /* SceneDelegate.swift */; };
 		E179EE8628B6A03A00F24CF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E179EE8528B6A03A00F24CF6 /* ViewController.swift */; };
@@ -42,6 +43,9 @@
 		E179EEE128B6A34400F24CF6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E179EEE028B6A34400F24CF6 /* Kingfisher */; };
 		E179EEE428B6A3B700F24CF6 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E179EEE328B6A3B700F24CF6 /* Realm */; };
 		E179EEE628B6A3B700F24CF6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E179EEE528B6A3B700F24CF6 /* RealmSwift */; };
+		E1CC1E9B28B7A5400038651C /* UnsplashEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC1E9A28B7A5400038651C /* UnsplashEndPoint.swift */; };
+		E1CC1E9F28B7A56C0038651C /* UnsplashAPIManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC1E9E28B7A56C0038651C /* UnsplashAPIManger.swift */; };
+		E1CC1EA228B7A7660038651C /* .gitignore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC1EA128B7A7660038651C /* .gitignore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,9 @@
 		E179EED028B6A2AA00F24CF6 /* ImageDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDummyData.swift; sourceTree = "<group>"; };
 		E179EED228B6A2B000F24CF6 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		E179EED428B6A2B900F24CF6 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		E1CC1E9A28B7A5400038651C /* UnsplashEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashEndPoint.swift; sourceTree = "<group>"; };
+		E1CC1E9E28B7A56C0038651C /* UnsplashAPIManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPIManger.swift; sourceTree = "<group>"; };
+		E1CC1EA128B7A7660038651C /* .gitignore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = .gitignore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1400BF428B7017500791E7E /* Zip in Frameworks */,
 				E179EEE628B6A3B700F24CF6 /* RealmSwift in Frameworks */,
 				E179EEE128B6A34400F24CF6 /* Kingfisher in Frameworks */,
 				E179EEDE28B6A33900F24CF6 /* SnapKit in Frameworks */,
@@ -98,6 +106,7 @@
 		E179EE7528B6A03A00F24CF6 = {
 			isa = PBXGroup;
 			children = (
+				E1CC1EA128B7A7660038651C /* .gitignore.swift */,
 				E179EE8028B6A03A00F24CF6 /* DiaryRealm */,
 				E179EE7F28B6A03A00F24CF6 /* Products */,
 			);
@@ -150,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				E179EEB628B6A16D00F24CF6 /* ReusableProtocol.swift */,
+				E1CC1E9928B7A50F0038651C /* Networking */,
 				E179EE9628B6A06100F24CF6 /* Constants */,
 				E179EE9E28B6A08700F24CF6 /* CustomView */,
 				E179EE9F28B6A0A500F24CF6 /* BaseView */,
@@ -200,9 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				E179EEBC28B6A24F00F24CF6 /* Backup */,
+				E179EEBD28B6A25500F24CF6 /* Home */,
 				E179EEBE28B6A25C00F24CF6 /* ImageSearch */,
 				E179EEBF28B6A26100F24CF6 /* Write */,
-				E179EEBD28B6A25500F24CF6 /* Home */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -254,6 +264,23 @@
 			path = Write;
 			sourceTree = "<group>";
 		};
+		E1CC1E9928B7A50F0038651C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E1CC1EA028B7A5730038651C /* Unsplash */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E1CC1EA028B7A5730038651C /* Unsplash */ = {
+			isa = PBXGroup;
+			children = (
+				E1CC1E9A28B7A5400038651C /* UnsplashEndPoint.swift */,
+				E1CC1E9E28B7A56C0038651C /* UnsplashAPIManger.swift */,
+			);
+			path = Unsplash;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,6 +304,7 @@
 				E179EEE028B6A34400F24CF6 /* Kingfisher */,
 				E179EEE328B6A3B700F24CF6 /* Realm */,
 				E179EEE528B6A3B700F24CF6 /* RealmSwift */,
+				E1400BF328B7017500791E7E /* Zip */,
 			);
 			productName = DiaryRealm;
 			productReference = E179EE7E28B6A03A00F24CF6 /* DiaryRealm.app */;
@@ -312,6 +340,7 @@
 				E179EEDC28B6A33900F24CF6 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				E179EEDF28B6A34400F24CF6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				E179EEE228B6A3B700F24CF6 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				E1400BF228B7017400791E7E /* XCRemoteSwiftPackageReference "Zip" */,
 			);
 			productRefGroup = E179EE7F28B6A03A00F24CF6 /* Products */;
 			projectDirPath = "";
@@ -349,6 +378,7 @@
 				E179EEC928B6A29100F24CF6 /* HomeTableViewCell.swift in Sources */,
 				E179EECF28B6A2A400F24CF6 /* ImageSearchCollectionViewCell.swift in Sources */,
 				E179EED128B6A2AA00F24CF6 /* ImageDummyData.swift in Sources */,
+				E1CC1EA228B7A7660038651C /* .gitignore.swift in Sources */,
 				E179EE8228B6A03A00F24CF6 /* AppDelegate.swift in Sources */,
 				E179EED528B6A2B900F24CF6 /* WriteView.swift in Sources */,
 				E179EECD28B6A29E00F24CF6 /* ImageSearchView.swift in Sources */,
@@ -359,8 +389,10 @@
 				E179EEC128B6A27500F24CF6 /* BackupViewController.swift in Sources */,
 				E179EEC528B6A28300F24CF6 /* BackupTableViewCell.swift in Sources */,
 				E179EEA728B6A11400F24CF6 /* Constants.swift in Sources */,
+				E1CC1E9F28B7A56C0038651C /* UnsplashAPIManger.swift in Sources */,
 				E179EED328B6A2B000F24CF6 /* WriteViewController.swift in Sources */,
 				E179EEB128B6A15800F24CF6 /* BaseView.swift in Sources */,
+				E1CC1E9B28B7A5400038651C /* UnsplashEndPoint.swift in Sources */,
 				E179EEC328B6A27B00F24CF6 /* BackupView.swift in Sources */,
 				E179EECB28B6A29800F24CF6 /* ImageSearchViewController.swift in Sources */,
 				E179EEB528B6A16700F24CF6 /* BaseCollectionViewCell.swift in Sources */,
@@ -585,6 +617,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E1400BF228B7017400791E7E /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		E179EED628B6A32000F24CF6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -628,6 +668,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E1400BF328B7017500791E7E /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1400BF228B7017400791E7E /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
 		E179EED728B6A32000F24CF6 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E179EED628B6A32000F24CF6 /* XCRemoteSwiftPackageReference "Alamofire" */;

@@ -5,7 +5,7 @@ import Kingfisher
 class SearchImageViewController: BaseViewController {
 
     var delegate: SelectImageDelegate?
-    
+
     var selectedImage: UIImage?
     var selectIndexPath: IndexPath?
     
