@@ -45,7 +45,7 @@
 		E179EEE628B6A3B700F24CF6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E179EEE528B6A3B700F24CF6 /* RealmSwift */; };
 		E1CC1E9B28B7A5400038651C /* UnsplashEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC1E9A28B7A5400038651C /* UnsplashEndPoint.swift */; };
 		E1CC1E9F28B7A56C0038651C /* UnsplashAPIManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC1E9E28B7A56C0038651C /* UnsplashAPIManger.swift */; };
-		E1CC1EA228B7A7660038651C /* .gitignore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC1EA128B7A7660038651C /* .gitignore.swift */; };
+		E1CC1EA828B7A8D80038651C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E1CC1EA728B7A8D80038651C /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,7 +82,7 @@
 		E179EED428B6A2B900F24CF6 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		E1CC1E9A28B7A5400038651C /* UnsplashEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashEndPoint.swift; sourceTree = "<group>"; };
 		E1CC1E9E28B7A56C0038651C /* UnsplashAPIManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPIManger.swift; sourceTree = "<group>"; };
-		E1CC1EA128B7A7660038651C /* .gitignore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = .gitignore.swift; sourceTree = "<group>"; };
+		E1CC1EA728B7A8D80038651C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 		E179EE7528B6A03A00F24CF6 = {
 			isa = PBXGroup;
 			children = (
-				E1CC1EA128B7A7660038651C /* .gitignore.swift */,
+				E1CC1EA728B7A8D80038651C /* .gitignore */,
 				E179EE8028B6A03A00F24CF6 /* DiaryRealm */,
 				E179EE7F28B6A03A00F24CF6 /* Products */,
 			);
@@ -356,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1CC1EA828B7A8D80038651C /* .gitignore in Resources */,
 				E179EE8E28B6A03B00F24CF6 /* LaunchScreen.storyboard in Resources */,
 				E179EE8B28B6A03B00F24CF6 /* Assets.xcassets in Resources */,
 				E179EE8928B6A03A00F24CF6 /* Main.storyboard in Resources */,
@@ -378,7 +379,6 @@
 				E179EEC928B6A29100F24CF6 /* HomeTableViewCell.swift in Sources */,
 				E179EECF28B6A2A400F24CF6 /* ImageSearchCollectionViewCell.swift in Sources */,
 				E179EED128B6A2AA00F24CF6 /* ImageDummyData.swift in Sources */,
-				E1CC1EA228B7A7660038651C /* .gitignore.swift in Sources */,
 				E179EE8228B6A03A00F24CF6 /* AppDelegate.swift in Sources */,
 				E179EED528B6A2B900F24CF6 /* WriteView.swift in Sources */,
 				E179EECD28B6A29E00F24CF6 /* ImageSearchView.swift in Sources */,
