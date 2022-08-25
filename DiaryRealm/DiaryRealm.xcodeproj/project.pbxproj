@@ -116,13 +116,13 @@
 			children = (
 				E179EE8F28B6A03C00F24CF6 /* Info.plist */,
 				E179EEB928B6A20500F24CF6 /* Realm */,
-				E179EEA428B6A0D600F24CF6 /* Application */,
-				E179EE9728B6A06C00F24CF6 /* Utility */,
 				E179EEB828B6A20000F24CF6 /* Scene */,
+				E179EE9728B6A06C00F24CF6 /* Utility */,
+				E179EE9528B6A05500F24CF6 /* Extension */,
+				E179EEA428B6A0D600F24CF6 /* Application */,
 				E179EEA528B6A0E300F24CF6 /* Resource */,
 				E179EE8C28B6A03B00F24CF6 /* LaunchScreen.storyboard */,
 				E179EE8728B6A03A00F24CF6 /* Main.storyboard */,
-				E179EE9528B6A05500F24CF6 /* Extension */,
 			);
 			path = DiaryRealm;
 			sourceTree = "<group>";
