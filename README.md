@@ -34,4 +34,4 @@
 
 8주차| 2022.08.22 ~ 2022.08.28 |
 :---: |--- 
-1| [코드베이스 쇼핑리스트 다시해보기 및 DB적용](https://github.com/WooseokJ/Sesac_Assignment_First/tree/main/TrendMedia/TrendMedia/Shopping/Codebase) |  |
+1| [코드베이스 쇼핑리스트 다시해보기 및 DB적용](https://github.com/WooseokJ/Sesac_Assignment_First/tree/main/TrendMedia/TrendMedia/Codebase) |  |
