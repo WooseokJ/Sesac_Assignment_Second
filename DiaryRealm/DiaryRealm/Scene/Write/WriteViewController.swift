@@ -4,10 +4,17 @@ import RealmSwift //Realm 1.
 
 
 
-class WriteViewController: BaseViewController {
+final class WriteViewController: BaseViewController {
 
     let mainView = WriteView()
-    let localRealm = try! Realm() //Realm 2. Realm 테이블에 데이터를 CRUD할 때, Realm 테이블 경로에 접근
+
+    //private 이클래스안에서만쓸거
+    // fileprivate: 같은파일안에서만 사용가능
+    // final 이후로 다른클래스 상속안할거란거 의미
+    private let localRealm = try! Realm() //Realm 2. Realm 테이블에 데이터를 CRUD할 때, Realm 테이블 경로에 접근
+
+    
+    let repository = UserDiaryRepository() //이는 HomeVC에서 선언된 repository와 메모리주소가 달라서 싱글턴패턴의미없음
     
     override func loadView() {
         self.view = mainView
@@ -29,7 +36,7 @@ class WriteViewController: BaseViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(saveButtonClicked))
     }
     
-    @objc func closeButtonClicked() {
+    @objc private func closeButtonClicked() {
         dismiss(animated: true)
     }
     
@@ -73,3 +80,15 @@ extension WriteViewController: SelectImageDelegate {
     }
 
 }
+
+/*
+ private : 같은 클래스
+
+ fileprivate : 같은 소스 파일(.swift)
+
+ internal : 같은 모듈(framework) or 같은 프로젝트
+
+ public : 모듈 외부까지 가능
+
+ open : 모듈 외부, 상속 및 override가능(확장 가능)
+ */

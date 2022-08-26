@@ -55,7 +55,6 @@ class BackupViewController: BaseViewController {
         
         var urlPaths = [URL]() // 빈배열 타입이 URL
         
-        
         //  도큐먼트 위치에 백업파일 확인
         guard let path = documentDirectoryPath() else { // path는 도큐먼트 경로
             showAlertMessage(title: "documnet 위치에 오류가있음")

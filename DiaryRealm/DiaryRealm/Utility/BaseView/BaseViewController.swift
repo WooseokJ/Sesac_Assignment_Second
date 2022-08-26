@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController { //final붙이면 상속이안되므로 붙이면안됨.
 
     override func viewDidLoad() {
         super.viewDidLoad()
