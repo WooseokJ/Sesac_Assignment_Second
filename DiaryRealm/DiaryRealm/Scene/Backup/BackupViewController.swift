@@ -38,10 +38,6 @@ class BackupViewController: BaseViewController {
 
     }
 
-    //복구버튼 클릭시
-    @objc func storedButtonClicked() {
-        restoreButtonClicked()
-    }
     @objc func xmarkClicked() {
         dismiss(animated: true)
     }
@@ -89,13 +85,15 @@ class BackupViewController: BaseViewController {
         let vc = UIActivityViewController(activityItems: [backupFileURL], applicationActivities: [] ) //activityItems: 어떤거보낼래?
         self.present(vc,animated: true)
     }
+
     //MARK: 복구
-    func restoreButtonClicked() {
+    @objc func storedButtonClicked() {
         let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.archive], asCopy: true) // 반드시 파일앱에 저장해놔야함 ascopy:     UIDocumentPickerViewController는 문서선택시 어떻게해줄거냐?
         documentPicker.delegate = self
         documentPicker.allowsMultipleSelection = false
         self.present(documentPicker,animated: true)
     }
+
     
 }
 
@@ -107,6 +105,7 @@ extension BackupViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BackupTableViewCell.reuseIdentifier) as? BackupTableViewCell else {return UITableViewCell()}
         cell.backgroundColor = .white
+        
         cell.titleLabel.text = "백업\(indexPath.row)"
         return cell
     }
@@ -117,7 +116,7 @@ extension BackupViewController: UITableViewDataSource, UITableViewDelegate {
     
 }
 
-
+//MARK: 복구
 extension BackupViewController: UIDocumentPickerDelegate{
     // 취소누른경우
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
@@ -149,7 +148,7 @@ extension BackupViewController: UIDocumentPickerDelegate{
                 }, fileOutputHandler: { unzippedFile in
                     print("unzippedFile: \(unzippedFile)")
                     self.showAlertMessage(title: "복구가완료되얷습니다.")
-                    
+                    self.inital()
                 }) //overwrite은 덮어씌우기
             } catch {
                 showAlertMessage(title: "압축해제실패")
@@ -166,8 +165,9 @@ extension BackupViewController: UIDocumentPickerDelegate{
                 }, fileOutputHandler: { unzippedFile in
                     print("unzippedFile: \(unzippedFile)")
                     self.showAlertMessage(title: "복구가완료되얷습니다.")
+                    self.inital()
                 }) //overwrite은 덮어씌우기
-                self.inital()
+                
                 
             } catch {
                 showAlertMessage(title: "압축해제 실패")
@@ -175,12 +175,9 @@ extension BackupViewController: UIDocumentPickerDelegate{
         }
     }
     func inital() {
-        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
-      let sceneDelegate = windowScene?.delegate as? SceneDelegate
-      let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: HomeViewController.reuseIdentifier) as! HomeViewController
-      let nav = UINavigationController(rootViewController: vc)
-      sceneDelegate?.window?.rootViewController = nav
-      sceneDelegate?.window?.makeKeyAndVisible()
+        let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let sceneDelegate = scene?.delegate as? SceneDelegate
+        sceneDelegate?.window?.rootViewController = UINavigationController(rootViewController: HomeViewController())
+        sceneDelegate?.window?.makeKeyAndVisible()
     }
 }

@@ -19,10 +19,7 @@ class SearchImageViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = Constants.BaseColor.background
-        
-        
     }
 
     override func configure() {

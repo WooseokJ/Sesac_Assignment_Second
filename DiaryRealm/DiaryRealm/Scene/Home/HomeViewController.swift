@@ -4,19 +4,19 @@ import SnapKit
 import RealmSwift //Realm 1. import
 import FSCalendar
 class HomeViewController: BaseViewController{
-    
-//    let localRealm = try! Realm() // Realm 2. Realm은 default.realm
+    static var identifier = "HomeViewController"
+    let localRealm = try! Realm() // Realm 2. Realm은 default.realm
     
     let repository = UserDiaryRepository() 
     
-    lazy var calendar: FSCalendar = {
-        let view = FSCalendar() //  nibName: , bundle: 은 이름,번들아이디뜻하고 아무것도안쓰면
-        view.delegate = self
-        view.dataSource = self
-        view.backgroundColor = .white
-        return view
-    }()
-    
+//    lazy var calendar: FSCalendar = {
+//        let view = FSCalendar() //  nibName: , bundle: 은 이름,번들아이디뜻하고 아무것도안쓰면
+//        view.delegate = self
+//        view.dataSource = self
+//        view.backgroundColor = .white
+//        return view
+//    }()
+//
     let tableView: UITableView = {
         let view = UITableView()
         view.rowHeight = 100
@@ -37,7 +37,7 @@ class HomeViewController: BaseViewController{
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() // uiviewcontroller의 viewdidload까지 찾아간다. homeVC-> baseVC-> UiVC의 viewdidloadn
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "cell")
@@ -47,7 +47,6 @@ class HomeViewController: BaseViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print(#function)
-        print(repository.localRealm.objects(UserDiary.self))
         //화면 갱신은 화면 전환 코드 및 생명 주기 실행 점검 필요!
         //present, overCurrentContext, overFullScreen > viewWillAppear X
         fetchRealm()
@@ -55,6 +54,7 @@ class HomeViewController: BaseViewController{
     
     func fetchRealm() {
         //Realm 3. Realm 데이터를 정렬해 tasks 에 담기
+        print("wewewewewe")
 //        tasks = localRealm.objects(UserDiary.self).sorted(byKeyPath: "diaryTitle", ascending: true)
         
         tasks = repository.fetch()
@@ -63,16 +63,16 @@ class HomeViewController: BaseViewController{
     
     override func configure() {
         view.addSubview(tableView)
-        view.addSubview(calendar)
+//        view.addSubview(calendar)
         
         let plusButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(plusButtonClicked))
         let backupButton = UIBarButtonItem(title:"백업화면" ,style: .plain, target: self, action: #selector(backupClicked2))
         navigationItem.rightBarButtonItems = [plusButton,backupButton]
         let sortButton = UIBarButtonItem(title: "정렬", style: .plain, target: self, action: #selector(sortButtonClicked))
         let filterButton = UIBarButtonItem(title: "필터", style: .plain, target: self, action: #selector(filterButtonClicked))
-        let backupleftButton = UIBarButtonItem(title: "백업", style: .plain, target: self, action: #selector(backupButtonClicked2))
-        navigationItem.leftBarButtonItems = [sortButton, filterButton, backupleftButton]
 
+        navigationItem.leftBarButtonItems = [sortButton, filterButton]
+        
     }
     
     @objc func backupClicked2() {
@@ -80,20 +80,16 @@ class HomeViewController: BaseViewController{
         transition(vc, transitionStyle: .presentFullNavigation)
     }
     
-    @objc func backupButtonClicked2() {
-        let vc = ViewController()
-        transition(vc, transitionStyle: .present)
-    }
     
     override func setConstraints() {
         tableView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
-        calendar.snp.makeConstraints {
-            $0.leading.top.trailing.equalTo(view.safeAreaLayoutGuide)
-            $0.height.equalTo(300)
-        }
-        
+//        calendar.snp.makeConstraints {
+//            $0.leading.top.trailing.equalTo(view.safeAreaLayoutGuide)
+//            $0.height.equalTo(300)
+//        }
+//
         
     }
     
@@ -126,7 +122,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? HomeTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? HomeTableViewCell else {
+            print("여기서문제생겨!!!!!!!")
+            return UITableViewCell() }
+        print("jhgjhgjhgjhgjhghj",tasks)
+        print(tasks[indexPath.row])
         cell.setData(data: tasks[indexPath.row])
         cell.diaryImageView.image = loadImageFromDocument(fileName: "\(tasks[indexPath.row].objectId).jpg")
         return cell
@@ -180,14 +180,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     // 커스텀 오른쪽 스와이프 액션
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
-        let favorite = UIContextualAction(style: .normal, title: "삭제") { [self] action, view, completionHandler in
+        let favorite = UIContextualAction(style: .normal, title: "삭제") {  action, view, completionHandler in
+            
 //            try! repository.localRealm.write{
 //                repository.localRealm.delete(tasks[indexPath.row]) // 레코드 삭제
 //            }
 //            self.removeImageFromDocument(fileName: "\(self.tasks[indexPath.row].objectId).jpg") //도큐먼트의 이미지 삭제 10
-            repository.deleteItem(item: tasks[indexPath.row])
+            self.repository.deleteItem(item: self.tasks[indexPath.row])
             
-            fetchRealm() //렘 데이터 가져오기
+            self.fetchRealm() //렘 데이터 가져오기
         }
         // 찾아보기
 //        tableView.beginUpdates()
@@ -197,30 +198,30 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
-
-extension HomeViewController: FSCalendarDelegate, FSCalendarDataSource {
-    // 밑에 점의개수
-    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        return repository.fetchDate(date: date).count
-    }
-    // 캘린더 전체 제목
-//    func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
-//        return "삭제"
+//
+//extension HomeViewController: FSCalendarDelegate, FSCalendarDataSource {
+//    // 밑에 점의개수
+//    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+//        return repository.fetchDate(date: date).count
 //    }
-    // date: yyyyMMdd hh:mm:ss => dateformatter
-    // 캘린더 하위 제목
-    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
-//        return "서브삭제"
-        return formatter.string(from: date) == "220907" ? "오프라인" : nil // 220907에만 표시 나머진 nil이라 안뜸
-    }
-    // 날짜아래에 이미지
-//    func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
-//        return UIImage(systemName: "star.fill")
+//    // 캘린더 전체 제목
+////    func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
+////        return "삭제"
+////    }
+//    // date: yyyyMMdd hh:mm:ss => dateformatter
+//    // 캘린더 하위 제목
+//    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
+////        return "서브삭제"
+//        return formatter.string(from: date) == "220907" ? "오프라인" : nil // 220907에만 표시 나머진 nil이라 안뜸
 //    }
-
-    // date는 22/8/26 00:00:00 ~ 23:59:59
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        // 선택된 날짜 에대한 내용 일정수
-        tasks = repository.fetchDate(date: date) // tasks는 배열
-    }
-}
+//    // 날짜아래에 이미지
+////    func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
+////        return UIImage(systemName: "star.fill")
+////    }
+//
+//    // date는 22/8/26 00:00:00 ~ 23:59:59
+//    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+//        // 선택된 날짜 에대한 내용 일정수
+//        tasks = repository.fetchDate(date: date) // tasks는 배열
+//    }
+//}

@@ -47,10 +47,22 @@ class UserDiaryRepository: UserDiaryRepositoryType {
         }
     }
     func deleteItem(item: UserDiary) {
+        removeImageFromDocument(fileName: "\(item.objectId).jpg") //도큐먼트의 이미지 삭제 10
         try! localRealm.write{
             localRealm.delete(item) // 레코드 삭제
         }
-        /// removeImageFromDocument(fileName: "\(item.objectId).jpg") //도큐먼트의 이미지 삭제 10
+        
+      
+    
+    }
+    func removeImageFromDocument(fileName: String) {
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return } //Document 경로
+        let fileURL = documentDirectory.appendingPathComponent(fileName) // 세부 경로. 이미지 저장할 위치
+        do {
+            try FileManager.default.removeItem(at: fileURL)
+        } catch let error {
+            print(error)
+        }
     }
     func addItem(item: UserDiary) {
         
