@@ -15,12 +15,16 @@ let users: [User] = [
 ]
 
 let encoder = JSONEncoder()
+//json 형태처럼 만들어줌
 encoder.outputFormatting = .prettyPrinted
-//encoder.dateEncodingStrategy = .iso8601 //iso
+//iso8601: 날짜와 시간 관련된 데이터 교환을 다루는 국제 표준
+encoder.dateEncodingStrategy = .iso8601 //iso
 
 let format = DateFormatter()
 format.locale = Locale(identifier: "ko-KR")
 format.dateFormat = "MM월 dd일 hh:mm:ss EEEE"
+
+encoder.dateEncodingStrategy = .formatted(format)
 
 do {
     

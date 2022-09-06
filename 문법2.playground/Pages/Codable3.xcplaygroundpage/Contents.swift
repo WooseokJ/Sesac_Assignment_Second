@@ -3,6 +3,8 @@
 import Foundation
 
 //MARK: 서버응답값(json)을 좀 변경해서 모델(struct)로 넣고싶은경우
+//커스텀 매핑을 하고 싶을때는 CodingKey
+
 let json = """
 {
 "quote_content": "I think that the good and the great are only separated by the willingness to sacrifice.",
@@ -19,16 +21,22 @@ struct Quote : Decodable { // 데이터 타입이 만약 옵셔널타입이면 �
     
     
     
-    
+    //내부적으로 선언 되어 잇는 열거형 -> 여기서 커스텀
+
     enum codingKeys: String, CodingKey {
         case ment = "quote_content"
         case author = "author_name"
         case like = "likeCount"
     }
-    
+    //응답값 바꿔 주고 싶을 경우. --> 컨테이너 작성 하기
+
     init(from decoder: Decoder) throws { // 디코더할떄 어떻게 초기화할까 , 새로운값 들어오거나 다른값으로 바꿔줄경우쓴다.
         let container = try decoder.container(keyedBy: codingKeys.self)
+        //String.self 형태로 받는다!
+
         ment = try container.decode(String.self, forKey: .ment) // codingKeys의 ment를 String기반으로 let ment에 담아줄게
+        //null 로 들어 올때는 unkown 으로 바꿔달라
+
         author = try container.decodeIfPresent(String.self, forKey: .author) ?? "unknown" //author_name이 null일떄 ifpresent사용해서 대체가능
         like = try container.decode(Int.self, forKey: .like)
         isInfluencer = (10000...).contains(like) ? true : false

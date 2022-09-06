@@ -29,7 +29,6 @@ class HomeViewController: BaseViewController{
     }()
     
     var tasks: Results<UserDiary>! {
-        
         didSet {
             tableView.reloadData()
             print("Tasks Changed")
@@ -58,7 +57,6 @@ class HomeViewController: BaseViewController{
 //        tasks = localRealm.objects(UserDiary.self).sorted(byKeyPath: "diaryTitle", ascending: true)
         
         tasks = repository.fetch()
-        
     }
     
     override func configure() {
@@ -131,7 +129,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.diaryImageView.image = loadImageFromDocument(fileName: "\(tasks[indexPath.row].objectId).jpg")
         return cell
     }
-    
+    //스와이핑으로 삭제
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let item = tasks?[indexPath.row]
@@ -149,15 +147,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             
             self.repository.updateFavorite(item: self.tasks[indexPath.row])
             
-            // realm data update
+            // realm data 업데이트(수정)
             try! self.repository.localRealm.write {
                 // 하나의 레코드에서 특정 컬럼 하나만 변경
 //                self.tasks[indexPath.row].favorite = !self.tasks[indexPath.row].favorite
-                
-                
                 // 하나의 테이블에 특정 컬럼 전체 값을 변경
 //                self.tasks.setValue(true, forKey: "favorite")
-                
                 // 하나의 레코드에서 여러 컬럼들이 변경
 //                self.localRealm.create(UserDiary.self, value: ["objectId":self.tasks[indexPath.row].objectId, "diaryContent":"변경테스트", "diaryTitle":"제목임"], update: .modified)
                 

@@ -15,9 +15,6 @@ protocol UserDiaryRepositoryType { //만든이유:  1.어떤메서드들이 있�
 
 class UserDiaryRepository: UserDiaryRepositoryType {
 
-    
-    
-    
     let localRealm = try! Realm() //
     // 찾아보기
     // 클래스는 싱글턴패턴을 쓰지만 구조체 싱글턴패턴 안쓰는이유는?

@@ -3,6 +3,8 @@
 import Foundation
 
 //MARK: codable
+// MARK: - 아예 다른 키로 담고 싶을때 --> 이렇게 되면 전략 바꿔도 소용이 없음.
+//커스텀 매핑을 하고 싶을때는 CodingKey
 let json = """
 {
 "quote_content": "I think that the good and the great are only separated by the willingness to sacrifice.",
@@ -13,6 +15,8 @@ let json = """
 struct Quote : Decodable { // 데이터 타입이 만약 옵셔널타입이면 옵셔널로 받아야한다.
     let ment: String
     let author: String
+    //내부적으로 선언 되어 잇는 열거형 -> 여기서 커스텀
+
     enum codingKeys: String, CodingKey {
         case ment = "quote_content"
         case author = "author_name"

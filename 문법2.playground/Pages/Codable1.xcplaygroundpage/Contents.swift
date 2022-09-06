@@ -22,6 +22,9 @@ struct Quote : Decodable { // 데이터 타입이 만약 옵셔널타입이면 �
 guard let result = json.data(using: .utf8) else {fatalError("Error")}
 print(result)
 
+
+//전략 변경: 즉 json의 키값에 구성된 Usage 를 바꿔주기
+//.convertFromSnakeCase: json 문자열에 _ 있으면, _지우고 바로앞 대문자 바꿔줌
 let decoder = JSONDecoder()
 //snakecase(_) 속성 chage    _ -> N(Name)으로     디코딩 전략
 decoder.keyDecodingStrategy = .convertFromSnakeCase

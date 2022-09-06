@@ -5,11 +5,15 @@
         <page name='일급객체,클로저'/>
         <page name='Untitled Page 3'/>
         <page name='재네릭'/>
-        <page name='인코딩과디코딩'/>
-        <page name='인코딩과디코딩3'/>
-        <page name='인코딩과디코딩2'/>
-        <page name='인코딩과디코딩5'/>
-        <page name='인코딩과디코딩4'/>
-        <page name='인코딩과디코딩6'/>
+        <page name='Codable1'/>
+        <page name='Codable3'/>
+        <page name='Codable2'/>
+        <page name='Codable5'/>
+        <page name='Codable6'/>
+        <page name='Codable7'/>
+        <page name='CodablePractice8'/>
+        <page name='캡쳐'/>
+        <page name='unowned, Weak'/>
+        <page name='RC'/>
     </pages>
 </playground>
