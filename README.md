@@ -38,3 +38,4 @@
 2| [다이어리 연습](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/DiaryRealm/DiaryRealm) |  |
 
 ### [참고: 성능 최적화관련글](https://github.com/apple/swift/blob/main/docs/OptimizationTips.rst)
+### [문법 모음](https://github.com/WooseokJ/Sesac_Assignment_Second/tree/main/%EB%AC%B8%EB%B2%952.playground/Pages)
