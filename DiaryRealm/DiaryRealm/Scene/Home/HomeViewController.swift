@@ -40,7 +40,6 @@ class HomeViewController: BaseViewController{
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "cell")
-              
     }
      
     override func viewWillAppear(_ animated: Bool) {
